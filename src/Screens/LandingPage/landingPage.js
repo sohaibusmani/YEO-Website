@@ -163,15 +163,143 @@ class LandingPage extends Component {
     }
 
     render(){
+        const { classes } = this.props;
         return(
             <React.Fragment>
-                <Grid>
+                <Grid container>
                 <Grid ref={this.block1Ref} item xs={12} md={12}>
                         <LandingPage1 getBlock1Height={this.getBlock1Height} />
                     </Grid>
                     </Grid>
+                    <Container maxWidth="lg"
+                        style={{ color: "black", marginTop: 80 }}>
+                          <div
+                            style={{
+                                justifyContent: "center",
+                                alignItems: "center,",
+                                display: "inline-flex",
+                                width: "100%"
+                            }}
+                        >
+                            <Typography
+                                className={classes.letsGrowSubHeading}
+                                style={{ textAlign: "center" }}
+                                color="textSecondary"
+                            >
+                                A global leader in Import/Export digital
+                                services and consulting
+                            </Typography>
+                        </div>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} md={3}>
+                                <div
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center,",
+                                        display: "inline-flex",
+                                        width: "100%",
+                                        marginTop: 50
+                                    }}
+                                >
+                                    <Typography
+                                        className={classes.aboutUsStats}
+                                        style={{
+                                            fontWeight: "bold",
+                                            textAlign: "center"
+                                        }}
+                                    >
+                                        50
+                                        <Typography
+                                            style={{ fontSize: "15px" }}
+                                        >
+                                            Countries where we have happy
+                                            customers
+                                        </Typography>
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={3}>
+                                <div
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center,",
+                                        display: "inline-flex",
+                                        width: "100%",
+                                        marginTop: 50
+                                    }}
+                                >
+                                    <Typography
+                                        className={classes.aboutUsStats}
+                                        style={{
+                                            fontWeight: "bold",
+                                            textAlign: "center"
+                                        }}
+                                    >
+                                        $1,000,000
+                                        <Typography
+                                            style={{ fontSize: "15px" }}
+                                        >
+                                            Estimated Import/Export market
+                                        </Typography>
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={3}>
+                                <div
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center,",
+                                        display: "inline-flex",
+                                        width: "100%",
+                                        marginTop: 50
+                                    }}
+                                >
+                                    <Typography
+                                        className={classes.aboutUsStats}
+                                        style={{
+                                            fontWeight: "bold",
+                                            textAlign: "center"
+                                        }}
+                                    >
+                                        120,000+
+                                        <Typography
+                                            style={{ fontSize: "15px" }}
+                                        >
+                                            Connected Enterpreneur with us
+                                        </Typography>
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={3}>
+                                <div
+                                    style={{
+                                        justifyContent: "center",
+                                        alignItems: "center,",
+                                        display: "inline-flex",
+                                        width: "100%",
+                                        marginTop: 50
+                                    }}
+                                >
+                                    <Typography
+                                        className={classes.aboutUsStats}
+                                        style={{
+                                            fontWeight: "bold",
+                                            textAlign: "center"
+                                        }}
+                                    >
+                                        100,000
+                                        <Typography
+                                            style={{ fontSize: "15px" }}
+                                        >
+                                            Students connected with us
+                                        </Typography>
+                                    </Typography>
+                                </div>
+                            </Grid>
+                        </Grid>
+                    </Container>
             </React.Fragment>
         )
     }
 }
-export default LandingPage;
+export default withStyles(styles)(LandingPage);

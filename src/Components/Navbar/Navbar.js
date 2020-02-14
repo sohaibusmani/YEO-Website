@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => ({
           marginLeft: 300,
           marginTop: 40,
           display: "flex",
+          
       }
   },
   desktopMenu: {
@@ -85,10 +86,10 @@ return(
                             </Link>
                         </Typography>
                         <div className={classes.navigationButtons}>
-                        <Link to='/Home' style={{ textDecoration: "none" }}>
+                        <Link to='/' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "black" }}
+                                    style={{ margin: 5, color: "#ff0081" }}
                                     className={classes.categoriesButton}
                                 >
                                     Home
@@ -97,7 +98,7 @@ return(
                             <Link to='/events' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "black" }}
+                                    style={{ margin: 5, color: "#ff0081" }}
                                     className={classes.categoriesButton}
                                 >
                                     Events
@@ -106,7 +107,7 @@ return(
                             <Link to='/Courses' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "black" }}
+                                    style={{ margin: 5, color: "#ff0081" }}
                                     className={classes.categoriesButton}
                                 >
                                     Courses
@@ -115,7 +116,7 @@ return(
                             <Link to='/About' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "black" }}
+                                    style={{ margin: 5, color: "#ff0081" }}
                                     className={classes.categoriesButton}
                                 >
                                     Grow Careers
@@ -124,7 +125,7 @@ return(
                             <Link to='/About' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "black" }}
+                                    style={{ margin: 5, color: "#ff0081" }}
                                     className={classes.categoriesButton}
                                 >
                                     About
@@ -133,7 +134,7 @@ return(
                             <Link to='/Contact' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "black" }}
+                                    style={{ margin: 5, color: "#ff0081" }}
                                     className={classes.categoriesButton}
                                 >
                                     Contact Us

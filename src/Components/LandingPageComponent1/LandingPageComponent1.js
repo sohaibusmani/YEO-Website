@@ -149,12 +149,13 @@ class LandingPage1 extends React.Component{
                                             <Link to='/import-export'>
                                                 <Button
                                                     style={{
-                                                        color: "white",
-                                                        borderColor: "white",
+                                                        color: "#ff0081",
+                                                        borderColor: "#ff0081",
                                                         height: 45,
                                                         width: 180,
                                                         fontSize: "14px",
-                                                        borderRadius: 0
+                                                        borderRadius: 0,
+                                                        
                                                     }}
                                                     variant="outlined"
                                                 >
