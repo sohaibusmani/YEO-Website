@@ -18,9 +18,10 @@ function App() {
   return (
     <Router>
     <SearchAppBar/>
-    <LandingPage/>
+    
     <Switch>
-          <Route path='/LandingPage' exact component={LandingPage}/>
+      <Route path='/' exact component={()=><LandingPage/>} />
+          {/* <Route path='/LandingPage' exact component={LandingPage}/> */}
           <Route path='/about' exact component={About}/>
           <Route path='/Events'  component={Events}/>
           <Route path='/Courses' exact  component={Courses}/>
