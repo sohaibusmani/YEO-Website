@@ -11,6 +11,9 @@ import AddCircleOutlinedIcon from "@material-ui/icons/AddCircleOutlined";
 import ArrowRightAltOutlinedIcon from "@material-ui/icons/ArrowRightAltOutlined";
 import { Link } from "react-router-dom";
 
+// Assets
+import CustomizationPic from '../../Assets/Images/customize.png';
+
 // Components
 import LandingPage1 from '../../Components/LandingPageComponent1/LandingPageComponent1';
 
@@ -186,7 +189,7 @@ class LandingPage extends Component {
                                 style={{ textAlign: "center" }}
                                 color="textSecondary"
                             >
-                                A global leader in Import/Export digital
+                                A global leader in Event Planning
                                 services and consulting
                             </Typography>
                         </div>
@@ -297,6 +300,52 @@ class LandingPage extends Component {
                                 </div>
                             </Grid>
                         </Grid>
+                    </Container>
+                    <Container maxWidth="lg"
+                        style={{ color: "black", marginTop: 80 }}>
+                             <div
+                            style={{
+                                justifyContent: "center",
+                                alignItems: "center,",
+                                display: "inline-flex",
+                                width: "100%"
+                            }}
+                        >
+                            <Typography
+                                className={classes.letsGrowSubHeading}
+                                style={{ textAlign: "center" }}
+                                color="textSecondary"
+                            >
+                                Customization : To satisfy Customer's Need
+                            </Typography>
+
+                        </div>
+                        <div
+                            style={{
+                                position: "relative",
+                                textAlign: "center",
+                                color: "white",
+                                maxWidth:"100%"
+                            }}
+                        >
+                            <img
+                                src={CustomizationPic}
+                                style={{ maxWidth: "100%", minWidth: "100%" }}
+                            />
+                            <p
+                                style={{
+                                    position: "absolute",
+                                    bottom: "60px",
+                                    left: "80px",
+                                    fontSize: "25px",
+                                    color: "white",
+                                    fontWeight: "bold"
+                                }}
+                            >
+                                According to Your Wants and Needs
+                            </p>
+                            </div>
+                         
                     </Container>
             </React.Fragment>
         )
