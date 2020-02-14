@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SearchAppBar from './Navbar/Navbar';
+import SearchAppBar from './Components/Navbar/Navbar';
 
 // Routing
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
@@ -18,6 +18,7 @@ function App() {
   return (
     <Router>
     <SearchAppBar/>
+    <LandingPage/>
     <Switch>
           <Route path='/LandingPage' exact component={LandingPage}/>
           <Route path='/about' exact component={About}/>
