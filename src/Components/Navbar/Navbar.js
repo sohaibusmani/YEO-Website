@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import { Container } from '@material-ui/core';
 
 // Logo
-import Logo from '../../Assets/Images/download.png';
+import Logo from '../../Assets/Images/logo.jpg';
 import { Link } from "react-router-dom";
 
 
@@ -76,7 +76,7 @@ return(
                                 <img
                                     src={Logo}
                                     style={{
-                                        width: "230px",
+                                        width: "180px",
                                         height: "80px",
                                         position: "absolute",
                                         bottom: " 0px",
@@ -89,7 +89,7 @@ return(
                         <Link to='/' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "#ff0081" }}
+                                    style={{ margin: 5, color: "#AD365C" }}
                                     className={classes.categoriesButton}
                                 >
                                     Home
@@ -98,7 +98,7 @@ return(
                             <Link to='/events' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "#ff0081" }}
+                                    style={{ margin: 5, color: "#AD365C" }}
                                     className={classes.categoriesButton}
                                 >
                                     Events
@@ -107,7 +107,7 @@ return(
                             <Link to='/Courses' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "#ff0081" }}
+                                    style={{ margin: 5, color: "#A20737" }}
                                     className={classes.categoriesButton}
                                 >
                                     Courses
@@ -116,7 +116,7 @@ return(
                             <Link to='/About' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "#ff0081" }}
+                                    style={{ margin: 5, color: "#A20737" }}
                                     className={classes.categoriesButton}
                                 >
                                     Grow Careers
@@ -125,7 +125,7 @@ return(
                             <Link to='/About' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "#ff0081" }}
+                                    style={{ margin: 5, color: "#A20737" }}
                                     className={classes.categoriesButton}
                                 >
                                     About
@@ -134,7 +134,7 @@ return(
                             <Link to='/Contact' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
-                                    style={{ margin: 5, color: "#ff0081" }}
+                                    style={{ margin: 5, color: "#A20737" }}
                                     className={classes.categoriesButton}
                                 >
                                     Contact Us

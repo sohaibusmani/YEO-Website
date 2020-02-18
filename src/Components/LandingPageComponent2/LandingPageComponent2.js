@@ -1,22 +1,14 @@
-import React , {Component} from 'react';
+import React from 'react';
+import './LandingPageComponent2.css';
 import { withStyles } from "@material-ui/core/styles";
-import {
-    Container,
-    Grid,
-    Typography,
-    Button,
-    Divider
-} from "@material-ui/core";
-import AddCircleOutlinedIcon from "@material-ui/icons/AddCircleOutlined";
-import ArrowRightAltOutlinedIcon from "@material-ui/icons/ArrowRightAltOutlined";
-import { Link } from "react-router-dom";
-
-// Assets
-import CustomizationPic from '../../Assets/Images/customize.png';
-
-// Components
-import LandingPage1 from '../../Components/LandingPageComponent1/LandingPageComponent1';
-import LandingPage2 from '../../Components/LandingPageComponent2/LandingPageComponent2';
+// import {
+//     Container,
+//     Grid,
+//     Typography,
+//     Button,
+//     Divider
+// } from "@material-ui/core";
+import {Container, Col,Row} from 'react-bootstrap';
 
 
 const styles = theme => ({
@@ -151,38 +143,28 @@ const styles = theme => ({
     }
 });
 
-class LandingPage extends Component {
-    constructor(props) {
-        super(props)
-        this.block1Ref = React.createRef()
-    }
 
-    state={
-        block1Height:0,
-    }
 
-    getBlock1Height = height => {
-        this.setState({
-            block1Height: height
-        })
-    }
 
-    render(){
+//Casecading Style Sheets
+// import './App.css';
+
+class LandingPageComponent2 extends React.Component {
+
+    render() {
         const { classes } = this.props;
-        return(
+        return (
+
             <React.Fragment>
-                <Grid container>
-                <Grid ref={this.block1Ref} item xs={12} md={12}>
-                        <LandingPage1 getBlock1Height={this.getBlock1Height} />
-                    </Grid>
-                    </Grid>
-                    <Grid container>
-                <Grid  item xs={12} md={12}>
-                        <LandingPage2  />
-                    </Grid>
-                    </Grid>
-                    <br/>
-                    <Container maxWidth="lg"
+                <br/>
+                <br/>
+                <div id="header">
+        <div class="overlay">
+            <div class="container">
+                <div class="row scroll-me">
+                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 text-center ">
+                       
+                    {/* <Container maxWidth="lg"
                         style={{ color: "black", marginTop: 80 }}>
                           <div
                             style={{
@@ -308,55 +290,46 @@ class LandingPage extends Component {
                                 </div>
                             </Grid>
                         </Grid>
-                    </Container>
-                    <Container maxWidth="lg"
-                        style={{ color: "black", marginTop: 80 }}>
-                             <div
-                            style={{
-                                justifyContent: "center",
-                                alignItems: "center,",
-                                display: "inline-flex",
-                                width: "100%"
-                            }}
-                        >
-                            <Typography
-                                className={classes.letsGrowSubHeading}
-                                style={{ textAlign: "center" }}
-                                color="textSecondary"
-                            >
-                                Customization : To satisfy Customer's Need
-                            </Typography>
-
-                        </div>
+                    </Container> */}
+                    <Container maxWidth='lg'
+                    style={{ color: "black", marginTop: 80 }}>
                         <div
-                            style={{
-                                position: "relative",
-                                textAlign: "center",
-                                color: "white",
-                                maxWidth:"100%"
-                            }}
-                        >
-                            <img
-                                src={CustomizationPic}
-                                style={{ maxWidth: "100%", minWidth: "100%" }}
-                            />
-                            <p
-                                style={{
-                                    position: "absolute",
-                                    bottom: "60px",
-                                    left: "80px",
-                                    fontSize: "25px",
-                                    color: "white",
-                                    fontWeight: "bold"
-                                }}
-                            >
-                                According to Your Wants and Needs
-                            </p>
-                            </div>
-                         
+                        style={{
+                            justifyContent: "center",
+                            alignItems: "center,",
+                            display: "inline-flex",
+                            width: "100%",
+                            marginLeft:'250px',
+                            color:'white',
+                            fontSize:'70px'
+                        }}>
+                            Youth
+                        </div>
+                        <p 
+                         style={{
+                            justifyContent: "center",
+                            alignItems: "center,",
+                            display: "inline-flex",
+                            width: "100%",
+                            marginLeft:'250px',
+                            marginTop:'50px',
+                            color:'white',
+                            fontSize:'30px'
+                        }}>
+                            We are Working With The Youth Here on field
+                        </p>
+                       
                     </Container>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
             </React.Fragment>
         )
     }
 }
-export default withStyles(styles)(LandingPage);
+
+export default withStyles(styles)(LandingPageComponent2);
