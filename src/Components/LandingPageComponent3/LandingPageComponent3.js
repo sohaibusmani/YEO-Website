@@ -1,17 +1,8 @@
 import React from 'react';
-import './LandingPageComponent2.css';
-import {Container, Col,Row} from 'react-bootstrap';
+import './LandingPageComponent3.css';
+import {Container} from 'react-bootstrap';
 
-
-
-
-
-
-
-//Casecading Style Sheets
-// import './App.css';
-
-class LandingPageComponent2 extends React.Component {
+class LandingPageComponent3 extends React.Component {
 
     render() {
         
@@ -39,7 +30,7 @@ class LandingPageComponent2 extends React.Component {
                             color:'white',
                             fontSize:'70px'
                         }}>
-                            Youth
+                            Customization
                         </div>
                         <p 
                          style={{
@@ -52,7 +43,7 @@ class LandingPageComponent2 extends React.Component {
                             color:'white',
                             fontSize:'30px'
                         }}>
-                            We are Working With The Youth Here on field
+                            To Satisfy Customers Needs
                         </p>
                        
                     </Container>
@@ -68,4 +59,4 @@ class LandingPageComponent2 extends React.Component {
     }
 }
 
-export default LandingPageComponent2;
+export default LandingPageComponent3;
