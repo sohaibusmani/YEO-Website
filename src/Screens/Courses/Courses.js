@@ -11,7 +11,7 @@ class Courses extends Component {
             <React.Fragment>
                 <Container>
                 <Row>
-                    <Col md={12} sm={6} xs={12} >
+                    <Col  >
                         <Image src={logo} fluid/>
                     </Col>
                  </Row>
@@ -20,41 +20,39 @@ class Courses extends Component {
                 
                  <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
-                     <Card style={{ width: '18rem' }}>
+                     <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={logo} />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Become an Event Planner </Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
   </Card.Body>
 </Card>
                      </Col>
                      <Col xs={12} md={4}>
-                     <Card style={{ width: '18rem' }}>
+                     <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={logo} />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Boost Your Business</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
   </Card.Body>
 </Card>
                      </Col>
                      <Col xs={12} md={4}>
-                     <Card style={{ width: '18rem' }}>
+                     <Card style={{ width: '20rem',  }}>
   <Card.Img variant="top" src={logo}/>
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Practical Classes</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
   </Card.Body>
 </Card>
                      </Col>
