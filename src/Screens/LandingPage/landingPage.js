@@ -15,6 +15,7 @@ import {
 import LandingPage1 from '../../Components/LandingPageComponent1/LandingPageComponent1';
 import LandingPage2 from '../../Components/LandingPageComponent2/LandingPageComponent2';
 import LandingPage3 from '../../Components/LandingPageComponent3/LandingPageComponent3';
+import Footer from '../../Components/Footer/Footer'
 
 
 const styles = theme => ({
@@ -311,6 +312,11 @@ class LandingPage extends Component {
                 <Grid  item xs={12} md={12}>
                         <LandingPage3  />
                     </Grid>
+                    </Grid>
+                    <Grid container>
+                
+                        <Footer />
+                    
                     </Grid>
                     <br/>
                    
