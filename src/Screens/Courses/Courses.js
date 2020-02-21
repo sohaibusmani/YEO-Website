@@ -1,6 +1,7 @@
 import React , {Component} from 'react';
 import {Container,Row,Col,Card,Button, Image} from 'react-bootstrap';
 import {Box} from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 // Assets
 import logo from '../../Assets/Images/testimonial.jpg';
@@ -24,7 +25,9 @@ class Courses extends Component {
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
-    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
+    <Link to='/Courses/CourseDetail'>
+    <Button  style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
+    </Link>
   </Card.Body>
 </Card>
                      </Col>

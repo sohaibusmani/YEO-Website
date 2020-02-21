@@ -11,6 +11,7 @@ import LandingPage from './Screens/LandingPage/landingPage';
 import About from './Screens/About/About';
 import Courses from './Screens/Courses/Courses'
 import Contact from './Screens/Contact/ContactUs';
+import CourseDetail from './Screens/Courses/CourseDetails';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/about' exact component={About}/>
           {/* <Route path='/Events'  component={Events}/> */}
           <Route path='/Courses' exact  component={Courses}/>
+          <Route path='/Courses/CourseDetail' exact component={CourseDetail}/>
           <Route path='/Contact' exact  component={Contact}/>
 
           </Switch>
