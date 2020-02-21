@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
 import {Container,Row,Col,Card,Button, Image} from 'react-bootstrap';
+import {Box} from '@material-ui/core';
 
 // Assets
 import logo from '../../Assets/Images/testimonial.jpg';
@@ -9,15 +10,11 @@ class Courses extends Component {
     render(){
         return(
             <React.Fragment>
+                 <div style={{ width: '100%' }}>
+          <Box display="flex" p={20} style={{backgroundColor:'#A20737'}}><span style={{color:'white', fontSize:'60px',marginTop:'-10px', marginLeft:'170px'}}>Event Planning Courses</span></Box>
+          
+        </div>
                 <Container>
-                <Row>
-                    <Col  >
-                        <Image src={logo} fluid/>
-                    </Col>
-                 </Row>
-                </Container>
-             <Container>
-                
                  <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
@@ -58,6 +55,9 @@ class Courses extends Component {
                      </Col>
                  </Row>
              </Container>
+             
+               
+            
             </React.Fragment>
         )
     }
