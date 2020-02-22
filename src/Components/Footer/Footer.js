@@ -46,12 +46,12 @@ class Footer extends React.Component {
                                                     <hr /> */}
                                                 <p>follow us to get notified with/about our latest news and </p>
                                                 <ul className="unordered-list">
-                                                    <a href='https://www.facebook.com/Youth.event.organizer/' style={{textDecoration:'none'}}>
+                                                    <a href='https://www.facebook.com/Youth.event.organizer/' style={{textDecoration:'none', color:'black'}}>
                                                     <li className="lik-unstyle social">
                                                         <FontAwesomeIcon size="2x"  icon={faFacebookSquare} className="icon fb-icon" />
                                                     </li>
                                                     </a>
-                                                    <a href='https://www.instagram.com/youtheventorganizer/'>
+                                                    <a href='https://www.instagram.com/youtheventorganizer/' style={{color:'black'}}>
                                                     <li className="lik-unstyle social">
                                                         <FontAwesomeIcon size="2x" icon={faInstagram} className="icon linkedin-icon" />
                                                     </li>
