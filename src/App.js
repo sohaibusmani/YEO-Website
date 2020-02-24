@@ -12,6 +12,7 @@ import About from './Screens/About/About';
 import Courses from './Screens/Courses/Courses'
 import Contact from './Screens/Contact/ContactUs';
 import CourseDetail from './Screens/Courses/CourseDetails';
+import BrandSection from './Screens/Courses/BrandSection';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           {/* <Route path='/Events'  component={Events}/> */}
           <Route path='/Courses' exact  component={Courses}/>
           <Route path='/Courses/CourseDetail' exact component={CourseDetail}/>
+          <Route path='/Courses/BrandSection' exact component={BrandSection}/>
           <Route path='/Contact' exact  component={Contact}/>
 
           </Switch>

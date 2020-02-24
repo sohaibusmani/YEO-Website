@@ -26,7 +26,7 @@ class Courses extends Component {
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
     <Link to='/Courses/CourseDetail'>
-    <Button  style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
+    <Button  style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Details</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -39,7 +39,9 @@ class Courses extends Component {
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
-    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
+    <Link to='/Courses/BrandSection'>
+    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Details</Button>
+    </Link>
   </Card.Body>
 </Card>
                      </Col>
