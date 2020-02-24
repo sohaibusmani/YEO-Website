@@ -2,9 +2,34 @@ import React , {Component} from 'react';
 import {Container,Row,Col,Card,Button, Image} from 'react-bootstrap';
 import {Box} from '@material-ui/core';
 import {Link} from 'react-router-dom';
+import styled from "@emotion/styled/macro";
 
 // Assets
-import logo from '../../Assets/Images/testimonial.jpg';
+import logo from '../../Assets/Images/eventsCover.jpg';
+
+const DisplayOver = styled.div({
+  height: "100%",
+  left: "0",
+  position: "absolute",
+  top: "0",
+  width: "100%",
+  zIndex: 2,
+  transition: "background-color 350ms ease",
+  backgroundColor: "transparent",
+  padding: "20px 20px 0 20px",
+  boxSizing: "border-box",
+  
+});
+
+const Background = styled.div({
+  position: "relative",
+  width: "100%",
+  height: "100%",
+  maxWidth: '100%',
+  maxHeight: '100%',
+  color: 'white',
+});
+
 
 
 class Courses extends Component {
@@ -12,7 +37,10 @@ class Courses extends Component {
         return(
             <React.Fragment>
                  <div style={{ width: '100%' }}>
-          <Box display="flex" p={20} style={{backgroundColor:'#A20737'}}><span style={{color:'white', fontSize:'60px',marginTop:'-10px', marginLeft:'170px'}}>Event Planning Courses</span></Box>
+                 <Background>
+                          <Image src={logo} style={{maxWidth:'100%', height:'auto', display:'block'}} responsive />
+                          
+                          </Background>
           
         </div>
                 <Container>
