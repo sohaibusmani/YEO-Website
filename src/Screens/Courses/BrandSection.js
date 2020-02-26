@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import {Container,Row,Card,Col,Image} from 'react-bootstrap';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import {Typography, Grid} from '@material-ui/core';
+import Footer from '../../Components/Footer/Footer';
 
 // Assets 
 import logo from '../../Assets/Images/eventsCover.jpg';
@@ -10,6 +10,7 @@ import axu from '../../Assets/Images/AXU.JPG';
 import miraculous from '../../Assets/Images/Miraculous.jpg';
 import eventezia from '../../Assets/Images/Eventezia.jpg';
 import neow from '../../Assets/Images/NEOW.jpg';
+import says from '../../Assets/Images/says.jpg';
 
 
 
@@ -28,20 +29,30 @@ class BrandSection extends Component {
                         <Col></Col>
                     </Row>
                     <Row>
-                        <Col xs={12} style={{marginTop:'80px', fontSize:'20px', textAlign:'center', color:'#AD365C', fontFamily:'cursive'}}>
+                        <Col xs={12} style={{marginTop:'80px', fontSize:'20px', textAlign:'center', color:'black', fontFamily:'cursive'}}>
                             <p>
                             Youth event organization is here to give platform to the youth to start their event management business in this market. Youth event organizer start their event management course at Usman Institute of Technology. Their first batch is enrolled and get the knowledge that how any event work. In this course we provide them a platform for their practical consideration so that students can groom their skills and get success in future.  
                             </p>
                         
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={4}></Col>
+                    <Row style={{marginTop:'20px'}}>
+                        <Col xs={4} md={4}></Col>
                         <Col>
-                            <h1>Our Brands</h1>
+                            <Typography
+                            style={{
+                              fontSize: '30px',
+                              color: '#AD365C',
+                              opacity:'1.9',
+                              textAlign: 'left',
+                              marginTop: '30px',
+                              fontWeight: 900,
+                              lineHeight: '30px',
+                              fontFamily: 'sans-serif',
+                          }} variant="h5" component="h2">Our Brands</Typography>
                         </Col>
                     </Row>
-                    <Row style={{marginTop:'20px'}}>
+                    <Row style={{marginTop:'100px'}}>
                        <Col md={4}>
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={bliss} />
@@ -55,7 +66,7 @@ class BrandSection extends Component {
                        </Col>
                        <Col md={4}>
                        <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={bliss} />
+  <Card.Img variant="top" src={says} />
   <Card.Body>
     <Card.Title>The AXU Eventors </Card.Title>
     <Card.Text>
@@ -114,6 +125,9 @@ class BrandSection extends Component {
                     </Row>
                     
                 </Container>
+                <Grid container style={{marginTop:'20px'}}>
+                  <Footer/>
+               </Grid>
                 
               
             </React.Fragment>

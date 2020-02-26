@@ -1,11 +1,14 @@
 import React , {Component} from 'react';
 import {Container,Row,Col,Card,Button, Image} from 'react-bootstrap';
-import {Box} from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 import styled from "@emotion/styled/macro";
 
 // Assets
 import logo from '../../Assets/Images/eventsCover.jpg';
+
+// Component
+import Footer from '../../Components/Footer/Footer';
 
 const DisplayOver = styled.div({
   height: "100%",
@@ -77,19 +80,23 @@ class Courses extends Component {
                      <Card style={{ width: '20rem',  }}>
   <Card.Img variant="top" src={logo}/>
   <Card.Body>
-    <Card.Title>Practical Classes</Card.Title>
+    <Card.Title>Internships</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Go somewhere</Button>
+    <Link to='/Courses/Internship'>
+    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Details</Button>
+    </Link>
   </Card.Body>
 </Card>
                      </Col>
                  </Row>
              </Container>
              
-               
+               <Grid container style={{marginTop:'20px'}}>
+                  <Footer/>
+               </Grid>
             
             </React.Fragment>
         )

@@ -13,6 +13,7 @@ import Courses from './Screens/Courses/Courses'
 import Contact from './Screens/Contact/ContactUs';
 import CourseDetail from './Screens/Courses/CourseDetails';
 import BrandSection from './Screens/Courses/BrandSection';
+import Internship from './Screens/Courses/Internship';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/Courses' exact  component={Courses}/>
           <Route path='/Courses/CourseDetail' exact component={CourseDetail}/>
           <Route path='/Courses/BrandSection' exact component={BrandSection}/>
+          <Route path='/Courses/Internship' exact component={Internship}/>
           <Route path='/Contact' exact  component={Contact}/>
 
           </Switch>
