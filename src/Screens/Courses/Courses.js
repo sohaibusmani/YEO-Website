@@ -39,13 +39,12 @@ class Courses extends Component {
     render(){
         return(
             <React.Fragment>
-                 <div style={{ width: '100%' }}>
-                 <Background>
-                          <Image src={logo} style={{maxWidth:'100%', height:'auto', display:'block'}} responsive />
-                          
-                          </Background>
-          
-        </div>
+                 <div style={{backgroundImage:`url(${logo})`,
+             width: '100%',
+             height: '500px',
+             backgroundSize:'100% 100%'}}>
+
+              </div>
                 <Container>
                  <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
