@@ -8,6 +8,8 @@ import {
     Divider
 } from "@material-ui/core";
 
+import Navbar from '../../Components/Navbar/Navbar'
+
 
 
 
@@ -170,6 +172,7 @@ class LandingPage extends Component {
         const { classes } = this.props;
         return(
             <React.Fragment>
+                <Navbar/>
                 <Grid container>
                 <Grid ref={this.block1Ref} item xs={12} md={12}>
                         <LandingPage1 getBlock1Height={this.getBlock1Height} />

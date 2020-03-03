@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SearchAppBar from './Components/Navbar/Navbar';
+import { withStyles } from '@material-ui/core/styles';
 
 // Routing
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect , withRouter} from 'react-router-dom';
 
 // Screens
 import LandingPage from './Screens/LandingPage/landingPage';
@@ -14,12 +14,20 @@ import Contact from './Screens/Contact/ContactUs';
 import CourseDetail from './Screens/Courses/CourseDetails';
 import BrandSection from './Screens/Courses/BrandSection';
 import Internship from './Screens/Courses/Internship';
+import Packages from './Screens/Packages/Packages';
+import WeddingPackages from './Screens/Packages/Components/WeddingPackages';
+
+const styles = (theme => {
+  
+})
 
 
-function App() {
-  return (
-    <Router>
-    <SearchAppBar/>
+class App extends React.Component{
+  render(){
+    return(
+      <React.Fragment>
+         <Router>
+    {/* <SearchAppBar/> */}
     
     <Switch>
       <Route path='/' exact component={()=><LandingPage/>} />
@@ -31,10 +39,14 @@ function App() {
           <Route path='/Courses/BrandSection' exact component={BrandSection}/>
           <Route path='/Courses/Internship' exact component={Internship}/>
           <Route path='/Contact' exact  component={Contact}/>
+          <Route path='/Packages' exact  component={Packages}/>
 
           </Switch>
     </Router>
-  );
+      </React.Fragment>
+    )
+  }
 }
 
+// export default withRouter(withStyles(styles)(App));
 export default App;

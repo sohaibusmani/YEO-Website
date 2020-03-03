@@ -76,7 +76,7 @@ return(
                                 <img
                                     src={Logo}
                                     style={{
-                                        width: "180px",
+                                        width: "150px",
                                         height: "80px",
                                         position: "absolute",
                                         bottom: " 0px",
@@ -113,13 +113,13 @@ return(
                                     Courses
                                 </Button>
                             </Link>
-                            <Link to='/About' style={{ textDecoration: "none" }}>
+                            <Link to='/Packages' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
                                     className={classes.categoriesButton}
                                 >
-                                    Grow Careers
+                                    Packages
                                 </Button>
                             </Link>
                             <Link to='/About' style={{ textDecoration: "none" }}>
