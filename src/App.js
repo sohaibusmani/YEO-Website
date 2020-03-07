@@ -40,6 +40,7 @@ class App extends React.Component{
           <Route path='/Courses/Internship' exact component={Internship}/>
           <Route path='/Contact' exact  component={Contact}/>
           <Route path='/Packages' exact  component={Packages}/>
+          
 
           </Switch>
     </Router>

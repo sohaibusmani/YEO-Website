@@ -39,7 +39,7 @@ class SideNavigations extends Component {
                         <ListItemIcon>
                             <BarChartIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Analytics" />
+                        <ListItemText primary="Wedding Packages" />
                     </ListItem>
                     <ListItem button onClick={()=> {history.push('/teller-panel')}}>
                         <ListItemIcon>
