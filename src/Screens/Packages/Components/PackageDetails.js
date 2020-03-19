@@ -1,5 +1,5 @@
-import React , {Component} from 'react';
-import {Card,Col,Row, Container,Form,Button} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Card, Col, Row, Container, Form, Button } from 'react-bootstrap';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
 
@@ -16,7 +16,7 @@ import image2 from '../../../Assets/Images/eventsCover.jpg';
 import image3 from '../../../Assets/Images/testimonial.jpg';
 
 class PackageDetails extends Component {
-    render(){
+    render() {
 
         const images = [
             {
@@ -37,73 +37,80 @@ class PackageDetails extends Component {
             },
         ]
 
-        return(
+        return (
             <React.Fragment>
-                <Navbar/>
+                <Navbar />
                 <div>
-                <div style={{backgroundImage:`url(${logo})`,
-             width: '100%',
-             height: '400px',
-             backgroundSize:'100% 100%'}}>
+                    <div style={{
+                        backgroundImage: `url(${logo})`,
+                        width: '100%',
+                        height: '400px',
+                        backgroundSize: '100% 100%'
+                    }}>
 
-              </div>
-             
+                    </div>
+
                 </div>
-                <Container style={{marginTop:'50px'}} fluid>
+                <Container style={{ marginTop: '50px' }} fluid>
                     <Row>
                         <Col md={8}>
                             <div>
-                          <ImageGallery style={{ height: 50 }} thumbnailPosition='bottom' autoPlay={true} items={images}/>
-                          </div>
+                                <ImageGallery style={{ height: 50 }} thumbnailPosition='bottom' autoPlay={true} items={images} />
+                            </div>
                         </Col>
                         <Col md={1}></Col>
                         <Col md={3}>
-                          <Row>
-                              <Card style={{minWidth: 325}}>
-                                  <Card.Body>
-                                      <Card.Header>
-                                      <Card.Title  style={{textAlign:'center'}}>
-                                          <strong>RS 30,000</strong>
-                                      </Card.Title>
-                                      </Card.Header>
-                                      <Card.Text>
-                                          Call Youth Event Oganizers For More info
-                                          <br/>
+                            <Row>
+                                <Card style={{ minWidth: 325 }}>
+                                    <Card.Body>
+                                        <Card.Header>
+                                            <Card.Title style={{ textAlign: 'center' }}>
+                                                <strong>RS 30,000</strong>
+                                            </Card.Title>
+                                        </Card.Header>
+                                        <Card.Text>
+                                            Call Youth Event Oganizers For More info
+                                          <br />
                                           Feel Free to call
-                                          <br/>
+                                          <br />
                                           0311-1017653
                                       </Card.Text>
-                                  </Card.Body>
-                              </Card>
-                          </Row>
-                          <Row>
-                            <Col md={12} style={{marginTop:'5rem'}}>
-                            <Form>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
+                                    </Card.Body>
+                                </Card>
+                            </Row>
+                            <Row>
+                                <Col md={12} style={{ marginTop: '5rem' }}>
+                                    <h3>
+                                        Your Requirements
+                                    </h3>
+                                    <br/>
+                                    <Form>
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Label>Email address</Form.Label>
+                                            <Form.Control type="email" placeholder="Enter email" />
+                                            <Form.Text className="text-muted">
+                                                We'll never share your email with anyone else.
     </Form.Text>
-  </Form.Group>
+                                        </Form.Group>
 
-  <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>Password</Form.Label>
+                                            <Form.Control type="password" placeholder="Password" />
+                                        </Form.Group>
+                                        <Form.Group controlId="formBasicCheckbox">
+                                            <Form.Label>Contact Number</Form.Label>
+                                            <Form.Control type="number" placeholder="Contact Number"/>
+                                        </Form.Group>
+                                        <Button variant="primary" type="submit">
+                                            Submit
   </Button>
-</Form>
-                            </Col>
-                          </Row>
+                                    </Form>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                 </Container>
-                
+
             </React.Fragment>
         )
     }
