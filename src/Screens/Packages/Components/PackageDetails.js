@@ -55,9 +55,28 @@ class PackageDetails extends Component {
                           <ImageGallery style={{ height: 50 }} thumbnailPosition='bottom' autoPlay={true} items={images}/>
                           </div>
                         </Col>
-                        <Col md={4}>
+                        <Col md={1}></Col>
+                        <Col md={3}>
                           <Row>
-                              
+                              <Card style={{minWidth: 325}}>
+                                  <Card.Body>
+                                      <Card.Header>
+                                      <Card.Title  style={{textAlign:'center'}}>
+                                          <strong>RS 30,000</strong>
+                                      </Card.Title>
+                                      </Card.Header>
+                                      <Card.Text>
+                                          Call Youth Event Oganizers For More info
+                                          <br/>
+                                          Feel Free to call
+                                          <br/>
+                                          0311-1017653
+                                      </Card.Text>
+                                  </Card.Body>
+                              </Card>
+                          </Row>
+                          <Row>
+                            
                           </Row>
                         </Col>
                     </Row>
