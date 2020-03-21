@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Col, Row, Container, Form, Button } from 'react-bootstrap';
-import {InputLabel , TextField} from '@material-ui/core';
+import { InputLabel, TextField } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
@@ -9,6 +9,7 @@ import ImageGallery from "react-image-gallery";
 // Components
 
 import Navbar from '../../../Components/Navbar/Navbar';
+import EventTypes from './Dropdown';
 
 // Assets
 
@@ -19,41 +20,47 @@ import image3 from '../../../Assets/Images/testimonial.jpg';
 
 const styles = {
     textField: {
-      backgroundColor: 'white',
-      color: 'black',
-      '&:hover': {
-        "& $notchedOutline": {
-          borderColor: '#008081 !important',
-          border: '2px solid',
-        }
-      },
-      marginBottom: '10px',
+        backgroundColor: 'white',
+        color: 'black',
+        '&:hover': {
+            "& $notchedOutline": {
+                borderColor: '#AD365C !important',
+                border: '2px solid',
+            }
+        },
+        marginBottom: '10px',
     },
     notchedOutline: {
-      borderColor: '#008081',
+        borderColor: '#AD365C',
     },
     focused: {
-      "& $notchedOutline": {
-        borderColor: '#008081 !important',
-      }
+        "& $notchedOutline": {
+            borderColor: '#AD365C !important',
+        }
     },
-  };
+};
 
 class PackageDetails extends Component {
 
-    state={
-        name : '',
-        email : '',
-        contactNumber : '',
-        guests:'',
-        eventDate:'',
-        eventLocation:'',
-        eventTime:'',
-        otherRequirements:'',
-      }
+    state = {
+        name: '',
+        email: '',
+        contactNumber: '',
+        guests: '',
+        eventDate: '',
+        eventLocation: '',
+        eventTime: '',
+        otherRequirements: '',
+    }
+
+    getEventTypes = eventtype => {
+        this.setState({
+            eventtype,
+        })
+    }
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
 
         const images = [
             {
@@ -136,8 +143,11 @@ class PackageDetails extends Component {
                                         }}
                                         style={{ width: '100%' }}
                                         onChange={e => this.setState({ name: e.target.value })}
-                                        
+
                                     />
+
+                                    <InputLabel style={{ fontWeight: 'bold', marginBottom: 5 }} >Event Type</InputLabel>
+                                    <EventTypes opt={this.getEventTypes} />
 
                                     <Button variant="primary" type="submit">
                                         Submit
