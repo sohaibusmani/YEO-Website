@@ -9,7 +9,7 @@ import ImageGallery from "react-image-gallery";
 // Components
 
 import Navbar from '../../../Components/Navbar/Navbar';
-import EventTypes from './Dropdown';
+import { EventTypes, EventTimes } from './Dropdown';
 
 // Assets
 
@@ -49,13 +49,20 @@ class PackageDetails extends Component {
         guests: '',
         eventDate: '',
         eventLocation: '',
+        eventType: '',
         eventTime: '',
         otherRequirements: '',
     }
 
-    getEventTypes = eventtype => {
+    getEventTypes = eventType => {
         this.setState({
-            eventtype,
+            eventType,
+        })
+    }
+
+    getEventTimes = eventTime => {
+        this.setState({
+            eventTime,
         })
     }
 
@@ -102,7 +109,7 @@ class PackageDetails extends Component {
                                 <ImageGallery style={{ height: 50 }} thumbnailPosition='bottom' autoPlay={true} items={images} />
                             </div>
                         </Col>
-                        <Col md={1}></Col>
+                        
                         <Col md={3}>
                             <Row>
                                 <Card style={{ minWidth: 325 }}>
@@ -123,14 +130,15 @@ class PackageDetails extends Component {
                                 </Card>
                             </Row>
                             <Row>
+                            <Container style={{border:'1px solid #AD365C' , marginTop : '3rem'}}>
                                 <Col md={12} style={{ marginTop: '5rem' }}>
                                     <h3>
                                         Your Requirements
                                     </h3>
                                     <br />
-                                    <InputLabel style={{ fontWeight: 'bold', marginBottom: 5 }} >Name</InputLabel>
+
                                     <TextField
-                                        variant='outlined'
+                                        id="standard-basic"
                                         size='small'
                                         required
                                         placeholder="Name"
@@ -141,19 +149,112 @@ class PackageDetails extends Component {
                                                 focused: classes.focused,
                                             }
                                         }}
-                                        style={{ width: '100%' }}
+                                        style={{ width: '100%' , marginTop:'3rem' }}
                                         onChange={e => this.setState({ name: e.target.value })}
 
                                     />
 
-                                    <InputLabel style={{ fontWeight: 'bold', marginBottom: 5 }} >Event Type</InputLabel>
+                                    <TextField
+                                        id="standard-basic"
+                                        size='small'
+                                        required
+                                        placeholder="Email"
+                                        className={classes.textField}
+                                        InputProps={{
+                                            classes: {
+                                                notchedOutline: classes.notchedOutline,
+                                                focused: classes.focused,
+                                            }
+                                        }}
+                                        style={{ width: '100%', marginTop:'3rem' }}
+                                        onChange={e => this.setState({ email: e.target.value })}
+
+                                    />
+
+                                    <TextField
+                                        id="standard-basic"
+                                        size='small'
+                                        required
+                                        placeholder="Number"
+                                        className={classes.textField}
+                                        InputProps={{
+                                            classes: {
+                                                notchedOutline: classes.notchedOutline,
+                                                focused: classes.focused,
+                                            }
+                                        }}
+                                        type='number'
+                                        style={{ width: '100%', marginTop:'3rem' }}
+                                        onChange={e => this.setState({ contactNumber: e.target.value })}
+
+                                    />
+
+                                    <TextField
+                                        id="standard-basic"
+                                        size='small'
+                                        required
+                                        placeholder="Date"
+                                        className={classes.textField}
+                                        InputProps={{
+                                            classes: {
+                                                notchedOutline: classes.notchedOutline,
+                                                focused: classes.focused,
+                                            }
+                                        }}
+                                        type='text'
+                                        style={{ width: '100%', marginTop:'3rem' }}
+                                        onChange={e => this.setState({ eventDate: e.target.value })}
+
+                                    />
+
+                                    <TextField
+                                        id="standard-basic"
+                                        size='small'
+                                        required
+                                        placeholder="Location"
+                                        className={classes.textField}
+                                        InputProps={{
+                                            classes: {
+                                                notchedOutline: classes.notchedOutline,
+                                                focused: classes.focused,
+                                            }
+                                        }}
+                                        type='text'
+                                        style={{ width: '100%' , marginTop:'3rem'}}
+                                        onChange={e => this.setState({ eventLocation: e.target.value })}
+
+                                    />
+
+                                    <TextField
+                                        id="standard-basic"
+                                        size='small'
+                                        required
+                                        placeholder="No. Of guests"
+                                        className={classes.textField}
+                                        InputProps={{
+                                            classes: {
+                                                notchedOutline: classes.notchedOutline,
+                                                focused: classes.focused,
+                                            }
+                                        }}
+                                        type='number'
+                                        style={{ width: '100%', marginTop:'3rem' }}
+                                        onChange={e => this.setState({ guests: e.target.value })}
+
+                                    />
+
+
+
                                     <EventTypes opt={this.getEventTypes} />
 
-                                    <Button variant="primary" type="submit">
+                                    <EventTimes opt={this.getEventTimes} />
+
+                                    <Button style={{ backgroundColor: '#AD365C',  borderColor: '#AD365C' }}>
                                         Submit
   </Button>
-
+    
                                 </Col>
+                                </Container>
                             </Row>
                         </Col>
                     </Row>

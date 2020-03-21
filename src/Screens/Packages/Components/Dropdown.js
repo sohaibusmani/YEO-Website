@@ -12,7 +12,7 @@ const EventTypesValues = [
     label:suggestion.label,
 }));
 
-const EventtimesValues = [
+const EventTimesValues = [
     {label:'Lunch'},
     {label:'Dinner'},
 ].map(suggestion => ({
@@ -88,9 +88,9 @@ function RenderDropDown(props) {
                         marginBottom: '10px',
                         // backgroundColor: 'white',
                         color: 'black',
-                        border: '1px solid #008081',
+                        border: '1px solid #AD365C',
                         '&:hover': {
-                            border: '1px solid #008081',
+                            border: '1px solid #AD365C',
                         },
                     }),
                     container: styles => ({
@@ -127,7 +127,7 @@ function RenderDropDown(props) {
     )
 };
 
-export default class EventTypes extends React.Component {
+export  class EventTypes extends React.Component {
 
     state = {
         option: null,
@@ -145,6 +145,29 @@ export default class EventTypes extends React.Component {
             <React.Fragment>
                 {/* <RenderDropDown opt={groupedOptionsForMobileMake} /> */}
                 <RenderDropDown option={EventTypesValues} selectedOption={this.props.selectedItem} placeholder={'Event Type'} getOption={this.getOption} />
+            </React.Fragment>
+        );
+    }
+};
+
+export  class EventTimes extends React.Component {
+
+    state = {
+        option: null,
+        completeValues: [],
+    }
+
+    getOption = (option) => {
+        const { opt } = this.props;
+        console.log(option)
+        opt(option);
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                {/* <RenderDropDown opt={groupedOptionsForMobileMake} /> */}
+                <RenderDropDown option={EventTimesValues} selectedOption={this.props.selectedItem} placeholder={'Event Time'} getOption={this.getOption} />
             </React.Fragment>
         );
     }
