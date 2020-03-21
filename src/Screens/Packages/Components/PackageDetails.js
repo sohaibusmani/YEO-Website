@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Col, Row, Container, Form, Button } from 'react-bootstrap';
+import {InputLabel , TextField} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
 
@@ -15,8 +17,43 @@ import image1 from '../../../Assets/Images/event.jpg';
 import image2 from '../../../Assets/Images/eventsCover.jpg';
 import image3 from '../../../Assets/Images/testimonial.jpg';
 
+const styles = {
+    textField: {
+      backgroundColor: 'white',
+      color: 'black',
+      '&:hover': {
+        "& $notchedOutline": {
+          borderColor: '#008081 !important',
+          border: '2px solid',
+        }
+      },
+      marginBottom: '10px',
+    },
+    notchedOutline: {
+      borderColor: '#008081',
+    },
+    focused: {
+      "& $notchedOutline": {
+        borderColor: '#008081 !important',
+      }
+    },
+  };
+
 class PackageDetails extends Component {
+
+    state={
+        name : '',
+        email : '',
+        contactNumber : '',
+        guests:'',
+        eventDate:'',
+        eventLocation:'',
+        eventTime:'',
+        otherRequirements:'',
+      }
+
     render() {
+        const {classes} = this.props;
 
         const images = [
             {
@@ -83,28 +120,29 @@ class PackageDetails extends Component {
                                     <h3>
                                         Your Requirements
                                     </h3>
-                                    <br/>
-                                    <Form>
-                                        <Form.Group controlId="formBasicEmail">
-                                            <Form.Label>Email address</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" />
-                                            <Form.Text className="text-muted">
-                                                We'll never share your email with anyone else.
-    </Form.Text>
-                                        </Form.Group>
+                                    <br />
+                                    <InputLabel style={{ fontWeight: 'bold', marginBottom: 5 }} >Name</InputLabel>
+                                    <TextField
+                                        variant='outlined'
+                                        size='small'
+                                        required
+                                        placeholder="Name"
+                                        className={classes.textField}
+                                        InputProps={{
+                                            classes: {
+                                                notchedOutline: classes.notchedOutline,
+                                                focused: classes.focused,
+                                            }
+                                        }}
+                                        style={{ width: '100%' }}
+                                        onChange={e => this.setState({ name: e.target.value })}
+                                        
+                                    />
 
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
-                                        </Form.Group>
-                                        <Form.Group controlId="formBasicCheckbox">
-                                            <Form.Label>Contact Number</Form.Label>
-                                            <Form.Control type="number" placeholder="Contact Number"/>
-                                        </Form.Group>
-                                        <Button variant="primary" type="submit">
-                                            Submit
+                                    <Button variant="primary" type="submit">
+                                        Submit
   </Button>
-                                    </Form>
+
                                 </Col>
                             </Row>
                         </Col>
@@ -116,4 +154,4 @@ class PackageDetails extends Component {
     }
 }
 
-export default PackageDetails;
+export default withStyles(styles)(PackageDetails);
