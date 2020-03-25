@@ -116,7 +116,7 @@ class PackageDetails extends Component {
                                 <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}></Col>
                             </Row>
                             <Row>
-                                <Container >
+                                
                                    
                                     <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}>
                                       <h4>Deal Includes:</h4>
@@ -130,7 +130,19 @@ class PackageDetails extends Component {
                                           <li><Typography>3 bridal shower games</Typography></li>
                                       </ul>
                                     </Col>
-                                </Container>
+                                    <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}>
+                                      <h4>Catering:</h4>
+                                      <ul>
+                                          <li><Typography>Biryani</Typography></li>
+                                          <li><Typography>Karahi</Typography></li>
+                                          <li><Typography>Handi</Typography></li>
+                                          <li><Typography>Fish</Typography></li>
+                                          <li><Typography>wong Tong</Typography></li>
+                                          <li><Typography>Stake</Typography></li>
+                                          <li><Typography>Labnani Kabab</Typography></li>
+                                      </ul>
+                                    </Col>
+                               
                             </Row>
                         </Col>
                         <Col md={1}></Col>
