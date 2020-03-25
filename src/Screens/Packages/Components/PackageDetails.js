@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Col, Row, Container, Form, Button } from 'react-bootstrap';
-import { InputLabel, TextField } from '@material-ui/core';
+import { InputLabel, TextField , Typography} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
@@ -82,14 +82,14 @@ class PackageDetails extends Component {
                 original: image2,
                 thumbnail: image2,
             },
-            {
-                original: image3,
-                thumbnail: image3,
-            },
+            // {
+            //     original: image3,
+            //     thumbnail: image3,
+            // },
         ]
 
         return (
-            <React.Fragment>
+            <React.Fragment >
                 <Navbar />
                 <div>
                     <div style={{
@@ -105,11 +105,35 @@ class PackageDetails extends Component {
                 <Container style={{ marginTop: '50px' }} fluid>
                     <Row>
                         <Col md={8}>
+                            <Row>
                             <div>
                                 <ImageGallery style={{ height: 50 }} thumbnailPosition='bottom' autoPlay={true} items={images} />
                             </div>
+                            </Row>
+                            <Row>
+                                <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}></Col>
+                                <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}><h2><strong>About the Deal</strong></h2></Col>
+                                <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}></Col>
+                            </Row>
+                            <Row>
+                                <Container >
+                                   
+                                    <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}>
+                                      <h4>Deal Includes:</h4>
+                                      <ul>
+                                          <li><Typography>Table décor with all the relevant décor</Typography></li>
+                                          <li><Typography>Chocolate fountain with Goodies</Typography></li>
+                                          <li><Typography>Juice corner</Typography></li>
+                                          <li><Typography>Balloon décor</Typography></li>
+                                          <li><Typography>Photo booth with props</Typography></li>
+                                          <li><Typography>30 floral tiaras</Typography></li>
+                                          <li><Typography>3 bridal shower games</Typography></li>
+                                      </ul>
+                                    </Col>
+                                </Container>
+                            </Row>
                         </Col>
-                        
+                        <Col md={1}></Col>
                         <Col md={3}>
                             <Row>
                                 <Card style={{ minWidth: 325 }}>
@@ -244,12 +268,13 @@ class PackageDetails extends Component {
                                     />
 
 
-
+                                     <br/>
+                                     <br/>
                                     <EventTypes opt={this.getEventTypes} />
-
+                                    <br/>
                                     <EventTimes opt={this.getEventTimes} />
-
-                                    <Button style={{ backgroundColor: '#AD365C',  borderColor: '#AD365C' }}>
+                                    <br/>
+                                    <Button style={{  backgroundColor: '#AD365C',  borderColor: '#AD365C' }}>
                                         Submit
   </Button>
     
