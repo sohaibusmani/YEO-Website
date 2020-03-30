@@ -10,6 +10,7 @@ import ImageGallery from "react-image-gallery";
 
 import Navbar from '../../../Components/Navbar/Navbar';
 import { EventTypes, EventTimes } from './Dropdown';
+import Footer from '../../../Components/Footer/Footer'
 
 // Assets
 
@@ -91,11 +92,12 @@ class PackageDetails extends Component {
         return (
             <React.Fragment >
                 <Navbar />
+                <div style={{marginBottom:'3rem'}}>
                 <div>
                     <div style={{
                         backgroundImage: `url(${logo})`,
                         width: '100%',
-                        height: '400px',
+                        height: '300px',
                         backgroundSize: '100% 100%'
                     }}>
 
@@ -118,19 +120,19 @@ class PackageDetails extends Component {
                             <Row>
                                 
                                    
-                                    <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}>
+                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
                                       <h4>Deal Includes:</h4>
                                       <ul>
-                                          <li><Typography>Table décor with all the relevant décor</Typography></li>
+                                          <li><Typography>Table décor </Typography></li>
                                           <li><Typography>Chocolate fountain with Goodies</Typography></li>
                                           <li><Typography>Juice corner</Typography></li>
                                           <li><Typography>Balloon décor</Typography></li>
-                                          <li><Typography>Photo booth with props</Typography></li>
+                                         
                                           <li><Typography>30 floral tiaras</Typography></li>
                                           <li><Typography>3 bridal shower games</Typography></li>
                                       </ul>
                                     </Col>
-                                    <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}>
+                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
                                       <h4>Catering:</h4>
                                       <ul>
                                           <li><Typography>Biryani</Typography></li>
@@ -142,13 +144,37 @@ class PackageDetails extends Component {
                                           <li><Typography>Labnani Kabab</Typography></li>
                                       </ul>
                                     </Col>
+                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
+                                      <h4>Photography:</h4>
+                                      <ul>
+                                          <li><Typography>Biryani</Typography></li>
+                                          <li><Typography>Karahi</Typography></li>
+                                          <li><Typography>Handi</Typography></li>
+                                          <li><Typography>Fish</Typography></li>
+                                          <li><Typography>wong Tong</Typography></li>
+                                          <li><Typography>Stake</Typography></li>
+                                          <li><Typography>Labnani Kabab</Typography></li>
+                                      </ul>
+                                    </Col>
+                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
+                                      <h4>Themes:</h4>
+                                      <ul>
+                                          <li><Typography>Cinderella</Typography></li>
+                                          <li><Typography>Fashionista</Typography></li>
+                                          <li><Typography>Bollywood</Typography></li>
+                                          <li><Typography>Chanel</Typography></li>
+                                          <li><Typography>Vogue</Typography></li>
+                                          <li><Typography>Black n gold</Typography></li>
+                                          <li><Typography>Tiffany & Co.</Typography></li>
+                                      </ul>
+                                    </Col>
                                
                             </Row>
                         </Col>
                         <Col md={1}></Col>
-                        <Col md={3}>
+                        <Col style={{marginLeft:'-2rem'}} md={3}>
                             <Row>
-                                <Card style={{ minWidth: 325 }}>
+                                <Card style={{ minWidth: 325 , borderColor:'#AD365C' }}>
                                     <Card.Body>
                                         <Card.Header>
                                             <Card.Title style={{ textAlign: 'center' }}>
@@ -288,7 +314,7 @@ class PackageDetails extends Component {
                                     <br/>
                                     <Button style={{  backgroundColor: '#AD365C',  borderColor: '#AD365C' }}>
                                         Submit
-  </Button>
+                                  </Button>
     
                                 </Col>
                                 </Container>
@@ -296,7 +322,8 @@ class PackageDetails extends Component {
                         </Col>
                     </Row>
                 </Container>
-
+                </div>
+   <Footer/>
             </React.Fragment>
         )
     }
