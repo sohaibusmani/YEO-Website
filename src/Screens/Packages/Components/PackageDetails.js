@@ -4,6 +4,7 @@ import { InputLabel, TextField , Typography} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
+import {Link} from 'react-router-dom';
 
 
 // Components
@@ -39,6 +40,16 @@ const styles = {
             borderColor: '#AD365C !important',
         }
     },
+    button:{
+        backgroundColor: 'white',
+        color: '#AD365C',
+        borderColor: '#AD365C !important',
+        '&:hover': {
+            backgroundColor: '#AD365C',
+            borderColor: '#AD365C',
+            
+          },
+    }
 };
 
 class PackageDetails extends Component {
@@ -176,7 +187,7 @@ class PackageDetails extends Component {
                             <Row>
                                 <Card style={{ minWidth: 325 , borderColor:'#AD365C' }}>
                                     <Card.Body>
-                                        <Card.Header>
+                                        <Card.Header style={{backgroundColor:'white', color:'#AD365C'}}>
                                             <Card.Title style={{ textAlign: 'center' }}>
                                                 <strong>RS 30,000</strong>
                                             </Card.Title>
@@ -188,6 +199,13 @@ class PackageDetails extends Component {
                                           <br />
                                           0311-1017653
                                       </Card.Text>
+                                      <hr/>
+                                      <Link style={{textDecoration:'none'}}>
+                                      
+                                       <Button className={classes.button} block>
+                                            Chat with Admin
+                                           </Button>
+                                           </Link>
                                     </Card.Body>
                                 </Card>
                             </Row>
