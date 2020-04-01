@@ -2,6 +2,7 @@ import React from 'react';
 import  {Card, Container , Row , Col , Button} from 'react-bootstrap';
 import {Typography} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import {Link} from 'react-router-dom';
 
 // Components
 import Navbar from '../../../Components/Navbar/Navbar'
@@ -87,7 +88,9 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
+                               <Link to='/Packages/PackageDetails' style={{textDecoration:'none'}}>
                                  <Button className={classes.button} block>View Details</Button>
+                                 </Link>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -127,7 +130,9 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
+                               <Link to='/PackageDetails'>
                                  <Button className={classes.button} block>View Details</Button>
+                                 </Link>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -168,7 +173,9 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
+                               <Link to='/PackageDetails'>
                                  <Button className={classes.button} block>View Details</Button>
+                                 </Link>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -207,7 +214,9 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
+                               <Link to='/PackageDetails'>
                                  <Button className={classes.button} block>View Details</Button>
+                                 </Link>
                                </Col>
                                <Col></Col>
                            </Row>
