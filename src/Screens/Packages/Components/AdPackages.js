@@ -4,24 +4,121 @@ import {Typography} from '@material-ui/core';
 
 // Components
 import Navbar from '../../../Components/Navbar/Navbar'
+import Footer from '../../../Components/Footer/Footer'
 
 // Assets
 import logo from '../../../Assets/Images/event1.jpg'
+import logo1 from '../../../Assets/Images/event.jpg'
+import Photography from '../../../Assets/Images/Photography.jpg' 
+import pcover from '../../../Assets/Images/pCover1.jpg'
 
 class AdPackages extends React.Component{
     render(){
         return(
             <React.Fragment>
                  <Navbar/>
-                 <div>
-                     <Card style={{ width: '40rem' , boxShadow:'2px 2px 2px 2px #AD365C'}}>
-                         <Card.Header style={{backgroundColor:'white', color:'#AD365C'}}>
+                 
+                    <div style={{
+                        backgroundImage: `url(${pcover})`,
+                        width: '100%',
+                        height: '350px',
+                        backgroundSize: '100% 100%'
+                    }}>
+
+                    </div>
+                 <div style={{marginTop:'50px', marginBottom:'50px'}}>
+                     <Container fluid>
+                         <Row>
+                             <Col md={6} lg={6} sm={12}>
+                     <Card style={{ width: '40rem', borderColor:'#AD365C'}}>
+                         <Card.Header style={{backgroundColor:'#AD365C', color:'white'}}>
                          <Card.Title>
-                             Mehendi Packages
+                             Photography Package
                          </Card.Title>
                          </Card.Header>
                          <Card.Body>
                          <Container>
+                           <Row>
+                               <Col lg={8} md={8} sm={12}>
+                                  <Card.Img variant='top' src={Photography}/>
+                               </Col>
+                               <Col lg={4} md={4} >
+                                   <h4>Deal includes:</h4>
+                                   <ul>
+                                          <li><Typography>Food</Typography></li>
+                                          <li><Typography>Decor</Typography></li>
+                                          <li><Typography>Photography</Typography></li>
+                                          <li><Typography>DJ</Typography></li>
+                                         
+                                          <li><Typography>Starter</Typography></li>
+                                          <li><Typography>Games</Typography></li>
+                                      </ul>
+                               </Col>
+                           </Row>
+                           <hr/>
+                           <Row>
+                               <Col lg={3} md={3}>
+                               </Col>
+                               <Col >
+                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                               </Col>
+                               <Col></Col>
+                           </Row>
+                         </Container>
+                         </Card.Body>
+                     </Card>
+                     </Col>
+                     
+                     <Col md={6} lg={6} sm={12}>
+                     <Card style={{ width: '40rem', borderColor:'#AD365C'}}>
+                         <Card.Header style={{backgroundColor:'#AD365C', color:'white'}}>
+                         <Card.Title>
+                             Birthday Supreme Package
+                         </Card.Title>
+                         </Card.Header>
+                         <Card.Body>
+                         <Container >
+                           <Row>
+                               <Col lg={8} md={8} sm={12}>
+                                  <Card.Img variant='top' src={logo1}/>
+                               </Col>
+                               <Col lg={4} md={4} >
+                                   <h4>Deal includes:</h4>
+                                   <ul>
+                                          <li><Typography>Food</Typography></li>
+                                          <li><Typography>Decor</Typography></li>
+                                          <li><Typography>Photography</Typography></li>
+                                          <li><Typography>DJ</Typography></li>
+                                         
+                                          <li><Typography>Starter</Typography></li>
+                                          <li><Typography>Games</Typography></li>
+                                      </ul>
+                               </Col>
+                           </Row>
+                           <hr/>
+                           <Row>
+                               <Col lg={3} md={3}>
+                               </Col>
+                               <Col >
+                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                               </Col>
+                               <Col></Col>
+                           </Row>
+                         </Container>
+                         </Card.Body>
+                     </Card>
+                     </Col>
+                     </Row>
+                     <Row style={{marginTop:'50px'}}>
+                         <Col  md={6} lg={6}>
+                         <Card style={{ width: '40rem', borderColor:'#AD365C'}}>
+                         <Card.Header style={{backgroundColor:'#AD365C', color:'white'}}>
+                         <Card.Title>
+                             Mehendi Supreme Package
+                         </Card.Title>
+                         </Card.Header>
+                         <Card.Body>
+                         <Container >
                            <Row>
                                <Col lg={8} md={8} sm={12}>
                                   <Card.Img variant='top' src={logo}/>
@@ -51,7 +148,51 @@ class AdPackages extends React.Component{
                          </Container>
                          </Card.Body>
                      </Card>
+                         </Col>
+                         <Col md={6} lg={6}>
+                         <Card style={{ width: '40rem', borderColor:'#AD365C'}}>
+                         <Card.Header style={{backgroundColor:'#AD365C', color:'white'}}>
+                         <Card.Title>
+                             Birthday Supreme Package
+                         </Card.Title>
+                         </Card.Header>
+                         <Card.Body>
+                         <Container >
+                           <Row>
+                               <Col lg={8} md={8} sm={12}>
+                                  <Card.Img variant='top' src={logo1}/>
+                               </Col>
+                               <Col lg={4} md={4} >
+                                   <h4>Deal includes:</h4>
+                                   <ul>
+                                          <li><Typography>Food</Typography></li>
+                                          <li><Typography>Decor</Typography></li>
+                                          <li><Typography>Photography</Typography></li>
+                                          <li><Typography>DJ</Typography></li>
+                                         
+                                          <li><Typography>Starter</Typography></li>
+                                          <li><Typography>Games</Typography></li>
+                                      </ul>
+                               </Col>
+                           </Row>
+                           <hr/>
+                           <Row>
+                               <Col lg={3} md={3}>
+                               </Col>
+                               <Col >
+                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                               </Col>
+                               <Col></Col>
+                           </Row>
+                         </Container>
+                         </Card.Body>
+                     </Card>
+                           </Col>
+
+                     </Row>
+                     </Container>
                  </div>
+                 <Footer/>
             </React.Fragment>
         )
     }
