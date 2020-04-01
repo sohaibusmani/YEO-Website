@@ -1,6 +1,7 @@
 import React from 'react';
 import  {Card, Container , Row , Col , Button} from 'react-bootstrap';
 import {Typography} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 // Components
 import Navbar from '../../../Components/Navbar/Navbar'
@@ -12,8 +13,33 @@ import logo1 from '../../../Assets/Images/event.jpg'
 import Photography from '../../../Assets/Images/Photography.jpg' 
 import pcover from '../../../Assets/Images/pCover1.jpg'
 
+const styles = {
+    button: {
+        backgroundColor: 'white',
+        color: '#AD365C',
+        borderColor: '#AD365C !important',
+        '&:hover': {
+            backgroundColor: '#AD365C',
+            borderColor: '#AD365C',
+            
+          },
+    }
+}
+//         marginBottom: '10px',
+//     },
+//     notchedOutline: {
+//         borderColor: '#AD365C',
+//     },
+//     focused: {
+//         "& $notchedOutline": {
+//             borderColor: '#AD365C !important',
+//         }
+//     },
+// };
+
 class AdPackages extends React.Component{
     render(){
+        const { classes } = this.props;
         return(
             <React.Fragment>
                  <Navbar/>
@@ -60,7 +86,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                                 <Button className={classes.button} block>View Details</Button>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -100,7 +126,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                                 <Button className={classes.button} block>View Details</Button>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -141,7 +167,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                                 <Button className={classes.button} block>View Details</Button>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -180,7 +206,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                                 <Button style={{backgroundColor:'white', color:'#AD365C', borderColor:'#AD365C'}} block>View Details</Button>
+                                 <Button className={classes.button} block>View Details</Button>
                                </Col>
                                <Col></Col>
                            </Row>
@@ -198,4 +224,4 @@ class AdPackages extends React.Component{
     }
 }
 
-export default AdPackages ;
+export default withStyles(styles)(AdPackages);
