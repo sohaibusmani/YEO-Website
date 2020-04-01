@@ -8,10 +8,11 @@ import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
 
 // Assets
-import logo from '../../../Assets/Images/event1.jpg'
-import logo1 from '../../../Assets/Images/event.jpg'
+import logo from '../../../Assets/Images/mehendi.webp'
+import logo1 from '../../../Assets/Images/birthday.jpg'
 import Photography from '../../../Assets/Images/Photography.jpg' 
 import pcover from '../../../Assets/Images/pCover1.jpg'
+import qawwali from '../../../Assets/Images/qawwali.jpg'
 
 const styles = {
     button: {
@@ -179,14 +180,14 @@ class AdPackages extends React.Component{
                          <Card style={{ width: '40rem', borderColor:'#AD365C'}}>
                          <Card.Header style={{backgroundColor:'#AD365C', color:'white'}}>
                          <Card.Title>
-                             Birthday Supreme Package
+                             Qawwali Supreme Package
                          </Card.Title>
                          </Card.Header>
                          <Card.Body>
                          <Container >
                            <Row>
                                <Col lg={8} md={8} sm={12}>
-                                  <Card.Img variant='top' src={logo1}/>
+                                  <Card.Img variant='top' src={qawwali}/>
                                </Col>
                                <Col lg={4} md={4} >
                                    <h4>Deal includes:</h4>
