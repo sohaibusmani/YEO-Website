@@ -194,11 +194,11 @@ class PackageDetails extends Component {
                                             </Card.Title>
                                         </Card.Header>
                                         <Card.Text>
-                                            Call Youth Event Oganizers For More info
+                                          => Need Any Sort OF Help
                                           <br />
-                                          Feel Free to call
+                                          => Chat with Youth Event Oganizers For More info
                                           <br />
-                                          0311-1017653
+                                          => Click The Button Below
                                       </Card.Text>
                                       <hr/>
                                       <Link style={{textDecoration:'none'}}>
