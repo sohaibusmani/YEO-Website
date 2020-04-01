@@ -130,7 +130,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                               <Link to='/PackageDetails'>
+                               <Link to='/Packages/PackageDetails' style={{textDecoration:'none'}}>
                                  <Button className={classes.button} block>View Details</Button>
                                  </Link>
                                </Col>
@@ -173,7 +173,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                               <Link to='/PackageDetails'>
+                               <Link to='/Packages/PackageDetails' style={{textDecoration:'none'}}>
                                  <Button className={classes.button} block>View Details</Button>
                                  </Link>
                                </Col>
@@ -214,7 +214,7 @@ class AdPackages extends React.Component{
                                <Col lg={3} md={3}>
                                </Col>
                                <Col >
-                               <Link to='/PackageDetails'>
+                               <Link to='/Packages/PackageDetails' style={{textDecoration:'none'}}>
                                  <Button className={classes.button} block>View Details</Button>
                                  </Link>
                                </Col>
