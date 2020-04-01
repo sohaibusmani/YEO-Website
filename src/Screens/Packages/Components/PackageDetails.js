@@ -44,6 +44,7 @@ const styles = {
         backgroundColor: 'white',
         color: '#AD365C',
         borderColor: '#AD365C !important',
+        
         '&:hover': {
             backgroundColor: '#AD365C',
             borderColor: '#AD365C',
@@ -330,7 +331,7 @@ class PackageDetails extends Component {
                                     <br/>
                                     <EventTimes opt={this.getEventTimes} />
                                     <br/>
-                                    <Button style={{  backgroundColor: '#AD365C',  borderColor: '#AD365C' }}>
+                                    <Button className={classes.button} style={{marginBottom:'12px',}} block>
                                         Submit
                                   </Button>
     
