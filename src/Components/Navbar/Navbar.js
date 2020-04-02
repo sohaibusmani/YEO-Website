@@ -15,6 +15,17 @@ import { Link } from "react-router-dom";
 
 
 const useStyles = makeStyles(theme => ({
+    navs: {
+        backgroundColor: 'white',
+        color: '#AD365C',
+        
+        '&:hover': {
+            
+            borderBottom:'1px solid #AD365C ',
+            color:'white !important'
+            
+          },
+    },
   root: {
       flexGrow: 1
   },
@@ -39,7 +50,8 @@ const useStyles = makeStyles(theme => ({
           marginTop: 40,
           display: "flex",
           
-      }
+      },
+      
   },
   desktopMenu: {
       display: "none",
@@ -86,7 +98,7 @@ return(
                             </Link>
                         </Typography>
                         <div className={classes.navigationButtons}>
-                        <Link to='/' style={{ textDecoration: "none" }}>
+                        <Link className={classes.navs} to='/' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
@@ -95,7 +107,7 @@ return(
                                     Home
                                 </Button>
                             </Link>
-                            <Link to='/events' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/events' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
@@ -104,7 +116,7 @@ return(
                                     Events
                                 </Button>
                             </Link>
-                            <Link to='/Courses' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Courses' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -113,7 +125,7 @@ return(
                                     Courses
                                 </Button>
                             </Link>
-                            <Link to='/Packages' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Packages' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -122,7 +134,7 @@ return(
                                     Packages
                                 </Button>
                             </Link>
-                            <Link to='/About' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/About' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -131,7 +143,7 @@ return(
                                     About
                                 </Button>
                             </Link>
-                            <Link to='/Contact' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Contact' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
