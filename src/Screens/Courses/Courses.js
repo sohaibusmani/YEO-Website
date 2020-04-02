@@ -9,6 +9,7 @@ import logo from '../../Assets/Images/eventsCover.jpg';
 
 // Component
 import Footer from '../../Components/Footer/Footer';
+import Navbar from '../../Components/Navbar/Navbar'
 
 const DisplayOver = styled.div({
   height: "100%",
@@ -39,9 +40,10 @@ class Courses extends Component {
     render(){
         return(
             <React.Fragment>
+              <Navbar/>
                  <div style={{backgroundImage:`url(${logo})`,
              width: '100%',
-             height: '500px',
+             height: '350px',
              backgroundSize:'100% 100%'}}>
 
               </div>
