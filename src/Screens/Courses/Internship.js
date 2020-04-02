@@ -4,24 +4,30 @@ import React , {Component} from 'react';
 import evebts from '../../Assets/Images/eventsCover.jpg';
 import { Container } from 'react-bootstrap';
 
+// Components
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from "../../Components/Footer/Footer";
+
 class Internship extends Component {
     render(){
         return(
             <React.Fragment>
+                <Navbar/>
                 
               <div style={{backgroundImage:`url(${evebts})`,
              width: '100%',
-             height: '500px',
+             height: '350px',
              backgroundSize:'100% 100%',
-             opacity:'0.7'}}>
+             }}>
                  <div 
                  style={{position:'absolute',
-                 color:'black',
+                 color:'white',
                  top:'50%' ,
                  left:'50%',
                  transform:'translate(-50%,-50%)',
+                 
                  }}>
-                 <h2>Be Professional With Us</h2> 
+                 <h1>Be Professional With Us</h1> 
               </div>
                </div>
 
@@ -56,7 +62,7 @@ Once you invest, you'll have access to the entire course which includes everythi
                
               
 
-
+<Footer/>
               
             </React.Fragment>
         )
