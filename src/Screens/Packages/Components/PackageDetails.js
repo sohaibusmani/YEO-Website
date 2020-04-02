@@ -201,7 +201,7 @@ class PackageDetails extends Component {
                                           => Click The Button Below
                                       </Card.Text>
                                       <hr/>
-                                      <Link style={{textDecoration:'none'}}>
+                                      <Link to='/Inbox' style={{textDecoration:'none'}}>
                                       
                                        <Button className={classes.button} block>
                                             Chat with Admin

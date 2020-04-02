@@ -16,6 +16,7 @@ import BrandSection from './Screens/Courses/BrandSection';
 import Internship from './Screens/Courses/Internship';
 import Packages from './Screens/Packages/Packages';
 import PackageDetails from './Screens/Packages/Components/PackageDetails';
+import Chat from './Screens/Chat/Chat';
 
 const styles = (theme => {
   
@@ -41,6 +42,7 @@ class App extends React.Component{
           <Route path='/Contact' exact  component={Contact}/>
           <Route path='/Packages' exact  component={Packages}/>
           <Route path='/Packages/PackageDetails' exact component={PackageDetails}/>
+          <Route path='/Inbox' exact component={Chat}/>
 
           </Switch>
     </Router>
