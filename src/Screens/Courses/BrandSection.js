@@ -33,7 +33,7 @@ class BrandSection extends Component {
                         <Col></Col>
                     </Row>
                     <Row>
-                        <Col xs={12} style={{marginTop:'80px', fontSize:'20px', textAlign:'center', color:'black', fontFamily:'cursive'}}>
+                        <Col xs={12} style={{marginTop:'80px',  fontSize:'20px', textAlign:'center', color:'black', fontFamily:'cursive'}}>
                             <p>
                             Youth event organization is here to give platform to the youth to start their event management business in this market. Youth event organizer start their event management course at Usman Institute of Technology. Their first batch is enrolled and get the knowledge that how any event work. In this course we provide them a platform for their practical consideration so that students can groom their skills and get success in future.  
                             </p>
@@ -61,7 +61,7 @@ class BrandSection extends Component {
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={bliss} />
   <Card.Body>
-    <Card.Title>The Bliss </Card.Title>
+    <Card.Title style={{color:'#AD365C'}}>The Bliss </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -72,7 +72,7 @@ class BrandSection extends Component {
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={says} />
   <Card.Body>
-    <Card.Title>The AXU Eventors </Card.Title>
+    <Card.Title style={{color:'#AD365C'}}>The Says  </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -83,7 +83,7 @@ class BrandSection extends Component {
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={axu} />
   <Card.Body>
-    <Card.Title>The Bliss </Card.Title>
+    <Card.Title style={{color:'#AD365C'}}>The AXU Eventors </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -97,7 +97,7 @@ class BrandSection extends Component {
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={eventezia} />
   <Card.Body>
-    <Card.Title>The Bliss </Card.Title>
+    <Card.Title style={{color:'#AD365C'}}>Eventezia </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -108,7 +108,7 @@ class BrandSection extends Component {
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top"  src={neow} />
   <Card.Body>
-    <Card.Title>The Bliss </Card.Title>
+    <Card.Title style={{color:'#AD365C'}}>The Neow </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -119,7 +119,7 @@ class BrandSection extends Component {
                        <Card style={{ width: '20rem' }}>
   <Card.Img variant="top" src={miraculous} />
   <Card.Body>
-    <Card.Title>The Bliss </Card.Title>
+    <Card.Title style={{color:'#AD365C'}}>The Miraculous </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
