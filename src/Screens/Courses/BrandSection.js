@@ -1,7 +1,10 @@
 import React , {Component} from 'react';
 import {Container,Row,Card,Col,Image} from 'react-bootstrap';
 import {Typography, Grid} from '@material-ui/core';
+
+// Components
 import Footer from '../../Components/Footer/Footer';
+import Navbar from '../../Components/Navbar/Navbar'
 
 // Assets 
 import logo from '../../Assets/Images/eventsCover.jpg';
@@ -20,6 +23,7 @@ class BrandSection extends Component {
     render(){
         return(
             <React.Fragment>
+              <Navbar/>
                 <Container >
                     <Row>
                         <Col md={2}></Col>
