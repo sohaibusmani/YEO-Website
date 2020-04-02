@@ -3,13 +3,27 @@ import {Container,Row,Col,Card,Button, Image} from 'react-bootstrap';
 import {Grid} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 import styled from "@emotion/styled/macro";
+import { withStyles } from '@material-ui/core/styles';
 
 // Assets
 import logo from '../../Assets/Images/eventsCover.jpg';
 
 // Component
 import Footer from '../../Components/Footer/Footer';
-import Navbar from '../../Components/Navbar/Navbar'
+import Navbar from '../../Components/Navbar/Navbar';
+
+const styles = {
+  button: {
+      backgroundColor: 'white',
+      color: '#AD365C',
+      borderColor: '#AD365C !important',
+      '&:hover': {
+          backgroundColor: '#AD365C',
+          borderColor: '#AD365C',
+          
+        },
+  }
+}
 
 const DisplayOver = styled.div({
   height: "100%",
@@ -38,6 +52,7 @@ const Background = styled.div({
 
 class Courses extends Component {
     render(){
+      const {classes} = this.props;
         return(
             <React.Fragment>
               <Navbar/>
@@ -57,8 +72,8 @@ class Courses extends Component {
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
-    <Link to='/Courses/CourseDetail'>
-    <Button  style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Details</Button>
+    <Link to='/Courses/CourseDetail' style={{textDecoration:'none'}}>
+    <Button  className={classes.button} block>Details</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -71,8 +86,8 @@ class Courses extends Component {
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
-    <Link to='/Courses/BrandSection'>
-    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Details</Button>
+    <Link to='/Courses/BrandSection' style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Details</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -86,8 +101,8 @@ class Courses extends Component {
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Link to='/Courses/Internship'>
-    <Button style={{backgroundColor:"#A20737", borderColor:'#A20737'}}>Details</Button>
+    <Link to='/Courses/Internship' style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Details</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -104,4 +119,4 @@ class Courses extends Component {
     }
 }
 
-export default Courses;
+export default withStyles(styles)(Courses);
