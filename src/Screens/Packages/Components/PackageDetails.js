@@ -331,9 +331,11 @@ class PackageDetails extends Component {
                                     <br/>
                                     <EventTimes opt={this.getEventTimes} />
                                     <br/>
+                                    <Link to='/EventSummary' style={{textDecoration:'none'}}>
                                     <Button className={classes.button} style={{marginBottom:'12px',}} block>
                                         Submit
                                   </Button>
+                                  </Link>
     
                                 </Col>
                                 </Container>
