@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './Components/AddressForm';
 import PaymentForm from './Components/PaymentForm';
 import Review from './Components/Review';
+import Navbar from '../../Components/Navbar/Navbar'; 
 
 function Copyright() {
   return (
@@ -94,13 +95,7 @@ export default function Checkout() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Youth Event Organizer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Navbar/>
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
