@@ -3,6 +3,10 @@ import {Container, Row, Col, Image} from 'react-bootstrap';
 import styled from "@emotion/styled/macro";
 import { withStyles } from "@material-ui/core/styles";
 
+// Components
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
+
 
 // Assets
 import picture from '../../Assets/Images/testimonial.jpg'
@@ -56,6 +60,7 @@ class CourseDetail extends Component {
         const {classes}=this.props;
         return(
             <React.Fragment>
+                <Navbar/>
               <Container>
                   <Row>
                       <Col md={2}>
@@ -67,7 +72,7 @@ class CourseDetail extends Component {
                           <Background>
                           <Image src={picture} responsive />
                           <DisplayOver style={{marginTop:'100px',
-                           color:'#AD365C', 
+                           color:'white', 
                            fontSize:'50px', 
                            textAlign:'center',
                             marginLeft:'150px',
@@ -91,6 +96,7 @@ Once you invest, you'll have access to the entire course which includes everythi
                       </Col>
                   </Row>
               </Container>
+              <Footer/>
             </React.Fragment>
         )
     }
