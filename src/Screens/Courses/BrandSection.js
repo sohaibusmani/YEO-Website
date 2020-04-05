@@ -7,7 +7,7 @@ import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar'
 
 // Assets 
-import logo from '../../Assets/Images/eventsCover.jpg';
+import logo from '../../Assets/Images/us6.jpg';
 import bliss from '../../Assets/Images/Bliss.jpg';
 import axu from '../../Assets/Images/AXU.JPG';
 import miraculous from '../../Assets/Images/Miraculous.jpg';
@@ -24,14 +24,16 @@ class BrandSection extends Component {
         return(
             <React.Fragment>
               <Navbar/>
+              <Container>
+                 <div style={{backgroundImage:`url(${logo})`,
+             width: '100%',
+             height: '350px',
+             backgroundSize:'100% 100%'}}>
+
+              </div>
+              </Container>
                 <Container >
-                    <Row>
-                        <Col md={2}></Col>
-                        <Col xs={12} md={8}>
-                            <Image src={logo} style={{maxWidth:'100%', height:'auto', display:'block'}} responsive/>
-                        </Col>
-                        <Col></Col>
-                    </Row>
+                    
                     <Row>
                         <Col xs={12} style={{marginTop:'80px',  fontSize:'20px', textAlign:'center', color:'black', fontFamily:'cursive'}}>
                             <p>
@@ -46,13 +48,14 @@ class BrandSection extends Component {
                             <Typography
                             style={{
                               fontSize: '30px',
-                              color: '#AD365C',
+                              color: 'black',
+                              fontFamily:'TimesNewRoman',
                               opacity:'1.9',
                               textAlign: 'left',
                               marginTop: '30px',
                               fontWeight: 900,
                               lineHeight: '30px',
-                              fontFamily: 'sans-serif',
+                              
                           }} variant="h5" component="h2">Our Brands</Typography>
                         </Col>
                     </Row>
