@@ -6,7 +6,7 @@ import styled from "@emotion/styled/macro";
 import { withStyles } from '@material-ui/core/styles';
 
 // Assets
-import logo from '../../Assets/Images/eventsCover.jpg';
+import logo from '../../Assets/Images/us3.jpg';
 
 // Component
 import Footer from '../../Components/Footer/Footer';
@@ -56,12 +56,14 @@ class Courses extends Component {
         return(
             <React.Fragment>
               <Navbar/>
+              <Container fluid>
                  <div style={{backgroundImage:`url(${logo})`,
              width: '100%',
              height: '350px',
              backgroundSize:'100% 100%'}}>
 
               </div>
+              </Container>
                 <Container>
                  <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
