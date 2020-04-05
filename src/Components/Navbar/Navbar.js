@@ -107,7 +107,7 @@ return(
                                     Home
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/events' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Events' style={{ textDecoration: "none" }}>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
