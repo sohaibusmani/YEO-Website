@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 
 // Assets
-import evebts from '../../Assets/Images/eventsCover.jpg';
+import evebts from '../../Assets/Images/us7.jpg';
 import { Container } from 'react-bootstrap';
 
 // Components
@@ -13,27 +13,18 @@ class Internship extends Component {
         return(
             <React.Fragment>
                 <Navbar/>
-                
+                <Container>
               <div style={{backgroundImage:`url(${evebts})`,
              width: '100%',
              height: '350px',
              backgroundSize:'100% 100%',
              }}>
-                 <div 
-                 style={{position:'absolute',
-                 color:'white',
-                 top:'50%' ,
-                 left:'50%',
-                 transform:'translate(-50%,-50%)',
-                 
-                 }}>
-                 <h1>Be Professional With Us</h1> 
-              </div>
+            
                </div>
-
+               </Container>
                <div
                 style={{marginTop:'30px', 
-                fontFamily:'san-serif',
+                fontFamily:'TimesNewRoman',
                 fontSize:'20px',
                 textAlign:'center' }}>
                     <h1>Internships at YEO</h1>
