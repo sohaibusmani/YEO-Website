@@ -6,7 +6,7 @@ import styled from "@emotion/styled/macro";
 import { withStyles } from '@material-ui/core/styles';
 
 // Assets
-import logo from '../../Assets/Images/us10.jpg';
+import logo from '../../Assets/Images/us11.jpg';
 import card1 from '../../Assets/Images/us3.jpg';
 import card2 from '../../Assets/Images/us5.jpg';
 import card3 from '../../Assets/Images/us7.jpg';

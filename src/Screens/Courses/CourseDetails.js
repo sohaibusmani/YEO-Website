@@ -9,30 +9,9 @@ import Footer from '../../Components/Footer/Footer';
 
 
 // Assets
-import picture from '../../Assets/Images/testimonial.jpg'
+import picture from '../../Assets/Images/us10.jpg'
 
-const DisplayOver = styled.div({
-    height: "100%",
-    left: "0",
-    position: "absolute",
-    top: "0",
-    width: "100%",
-    zIndex: 2,
-    transition: "background-color 350ms ease",
-    backgroundColor: "transparent",
-    padding: "20px 20px 0 20px",
-    boxSizing: "border-box",
-    
-});
 
-const Background = styled.div({
-    position: "relative",
-    width: "100%",
-    height: "100%",
-    maxWidth: '100%',
-    maxHeight: '100%',
-    color: 'white',
-});
 
 const styles = theme => ({
     firstHeading: {
@@ -61,33 +40,26 @@ class CourseDetail extends Component {
         return(
             <React.Fragment>
                 <Navbar/>
+                <Container>
+                <div style={{backgroundImage:`url(${picture})`,
+             width: '100%',
+             height: '350px',
+             backgroundSize:'100% 100%'}}>
+
+              </div>
+              </Container>
               <Container>
-                  <Row>
-                      <Col md={2}>
-                        
+                  <Row style={{marginTop:'50px' ,  fontFamily:'TimesNewRoman'}}>
+                      <Col md={4} lg={4}>
+                         
                       </Col>
-                      <Col md={4}>
-                          <Row>
-                              <Col md={12}>
-                          <Background>
-                          <Image src={picture} responsive />
-                          <DisplayOver style={{marginTop:'100px',
-                           color:'white', 
-                           fontSize:'50px', 
-                           textAlign:'center',
-                            marginLeft:'150px',
-                            opacity:'1.5'}}>
-                          <p>Become an Event Planner</p>
-                          </DisplayOver>
-                          </Background>
-                          </Col>
-                          </Row>
-                      </Col>
-                      <Col md={4}>
+                      <Col md={6} lg={6}>
+                        <h2>Become an Event Planner </h2>
                       </Col>
                   </Row>
+                 
                   <Row>
-                      <Col md={12} style={{marginTop:'80px', fontSize:'20px', textAlign:'center', color:'#AD365C', fontFamily:'cursive'}}>
+                      <Col md={12} style={{marginTop:'50px',marginBottom:'50px', fontSize:'20px', textAlign:'center', color:'black', fontFamily:'TimesNewRoman'}}>
                           <p>
                           The complete How to Be an Event Planner course is delivered to you inside our member's portal. This system is designed to help keep you organized, focused and learning. You can pause, rewind and watch the trainings as much and as often as you like. 
 
