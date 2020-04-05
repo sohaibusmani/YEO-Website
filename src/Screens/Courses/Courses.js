@@ -6,7 +6,11 @@ import styled from "@emotion/styled/macro";
 import { withStyles } from '@material-ui/core/styles';
 
 // Assets
-import logo from '../../Assets/Images/us3.jpg';
+import logo from '../../Assets/Images/us10.jpg';
+import card1 from '../../Assets/Images/us3.jpg';
+import card2 from '../../Assets/Images/us5.jpg';
+import card3 from '../../Assets/Images/us7.jpg';
+
 
 // Component
 import Footer from '../../Components/Footer/Footer';
@@ -56,19 +60,20 @@ class Courses extends Component {
         return(
             <React.Fragment>
               <Navbar/>
-              <Container fluid>
+              <Container>
                  <div style={{backgroundImage:`url(${logo})`,
              width: '100%',
              height: '350px',
              backgroundSize:'100% 100%'}}>
 
               </div>
+                 
               </Container>
                 <Container>
                  <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={logo} />
+  <Card.Img variant="top" src={card1} />
   <Card.Body>
     <Card.Title>Become an Event Planner </Card.Title>
     <Card.Text>
@@ -82,7 +87,7 @@ class Courses extends Component {
                      </Col>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={logo} />
+  <Card.Img variant="top" src={card2} />
   <Card.Body>
     <Card.Title>Boost Your Business</Card.Title>
     <Card.Text>
@@ -96,7 +101,7 @@ class Courses extends Component {
                      </Col>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem',  }}>
-  <Card.Img variant="top" src={logo}/>
+  <Card.Img variant="top" src={card3}/>
   <Card.Body>
     <Card.Title>Internships</Card.Title>
     <Card.Text>
