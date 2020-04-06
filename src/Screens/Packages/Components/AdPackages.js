@@ -12,7 +12,7 @@ import Footer from '../../../Components/Footer/Footer'
 import logo from '../../../Assets/Images/mehendi.webp'
 import logo1 from '../../../Assets/Images/birthday.jpg'
 import Photography from '../../../Assets/Images/Photography.jpg' 
-import pcover from '../../../Assets/Images/pCover1.jpg'
+import pcover from '../../../Assets/Images/us15.jpg'
 import qawwali from '../../../Assets/Images/qawwali.jpg'
 
 const styles = {
@@ -45,15 +45,18 @@ class AdPackages extends React.Component{
         return(
             <React.Fragment>
                  <Navbar/>
-                 
+                 <Container>
                     <div style={{
                         backgroundImage: `url(${pcover})`,
                         width: '100%',
                         height: '350px',
-                        backgroundSize: '100% 100%'
+                        backgroundSize: '100% 100%',
+                        
                     }}>
+                        
 
                     </div>
+                    </Container>
                     <div style={{marginTop:'50px'}}>
                         <Container fluid>
                             <Row>
