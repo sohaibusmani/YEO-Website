@@ -105,7 +105,8 @@ class PackageDetails extends Component {
             <React.Fragment >
                 <Navbar />
                 <div style={{marginBottom:'3rem'}}>
-                <div>
+               
+               <Container>
                     <div style={{
                         backgroundImage: `url(${logo})`,
                         width: '100%',
@@ -114,8 +115,9 @@ class PackageDetails extends Component {
                     }}>
 
                     </div>
+                    </Container>
 
-                </div>
+                
                 <Container style={{ marginTop: '50px' }} fluid>
                     <Row>
                         <Col md={8}>
