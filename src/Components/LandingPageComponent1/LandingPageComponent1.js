@@ -155,7 +155,7 @@
 //                                                         width: 180,
 //                                                         fontSize: "14px",
 //                                                         borderRadius: 0,
-                                                        
+
 //                                                     }}
 //                                                     variant="outlined"
 //                                                 >
@@ -179,40 +179,53 @@
 // export default withStyles(styles)(LandingPage1);
 
 import React from 'react';
-import {Container, Row , Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // Assets
-import us18 from '../../Assets/Images/us18.jpg'
+import us18 from '../../Assets/Images/us18.jpg';
+import us17 from '../../Assets/Images/us17.jpg'
+
 
 class LandingPageComponent1 extends React.Component {
-    render(){
-        return(
+    render() {
+        return (
             <React.Fragment>
-                  <div style={{
-                        backgroundImage: `url(${us18})`,
-                        width: '100%',
-                        height: '600px',
-                        backgroundSize: '100% 100%',
-                        
-                    }}>
-                        
+                <div style={{
+                    backgroundImage: `url(${us18})`,
+                    width: '100%',
+                    height: '600px',
+                    backgroundSize: '100% 100%',
 
-                    </div>
-                  <Container>
-                      <Row>
-                          <Col md={3} lg={3}>
-                          </Col>
-                          <Col md={6} lg={6} md={12} style={{marginTop:'50px', textAlign:'center' }}>
-                              <h4>GIVE YOUR GUESTS A REASON TO STARE</h4>
-                              <hr/>
-                              <p>From lavish weddings set on the bloom-bordered paths of Karachi’s historic venues to elaborate corporate events that nurture company connections,
+                }}>
+
+
+                </div>
+                <Container>
+                    <Row>
+                        <Col md={3} lg={3}>
+                        </Col>
+                        <Col md={6} lg={6} md={12} style={{ marginTop: '50px', textAlign: 'center' }}>
+                            <h4>GIVE YOUR GUESTS A REASON TO STARE</h4>
+                            <hr />
+                            <p>From lavish weddings set on the bloom-bordered paths of Karachi’s historic venues to elaborate corporate events that nurture company connections,
                                    Youth Event Organizer has a flair for transforming meaningful celebrations into unforgettable experiences.</p>
-                          </Col>
-                      </Row>
-                  </Container>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Container style={{marginTop:'100px'}} fluid>
+                            <Row>
+                                <Col md={6} lg={6}>
+                                 <img style={{width: '100%',
+                    height: '600px',}} src={us17} />
+                                </Col>
+                            </Row>
+                        </Container>
+
+                    </Row>
+                </Container>
             </React.Fragment>
         )
     }
 }
 
-export default LandingPageComponent1 ;
+export default LandingPageComponent1;
