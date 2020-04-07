@@ -7,6 +7,7 @@ import {
     Button,
     Divider
 } from "@material-ui/core";
+import  ScrollUpButton  from "react-scroll-up-button";
 
 import Navbar from '../../Components/Navbar/Navbar'
 
@@ -150,6 +151,13 @@ const styles = theme => ({
             color: "white",
             fontWeight: "bold",
         }
+    },
+    scrollUpButton: {
+        // zIndex: 9999,
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'block',
+        },
     }
 });
 
@@ -174,6 +182,14 @@ class LandingPage extends Component {
         return(
             <React.Fragment>
                 <Navbar/>
+                <div className={classes.scrollUpButton}>
+                <ScrollUpButton
+                    ShowAtPosition={150}
+                    EasingType='easeOutCubic'
+                    AnimationDuration={500}
+                    style={{ zIndex: 9999 }}
+                />
+            </div>
                 <Grid container>
                 <Grid ref={this.block1Ref} item xs={12} md={12}>
                         <LandingPage1 getBlock1Height={this.getBlock1Height} />
