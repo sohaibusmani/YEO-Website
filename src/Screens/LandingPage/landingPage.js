@@ -7,7 +7,7 @@ import {
     Button,
     Divider
 } from "@material-ui/core";
-import  ScrollUpButton  from "react-scroll-up-button";
+import   ScrollUpButton  from "react-scroll-up-button";
 
 import Navbar from '../../Components/Navbar/Navbar'
 
@@ -187,7 +187,7 @@ class LandingPage extends Component {
                     ShowAtPosition={150}
                     EasingType='easeOutCubic'
                     AnimationDuration={500}
-                    style={{ zIndex: 9999 }}
+                    style={{ zIndex: 9999 , color:'#AD365C', backgroundColor:'#AD365C'}}
                 />
             </div>
                 <Grid container>

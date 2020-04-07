@@ -8915,6 +8915,13 @@ react-fontawesome@^1.7.1:
   dependencies:
     prop-types "^15.5.6"
 
+react-icons@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.9.0.tgz#89a00f20a0e02e6bfd899977eaf46eb4624239d5"
+  integrity sha512-gKbYKR+4QsD3PmIHLAM9TDDpnaTsr3XZeK1NTAb6WQQ+gxEdJ0xuCgLq0pxXdS7Utg2AIpcVhM1ut/jlDhcyNg==
+  dependencies:
+    camelcase "^5.0.0"
+
 react-image-gallery@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.6.tgz#cbbef85973e72bb01b5d331de68f884654f47b2f"
