@@ -39,20 +39,20 @@ class LandingPageComponent2 extends React.Component {
                             color:'white',
                             fontSize:'70px'
                         }}>
-                            Youth
+                            Why Us
                         </div>
                         <p 
                          style={{
-                            justifyContent: "center",
-                            alignItems: "center,",
-                            display: "inline-flex",
-                            width: "100%",
+                            textAlign:'center',
+                            
                             marginLeft:'250px',
+                            width: "100%",
+                            
                             marginTop:'50px',
                             color:'white',
-                            fontSize:'30px'
+                            fontSize:'20px'
                         }}>
-                            We are Working With The Youth Here on field
+                            Our various art works/operations like FLORISTS (the art of flowers), CRAFTERS (The art of crafting clever ideas), DECORATION (the art of assembling scattered things in an unbelievable way), SOUND SYSTEM (The art of taking yourself in an acceptable place), all these Beautiful things that make your event outlast, are done by our Passionate, Talented and Highly Motivated Youngsters who are willing to explore new experience and make your event awesome/ a dream come true.
                         </p>
                        
                     </Container>

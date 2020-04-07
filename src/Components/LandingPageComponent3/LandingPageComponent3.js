@@ -41,9 +41,9 @@ class LandingPageComponent3 extends React.Component {
                             marginLeft:'250px',
                             marginTop:'50px',
                             color:'white',
-                            fontSize:'30px'
+                            fontSize:'20px'
                         }}>
-                            To Satisfy Customers Needs
+                            We are not copying the boring old traditional catalogue system. Rather, to make something unique and eye-catching, we offer our client to tell us about their dream event, and our professionals follow their wishes/demands and execute to amaze them as per their taste. /(customize it as per their needs).
                         </p>
                        
                     </Container>
