@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faFacebookSquare, faInstagram , faGithub, faGooglePlus, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookSquare, faInstagram, faGithub, faGooglePlus, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 //Casecading Style Sheets
 import './Footer.css';
@@ -11,7 +11,8 @@ import './Footer.css';
 // import Contact from '../../Components/Contact Form/ContactForm';
 
 //Assets
-import logo from '../../Assets/Images/logo.jpg'
+import logo from '../../Assets/Images/logo.jpg';
+import oric from '../../Assets/Images/ORIC.png'
 
 
 class Footer extends React.Component {
@@ -21,30 +22,27 @@ class Footer extends React.Component {
         return (
 
             <React.Fragment>
-                <div id="footer">
-                    <div>
-                        <Container fluid>
-                            <Row>
-                                <Col md={12}>
-                                   
-                                    <Row>
-                                        <Col sm={4}>
-                                            <div className="footer-sec-1" style={{marginTop:'20px'}}>
-                                                <img src={logo} width="150" height="auto" />
-                                               
-                                            </div>
-                                        </Col>
-                                        <Col sm={4}>
-                                            <br/>
-                                            <br/>
-                                        <p>Youth Event Organizers is found to counter the gap between Information Technologies and today's business requirements.</p>
-                                        </Col>
-                                        <Col sm={4}>
-                                            <div className="footer-sec-2" style={{marginTop:'20px'}}>
+                
+                    <Container>
+                        <Row>
+                            <Col md={4} lg={4} >
+                                <div className="footer-sec-1" style={{ marginTop: '20px' }}>
+                                    <img src={logo} width="200" height="auto" />
+
+                                </div>
+                            </Col>
+                            <Col md={4} lg={4} >
+                                <div style={{marginTop:'20px' , fontFamily:'TimesNewRoman'}}>
+                                <h2>Our Official Partner</h2>
+                                <img src={oric} style={{marginTop:'20px', }} width='300' height='auto' />
+                                </div>
+                            </Col>
+                            <Col md={4} lg={4}>
+                            <div style={{marginTop:'20px', marginLeft:'20px' , fontFamily:'TimesNewRoman'}}>
                                                 <h2>Follow Us</h2>
                                                 {/* <hr />
                                                     <hr /> */}
-                                                <p>follow us to get notified with/about our latest news and </p>
+                                                <p>Follow us to get notified with/about our latest news and </p>
                                                 <ul className="unordered-list">
                                                     <a href='https://www.facebook.com/Youth.event.organizer/' style={{textDecoration:'none', color:'black'}}>
                                                     <li className="lik-unstyle social">
@@ -67,17 +65,18 @@ class Footer extends React.Component {
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </Col>
-                                    </Row>
-                                </Col>
-                               
-                            </Row>
-                        </Container>
-                    </div>
-                </div>
-                <div className="footer-bottom" style={{marginTop:'40px'}}>
+                            </Col>
+                        </Row>
+                        <Row>
+                                <Col>
+                                <div className="footer-bottom" style={{marginTop:'40px', fontFamily:'TimesNewRoman'}}>
                     <p>Copyright © 2020 All rights reserved | Youth Event Organizers</p>
                 </div>
+                                </Col>
+                            </Row>
+                    </Container>
+                
+
             </React.Fragment>
         )
     }
