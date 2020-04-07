@@ -179,6 +179,7 @@
 // export default withStyles(styles)(LandingPage1);
 
 import React from 'react';
+import {Container, Row , Col } from 'react-bootstrap'
 
 // Assets
 import us18 from '../../Assets/Images/us18.jpg'
@@ -197,6 +198,18 @@ class LandingPageComponent1 extends React.Component {
                         
 
                     </div>
+                  <Container>
+                      <Row>
+                          <Col md={3} lg={3}>
+                          </Col>
+                          <Col md={6} lg={6} md={12} style={{marginTop:'50px', textAlign:'center' }}>
+                              <h4>GIVE YOUR GUESTS A REASON TO STARE</h4>
+                              <hr/>
+                              <p>From lavish weddings set on the bloom-bordered paths of Karachi’s historic venues to elaborate corporate events that nurture company connections,
+                                   Youth Event Organizer has a flair for transforming meaningful celebrations into unforgettable experiences.</p>
+                          </Col>
+                      </Row>
+                  </Container>
             </React.Fragment>
         )
     }
