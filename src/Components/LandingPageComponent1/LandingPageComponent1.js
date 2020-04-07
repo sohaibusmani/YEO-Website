@@ -183,7 +183,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 // Assets
 import us18 from '../../Assets/Images/us18.jpg';
-import us17 from '../../Assets/Images/us17.jpg'
+import us17 from '../../Assets/Images/us12.jpg'
 
 
 class LandingPageComponent1 extends React.Component {
