@@ -212,7 +212,7 @@ class LandingPageComponent1 extends React.Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Container style={{marginTop:'100px'}} fluid>
+                        <Container style={{marginTop:'100px', marginBottom:'50px'}} fluid>
                             <Row>
                                 <Col md={6} lg={6}>
                                  <img style={{width: '100%',

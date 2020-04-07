@@ -15,7 +15,7 @@ import Footer from '../../../Components/Footer/Footer'
 
 // Assets
 
-import logo from '../../../Assets/Images/event1.jpg';
+import logo from '../../../Assets/Images/us19.jpg';
 import image1 from '../../../Assets/Images/event.jpg';
 import image2 from '../../../Assets/Images/eventsCover.jpg';
 import image3 from '../../../Assets/Images/testimonial.jpg';

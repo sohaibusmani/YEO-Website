@@ -39,7 +39,7 @@ class LandingPageComponent2 extends React.Component {
                             color:'white',
                             fontSize:'70px'
                         }}>
-                            Why Us
+                            Youth operations
                         </div>
                         <p 
                          style={{

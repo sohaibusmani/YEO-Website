@@ -318,10 +318,11 @@ class LandingPage extends Component {
                     </Grid>
                     <Grid container>
                 
-                        <Footer />
+                        
                     
                     </Grid>
                     <br/>
+                    <Footer />
                    
             </React.Fragment>
         )
