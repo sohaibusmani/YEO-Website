@@ -17,6 +17,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import LandingPage1 from '../../Components/LandingPageComponent1/LandingPageComponent1';
 import LandingPage2 from '../../Components/LandingPageComponent2/LandingPageComponent2';
 import LandingPage3 from '../../Components/LandingPageComponent3/LandingPageComponent3';
+import LandingPage4 from '../../Components/LandingPageComponent4/LandingPageComponent4';
 import Footer from '../../Components/Footer/Footer'
 
 
@@ -317,12 +318,17 @@ class LandingPage extends Component {
                     </Grid>
                     </Grid>
                     <Grid container>
+                    <Grid  item xs={12} md={12}>
+                        <LandingPage4  />
+                    </Grid>
+                    </Grid>
+                    <Grid container>
                 
-                        
+                    <Footer />   
                     
                     </Grid>
                     <br/>
-                    <Footer />
+                    
                    
             </React.Fragment>
         )

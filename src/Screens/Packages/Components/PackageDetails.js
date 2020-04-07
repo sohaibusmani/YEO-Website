@@ -18,7 +18,7 @@ import Footer from '../../../Components/Footer/Footer'
 import logo from '../../../Assets/Images/us19.jpg';
 import image1 from '../../../Assets/Images/event.jpg';
 import image2 from '../../../Assets/Images/eventsCover.jpg';
-import image3 from '../../../Assets/Images/testimonial.jpg';
+
 
 const styles = {
     textField: {
