@@ -218,6 +218,28 @@ class LandingPageComponent1 extends React.Component {
                                  <img style={{width: '100%',
                     height: '600px',}} src={us17} />
                                 </Col>
+                                <Col style={{fontFamily:'TimesNewRoman'}} md={6} lg={6}>
+                                 <h2 style={{textAlign:'center'}}>We are here to deal you with</h2>
+                                 <br/>
+                                 <br/>
+                                 <ul style={{fontSize:'18px'}}>
+                                     <li>Full Service Planning or Wedding Design and Coordination.</li>
+                                     <br/>
+                                     <li>Access to our in-house floral team and décor rental warehouse.</li>
+                                     <br/>
+                                     <li>Custom-built features such as floral balls, unique backdrops, fabric work and mural paintings.</li>
+                                     <br/>
+                                     <li>Personalized event design, checklists and templates to keep you organized.</li>
+                                     <br/>
+                                     <li>Creation of master timeline for smooth scheduling.</li>
+                                     <br/>
+                                     <li>Budget planning to ensure your money are well-spent.</li>
+                                     <br/>
+                                     <li>Unlimited communication leading up to your event.</li>
+                                     <br/>
+                                     <li>And of course, we’ll give your logistics lots of love and you lots of hand-holding.</li>
+                                 </ul>
+                                </Col>
                             </Row>
                         </Container>
 
