@@ -1,10 +1,23 @@
 import React from 'react';
 
+// Assets
+import us20 from '../../Assets/Images/us20.jpg'
+
 class LandingPageComponent4 extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <h1>Yo</h1>
+                 <div style={{
+                    backgroundImage: `url(${us20})`,
+                    width: '100%',
+                    height: '600px',
+                    backgroundSize: '100% 100%',
+                    
+
+                }}>
+
+
+                </div>
             </React.Fragment>
         )
     }
