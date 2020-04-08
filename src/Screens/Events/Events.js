@@ -1,15 +1,32 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import {Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 
 // Assets
 import us14 from '../../Assets/Images/us14.jpg';
-import us17 from '../../Assets/Images/us17.jpg'
+import us17 from '../../Assets/Images/us17.jpg';
+
+const styles = {
+    button: {
+        backgroundColor: 'white',
+        color: '#AD365C',
+        borderColor: '#AD365C !important',
+        '&:hover': {
+            backgroundColor: '#AD365C',
+            borderColor: '#AD365C',
+            
+          },
+    }
+  }
 
 class Events extends React.Component {
     render() {
+        const {classes} = this.props;
         return (
             <React.Fragment>
                 <Navbar />
@@ -58,10 +75,102 @@ class Events extends React.Component {
                           <h1>Our Portfolio</h1>
                         </Col>
                     </Row>
+                    <Row style={{marginTop:"5rem"}}>
+                     <Col xs={12} md={4}>
+                     <Card style={{ width: '20rem' }}>
+  <Card.Img variant="top" src={us14} />
+  <Card.Body>
+    <Card.Title>Become an Event Planner </Card.Title>
+    <Card.Text>
+    This popular event course guides you through each step so you become a certified event planner!
+    </Card.Text>
+    <Link  style={{textDecoration:'none'}}>
+    <Button  className={classes.button} block>Details</Button>
+    </Link>
+  </Card.Body>
+</Card>
+                     </Col>
+                     <Col xs={12} md={4}>
+                     <Card style={{ width: '20rem' }}>
+  <Card.Img variant="top" src={us14} />
+  <Card.Body>
+    <Card.Title>Boost Your Business</Card.Title>
+    <Card.Text>
+    Accelerate your learning in sales & marketing and business development too.
+    </Card.Text>
+    <Link  style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Details</Button>
+    </Link>
+  </Card.Body>
+</Card>
+                     </Col>
+                     <Col xs={12} md={4}>
+                     <Card style={{ width: '20rem',  }}>
+  <Card.Img variant="top" src={us14}/>
+  <Card.Body>
+    <Card.Title>Internships</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Link  style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Details</Button>
+    </Link>
+  </Card.Body>
+</Card>
+                     </Col>
+                 </Row>
+                 <Row style={{marginTop:"5rem"}}>
+                     <Col xs={12} md={4}>
+                     <Card style={{ width: '20rem' }}>
+  <Card.Img variant="top" src={us14} />
+  <Card.Body>
+    <Card.Title>Become an Event Planner </Card.Title>
+    <Card.Text>
+    This popular event course guides you through each step so you become a certified event planner!
+    </Card.Text>
+    <Link  style={{textDecoration:'none'}}>
+    <Button  className={classes.button} block>Details</Button>
+    </Link>
+  </Card.Body>
+</Card>
+                     </Col>
+                     <Col xs={12} md={4}>
+                     <Card style={{ width: '20rem' }}>
+  <Card.Img variant="top" src={us14} />
+  <Card.Body>
+    <Card.Title>Boost Your Business</Card.Title>
+    <Card.Text>
+    Accelerate your learning in sales & marketing and business development too.
+    </Card.Text>
+    <Link  style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Details</Button>
+    </Link>
+  </Card.Body>
+</Card>
+                     </Col>
+                     <Col xs={12} md={4}>
+                     <Card style={{ width: '20rem',  }}>
+  <Card.Img variant="top" src={us14}/>
+  <Card.Body>
+    <Card.Title>Internships</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Link  style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Details</Button>
+    </Link>
+  </Card.Body>
+</Card>
+                     </Col>
+                 </Row>
+                 
                 </Container>
+                <Footer/>
             </React.Fragment>
         )
     }
 }
 
-export default Events;
+export default withStyles(styles)(Events);
