@@ -10,6 +10,13 @@ import Footer from '../../Components/Footer/Footer';
 // Assets
 import us14 from '../../Assets/Images/us14.jpg';
 import us17 from '../../Assets/Images/us17.jpg';
+import mehendi from '../../Assets/Images/mehendi.jpg';
+import qawwali from '../../Assets/Images/qawwalievent.jpg';
+import marmaid from '../../Assets/Images/marmaid.jpg';
+import bossbaby from '../../Assets/Images/bossbaby.jpg';
+import redblack from '../../Assets/Images/redblack.jpg';
+import multicolor from '../../Assets/Images/multicolor.jpg';
+
 
 const styles = {
     button: {
@@ -78,9 +85,9 @@ class Events extends React.Component {
                     <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={us14} />
+  <Card.Img variant="top" src={mehendi} />
   <Card.Body>
-    <Card.Title>Become an Event Planner </Card.Title>
+    <Card.Title>Mehendi </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -92,9 +99,9 @@ class Events extends React.Component {
                      </Col>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={us14} />
+  <Card.Img variant="top" src={qawwali} />
   <Card.Body>
-    <Card.Title>Boost Your Business</Card.Title>
+    <Card.Title>Qawwali</Card.Title>
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
@@ -106,9 +113,9 @@ class Events extends React.Component {
                      </Col>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem',  }}>
-  <Card.Img variant="top" src={us14}/>
+  <Card.Img variant="top" src={bossbaby}/>
   <Card.Body>
-    <Card.Title>Internships</Card.Title>
+    <Card.Title>Boss baby Theme</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
@@ -123,9 +130,9 @@ class Events extends React.Component {
                  <Row style={{marginTop:"5rem"}}>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={us14} />
+  <Card.Img variant="top" src={redblack} />
   <Card.Body>
-    <Card.Title>Become an Event Planner </Card.Title>
+    <Card.Title>Red and Black Theme </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
@@ -137,9 +144,9 @@ class Events extends React.Component {
                      </Col>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem' }}>
-  <Card.Img variant="top" src={us14} />
+  <Card.Img variant="top" src={marmaid} />
   <Card.Body>
-    <Card.Title>Boost Your Business</Card.Title>
+    <Card.Title>Marmaid Theme</Card.Title>
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
@@ -151,9 +158,9 @@ class Events extends React.Component {
                      </Col>
                      <Col xs={12} md={4}>
                      <Card style={{ width: '20rem',  }}>
-  <Card.Img variant="top" src={us14}/>
+  <Card.Img variant="top" src={multicolor}/>
   <Card.Body>
-    <Card.Title>Internships</Card.Title>
+    <Card.Title>Multicolor Theme</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
