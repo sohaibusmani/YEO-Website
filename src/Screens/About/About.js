@@ -3,6 +3,7 @@ import {Container, Row , Col} from 'react-bootstrap';
 
 // Assets
 import us16 from "../../Assets/Images/us5.jpg";
+import us8 from '../../Assets/Images/us8.jpg'
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
@@ -44,6 +45,26 @@ class About extends Component {
                                    It proves that if you keep on struggling you will achieve the goal until and unless you have the skills. 
                                </p>
                             </Col>
+                        </Row>
+                        <Row>
+                        <Container style={{ marginTop: '100px', marginBottom: '50px' }} fluid>
+                            <Row>
+                                <Col>
+                                <h2 style={{ textAlign: 'center' , fontFamily:'TimesNewRoman', marginBottom: '50px'}}>Our Workplace</h2>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md={6} lg={6}>
+                                    <img style={{
+                                        width: '100%',
+                                        height: '300px',
+                                    }} src={us8} />
+                                </Col>
+                                <Col style={{ fontFamily: 'TimesNewRoman' }} md={6} lg={6}>
+                                    <p style={{ fontSize: '20px' }}>We specialize in Planning Weddings, Parties, Corporate Events, Social gatherings etc. Our first priority is to understand our client’s needs and provide them the best possible arrangements, while staying within their budget. We coordinate your events according to your wishes and have a complete set up of event management, farm house booking, decorations and catering. We always follow latest trends and ensure that your event is as flawless as it is memorable. With every event, we come up with breakthrough ideas by adding creative touches to make it unique. Our services are tailored to specific needs. We do as much or as little as you desire.</p>
+                                </Col>
+                            </Row>
+                        </Container>
                         </Row>
                     </Container>
             </React.Fragment>
