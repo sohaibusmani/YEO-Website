@@ -6,7 +6,7 @@ import { GoPerson } from 'react-icons/go';
 
 
 // Assets
-import us20 from '../../Assets/Images/us16.jpg';
+import us20 from '../../Assets/Images/us14.jpg';
 
 const DisplayOver = styled.div({
         height: "100%",
@@ -42,7 +42,7 @@ class LandingPageComponent4 extends React.Component{
                         width: '100%',
                         height: '700px',
                         backgroundSize: '100% 100%',
-                        marginTop:'20px',
+                        
                         opacity:'0.5'
                     }}>
                         </div>
