@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
-import {Container, Row , Col} from 'react-bootstrap';
+import {Container, Row , Col, Card} from 'react-bootstrap';
+import {Typography} from '@material-ui/core'
 
 // Assets
 import us16 from "../../Assets/Images/us5.jpg";
@@ -50,7 +51,7 @@ class About extends Component {
                         <Container style={{ marginTop: '100px', marginBottom: '50px' }} fluid>
                             <Row>
                                 <Col>
-                                <h2 style={{ textAlign: 'center' , fontFamily:'TimesNewRoman', marginBottom: '50px'}}>Our Workplace</h2>
+                                <h2 style={{ textAlign: 'center' , fontFamily:'TimesNewRoman', color:'#AD365C', marginBottom: '50px'}}>Our Workplace</h2>
                                 </Col>
                             </Row>
                             <Row>
@@ -66,7 +67,82 @@ class About extends Component {
                             </Row>
                         </Container>
                         </Row>
+                        
+                        
+                        <Row >
+                            <Container>
+                            <Row>
+                            <Col style={{ textAlign: 'center' , color:'#AD365C', fontFamily:'TimesNewRoman', marginTop: '50px'}}>
+                              <h2>Youth Event Organizer Team</h2>
+                            </Col>
+                        </Row>
+                                <Row  style={{marginTop: '50px'}}>
+                            <Col md={3} lg={3}>
+                                <Card style={{width:'16rem', borderColor:'#AD365C'}}>
+                                  <Card.Img src={us8}/>
+                                  </Card>
+                                  <hr />
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Name
+                                </Typography>
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Role
+                                </Typography>
+                                    <hr />
+                            </Col>
+                            <Col md={3} lg={3}>
+                            <Card style={{width:'16rem', borderColor:'#AD365C'}}>
+                                  <Card.Img src={us8}/>
+                                  </Card>
+                                  <hr />
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Name
+                                </Typography>
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Role
+                                </Typography>
+                                    <hr />
+                            </Col>
+                            <Col md={3} lg={3}>
+                            <Card style={{width:'16rem', borderColor:'#AD365C'}}>
+                                  <Card.Img src={us8}/>
+                                  </Card>
+                                  <hr />
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Name
+                                </Typography>
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Role
+                                </Typography>
+                                    <hr />
+                            </Col>
+                            <Col md={3} lg={3}>
+                            <Card style={{width:'16rem', height:'10rem', borderColor:'#AD365C'}}>
+                                  <Card.Img src={us8}/>
+                                  </Card>
+                                  <hr />
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Name
+                                </Typography>
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Role
+                                </Typography>
+                                    <hr />
+                            </Col>
+                            </Row>
+                            </Container>
+                        </Row>
+                        
                     </Container>
+                    <Footer/>
             </React.Fragment>
         )
     }
