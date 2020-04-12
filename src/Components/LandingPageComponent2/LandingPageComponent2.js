@@ -24,7 +24,10 @@ class LandingPageComponent2 extends React.Component {
         <div class="overlay">
             <div class="container">
                 <div class="row scroll-me">
-                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 text-center ">
+                    <Container>
+                        <Row>
+                            <Col md={4} lg={4} sm={12}>
+                    <div >
                        
                    
                     <Container maxWidth='lg'
@@ -58,7 +61,11 @@ class LandingPageComponent2 extends React.Component {
                     </Container>
                         
                     </div>
+                    </Col>
+                    </Row>
+                    </Container>
                 </div>
+                
             </div>
         </div>
 

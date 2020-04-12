@@ -12,6 +12,21 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.testimonial-banner {
+  background: url(./Assets/Images/us10.jpg) no-repeat center center;
+  padding: 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -moz-background-size: cover;
+  background-attachment: fixed;
+}
+
+.testimonial-banner .overlay {
+  background-color: rgba(3, 3, 3, 0.9);
+  /* background-color: rgba(275, 275, 275, 0.98); */
+  color: white;
+  min-height: 500px;
+}
 
 .App-header {
   background-color: #282c34;

@@ -1,147 +1,80 @@
 import React from 'react';
-import styled from "@emotion/styled/macro";
-import {Container, Col, Row, Card } from "react-bootstrap";
+import { Grid, Container, Typography } from '@material-ui/core';
+//React Router
+import { withRouter } from 'react-router-dom';
+//Casecading Style Sheets
+import '../../App.css';
 import { GoPerson } from 'react-icons/go';
+import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Rotate';
 
 
+class LandingPageComponent4 extends React.Component {
 
-// Assets
-import us20 from '../../Assets/Images/us14.jpg';
+    render() {
 
-const DisplayOver = styled.div({
-        height: "100%",
-        left: "0",
-        position: "absolute",
-        top: "0",
-        width: "100%",
-        zIndex: 2,
-        transition: "background-color 350ms ease",
-        backgroundColor: "transparent",
-        padding: "20px 20px 0 20px",
-        boxSizing: "border-box",
-    });
-    
-    const Background = styled.div({
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        maxWidth: '100%',
-        maxHeight: '100%',
-        color: 'white',
-        marginBottom:'100px'
-    });
-    
-
-class LandingPageComponent4 extends React.Component{
-    render(){
-        return(
-            <React.Fragment >
-               <Background>
-               <div style={{
-                        backgroundImage: `url(${us20})`,
-                        width: '100%',
-                        height: '700px',
-                        backgroundSize: '100% 100%',
-                        
-                        opacity:'0.5'
-                    }}>
+        return (
+            <Container maxWidth="md">
+                <div style={{ height: 120 }} />
+                <Grid container spacing={2}>
+                    <Grid item lg={6} md={6}>
+                        <div className="client-info" style={{ padding: 10 }}>
+                            <Grid container spacing={1}>
+                                <Grid item lg={2} md={2} sm={12}>
+                                    <GoPerson style={{ fontSize: '5em' }} />
+                                </Grid>
+                                <Grid item lg={10} md={10} sm={12}>
+                                    <Typography variant="h4"
+                                        style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Syed Azib Ali
+                                    </Typography>
+                                    <Typography variant="h4"
+                                        style={{ color: '#6195FF', marginTop: 7, fontWeight: 'bolder', fontSize: '1.2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Giverpays
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <div style={{ height: 10 }} />
+                            <div>
+                                <Typography variant="p" style={{ color: '#f0f0f0f', fontWeight: 'normal', fontSize: '1.1em', opacity: '0.9' }} >
+                                    Was great to work with TechNest, good communication and very good
+                                    technical understanding of the features/bug fix. I highly recommend TechNest as
+                                    they would be a good asset for web development
+                                </Typography>
+                            </div>
                         </div>
-                        <DisplayOver>
-                            <Container style={{marginTop:'50px', color:'black', fontFamily:'TimesNewRoman'}} fluid>
-                                <Row>
-                                    <Col md={4} lg={4}>
-                                      
-                                    </Col>
-                                    <Col>
-                                     <h1>What our happy clients say</h1>
-                                    </Col>
-                                </Row>
-                            </Container>
-                          <Container style={{marginTop:'100px'}} >
-                              <Row>
-                                  <Col md={4} lg={4}>
-                                     
-                                     <Card style={{ width: '18rem' }}>
-                                         
-                             <Card.Header style={{backgroundColor:'#AD365C' , textDecoration:'none' , border:'none'}}>
-                             <Row>
-                                             <Col md={4} lg={4}>
-                             <GoPerson style={{ fontSize: '5em', alignItems:'center', justifyContent:'center' }}/>
-                             </Col>
-                             <Col md={8} lg={8}>
-                                <h4>Syed Azib Ali</h4>
-                             </Col>
-                             </Row>
-                             </Card.Header>
-                            
-  <Card.Body>
-    <Card.Title style={{color:'#AD365C'}}>GiverPays</Card.Title>
-    <Card.Text style={{color:'black'}}>
-      'Some quick example text to build on the card title and make up the bulk of
-      the card's content.'
-    </Card.Text>
-    
-  </Card.Body>
-</Card>
-                                  </Col>
-                                  <Col md={4} lg={4}>
-                                     
-                                     <Card style={{ width: '18rem' }}>
-                                         
-                             <Card.Header style={{backgroundColor:'#AD365C' , textDecoration:'none' , border:'none'}}>
-                             <Row>
-                                             <Col md={4} lg={4}>
-                             <GoPerson style={{ fontSize: '5em', alignItems:'center', justifyContent:'center' }}/>
-                             </Col>
-                             <Col md={8} lg={8}>
-                                <h4>Syed Azib Ali</h4>
-                             </Col>
-                             </Row>
-                             </Card.Header>
-                            
-  <Card.Body>
-  <Card.Title style={{color:'#AD365C'}}>GiverPays</Card.Title>
-    <Card.Text style={{color:'black'}}>
-      'Some quick example text to build on the card title and make up the bulk of
-      the card's content.'
-    </Card.Text>
-    
-  </Card.Body>
-</Card>
-                                  </Col>
-                                  <Col md={4} lg={4}>
-                                     
-                                     <Card style={{ width: '18rem' }}>
-                                         
-                             <Card.Header style={{backgroundColor:'#AD365C' , textDecoration:'none' , border:'none'}}>
-                             <Row>
-                                             <Col md={4} lg={4}>
-                             <GoPerson style={{ fontSize: '5em', alignItems:'center', justifyContent:'center' }}/>
-                             </Col>
-                             <Col md={8} lg={8}>
-                                <h4>Syed Azib Ali</h4>
-                             </Col>
-                             </Row>
-                             </Card.Header>
-                            
-  <Card.Body>
-  <Card.Title style={{color:'#AD365C'}}>GiverPays</Card.Title>
-    <Card.Text style={{color:'black'}}>
-      'Some quick example text to build on the card title and make up the bulk of
-      the card's content.'
-    </Card.Text>
-    
-  </Card.Body>
-</Card>
-                                  </Col>
-                              </Row>
-                          </Container>
-                        </DisplayOver>
-               </Background>
-                   
-            </React.Fragment>
+                    </Grid>
+                    <Grid item lg={6} md={6}>
+                        <div className="client-info" style={{ padding: 10 }}>
+                            <Grid container spacing={1}>
+                                <Grid item lg={2} md={2} sm={12}>
+                                    <GoPerson style={{ fontSize: '5em', borderColor:'black' }} />
+                                </Grid>
+                                <Grid item lg={10} md={10} sm={12}>
+                                    <Typography variant="h4"
+                                        style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Montserrat", sans-serif', }} >
+                                        Syed Azib Ali
+                                    </Typography>
+                                    <Typography variant="h4"
+                                        style={{ color: '#6195FF', marginTop: 7, fontWeight: 'bolder', fontSize: '1.2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Giverpays
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <div style={{ height: 10 }} />
+                            <div>
+                                <Typography variant="p" style={{ color: '#f0f0f0f', fontWeight: 'normal', fontSize: '1.1em', opacity: '0.9' }} >
+                                    Was great to work with TechNest, good communication and very good
+                                    technical understanding of the features/bug fix. I highly recommend TechNest as
+                                    they would be a good asset for web development
+                                </Typography>
+                            </div>
+                        </div>
+                    </Grid>
+                </Grid>
+            </Container>
         )
     }
 }
 
-export default LandingPageComponent4;
+export default withRouter(LandingPageComponent4);

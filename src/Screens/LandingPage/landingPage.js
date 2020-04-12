@@ -9,6 +9,9 @@ import {
 } from "@material-ui/core";
 import   ScrollUpButton  from "react-scroll-up-button";
 
+// CSS
+import '../../App.css';
+
 import Navbar from '../../Components/Navbar/Navbar'
 
 
@@ -335,7 +338,12 @@ class LandingPage extends Component {
                     </Grid>
                     <Grid container>
                     <Grid  item xs={12} md={12}>
-                        <LandingPage4  />
+                    <div style={{ height: 50 }} />
+                    <div className="testimonial-banner">
+                        <div className="overlay">
+                            <LandingPage4 />
+                        </div>
+                    </div>
                     </Grid>
                     </Grid>
                     <Grid container>
