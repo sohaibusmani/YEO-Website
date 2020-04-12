@@ -57,19 +57,7 @@ class AdPackages extends React.Component{
 
                     </div>
                     </Container>
-                    <div style={{marginTop:'50px'}}>
-                        <Container fluid>
-                            <Row>
-                                <Col>
-                        <Link to='/BreakupPackages'>
-                         <Button className={classes.button}>
-                             Make Your Own Package
-                         </Button>
-                        </Link>
-                        </Col>
-                        </Row>
-                        </Container>
-                    </div>
+                   
                  <div style={{marginTop:'50px', marginBottom:'50px'}}>
                      <Container fluid>
                          <Row>
@@ -244,6 +232,19 @@ class AdPackages extends React.Component{
                      </Row>
                      </Container>
                  </div>
+                 <div style={{marginTop:'50px', marginBottom:'50px', textAlign:'center'}}>
+                        <Container fluid>
+                            <Row>
+                                <Col>
+                        <Link to='/BreakupPackages'>
+                         <Button className={classes.button}>
+                             Make Your Own Package
+                         </Button>
+                        </Link>
+                        </Col>
+                        </Row>
+                        </Container>
+                    </div>
                  <Footer/>
             </React.Fragment>
         )

@@ -10,6 +10,9 @@ import { Container } from '@material-ui/core';
 import Logo from '../../Assets/Images/logo.jpg';
 import { Link } from "react-router-dom";
 
+// Components
+import MobileMenu from '../MobileMenu/MobileMenu';
+
 
 
 
@@ -157,6 +160,9 @@ return(
                             
                         </div>
                 </Container>
+                <div className={classes.mobileMenu}>
+                        <MobileMenu />
+                    </div>
               </Toolbar>
             </AppBar>
    </div>
