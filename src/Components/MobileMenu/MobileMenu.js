@@ -44,7 +44,7 @@ function TemporaryDrawer(props) {
             role="presentation"
         >
             <List>
-                <IconButton onClick={toggleDrawer('right', false)} style={{ marginTop: 30, backgroundColor: '#061838', float: 'right', marginRight: 30 }}>
+                <IconButton onClick={toggleDrawer('right', false)} style={{ marginTop: 30, backgroundColor: '#AD365C', float: 'right', marginRight: 30 }}>
                     <CloseIcon style={{ color: 'white' }} />
                 </IconButton>
                 <div style={{ height: 100 }} />
@@ -52,7 +52,7 @@ function TemporaryDrawer(props) {
                     <img
                         style={{
                             maxHeight: "100%",
-                            maxWidth: "80%",
+                            maxWidth: "40%",
                             height: "auto",
                             width: "auto"
                         }}
@@ -64,11 +64,11 @@ function TemporaryDrawer(props) {
                             <Link to='/'>
                                 <Typography
                                     style={{
-                                        color: "#3F3F3F",
+                                        color: "#AD365C",
                                         fontSize: "23px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 900,
+                                        fontWeight: 500,
                                         marginBottom: "15px",
                                         cursor: "pointer"
                                     }}
@@ -82,11 +82,11 @@ function TemporaryDrawer(props) {
                             <Link to='/Events'>
                                 <Typography
                                     style={{
-                                        color: "#3F3F3F",
+                                        color: "#AD365C",
                                         fontSize: "23px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 900,
+                                        fontWeight: 500,
                                         marginBottom: "15px",
                                         cursor: "pointer"
                                     }}
@@ -100,11 +100,11 @@ function TemporaryDrawer(props) {
                             <Link to='/Courses'>
                                 <Typography
                                     style={{
-                                        color: "#3F3F3F",
+                                        color: "#AD365C",
                                         fontSize: "23px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 900,
+                                        fontWeight: 500,
                                         marginBottom: "15px",
                                         cursor: "pointer"
                                     }}
@@ -118,11 +118,11 @@ function TemporaryDrawer(props) {
                             <Link to='/Packages'>
                                 <Typography
                                     style={{
-                                        color: "#3F3F3F",
+                                        color: "#AD365C",
                                         fontSize: "23px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 900,
+                                        fontWeight: 500,
                                         marginBottom: "15px",
                                         cursor: "pointer",
                                         width: 130
@@ -137,11 +137,11 @@ function TemporaryDrawer(props) {
                             <Link to='/About'>
                                 <Typography
                                     style={{
-                                        color: "#3F3F3F",
+                                        color: "#AD365C",
                                         fontSize: "23px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 900,
+                                        fontWeight: 500,
                                         marginBottom: "15px",
                                         cursor: "pointer",
                                         width: 130
@@ -156,11 +156,11 @@ function TemporaryDrawer(props) {
                             <Link to='/Contact'>
                                 <Typography
                                     style={{
-                                        color: "#686868",
-                                        fontSize: "18px",
+                                        color: "#AD365C",
+                                        fontSize: "23px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 400,
+                                        fontWeight: 500,
                                         marginBottom: "8px",
                                         cursor: "pointer"
                                     }}
@@ -178,7 +178,7 @@ function TemporaryDrawer(props) {
 
     return (
         <div>
-            <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 30, backgroundColor: '#061838' }}>
+            <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 30, backgroundColor: '#AD365C' }}>
                 <MenuIcon style={{ color: 'white' }} />
             </IconButton>
             <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
