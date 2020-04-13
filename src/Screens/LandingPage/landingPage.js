@@ -200,7 +200,11 @@ class LandingPage extends Component {
                     </Grid>
                     <Grid container>
                 <Grid  item xs={12} md={12}>
-                        <LandingPage2  />
+                <div className="testimonial-banner">
+                        <div className="overlay">
+                            <LandingPage2 />
+                        </div>
+                        </div>
                     </Grid>
                     </Grid>
                     <br/>
@@ -339,6 +343,7 @@ class LandingPage extends Component {
                     <Grid container>
                     <Grid  item xs={12} md={12}>
                     <div style={{ height: 50 }} />
+                    <h1 style={{textAlign:'center', marginBottom:'100px'}}>What our happy clients say</h1>
                     <div className="testimonial-banner">
                         <div className="overlay">
                             <LandingPage4 />

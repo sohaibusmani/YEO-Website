@@ -1,78 +1,48 @@
 import React from 'react';
-import './LandingPageComponent2.css';
-import {Container, Col,Row} from 'react-bootstrap';
-
-
-
-
-
-
-
+import { Grid, Container, Typography } from '@material-ui/core';
+//React Router
+import { withRouter } from 'react-router-dom';
 //Casecading Style Sheets
-// import './App.css';
+import '../../App.css';
+import { GoPerson } from 'react-icons/go';
+import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Rotate';
 
-class LandingPageComponent2 extends React.Component {
+
+class LandingPageComponent4 extends React.Component {
 
     render() {
-        
+
         return (
-
-            <React.Fragment>
-                <br/>
-                <br/>
-                <div id="header">
-        <div class="overlay">
-            <div class="container">
-                <div class="row scroll-me">
-                    <Container>
-                        <Row>
-                            <Col md={4} lg={4} sm={12}>
-                    <div >
-                       
-                   
-                    <Container maxWidth='lg'
-                    style={{ color: "black", marginTop: 80 }}>
-                        <div
-                        style={{
-                            justifyContent: "center",
-                            alignItems: "center,",
-                            display: "inline-flex",
-                            width: "100%",
-                            marginLeft:'250px',
-                            color:'white',
-                            fontSize:'70px'
-                        }}>
-                            Operations
+            <Container maxWidth="md">
+                <div style={{ height: 120 }} />
+                <Grid container spacing={2}>
+                    <Grid item lg={4} md={4}></Grid>
+                <Grid item lg={6} md={6}>
+                        <div className="client-info" style={{ padding: 10 }}>
+                            <Grid container spacing={1}>
+                               
+                                <Grid item lg={10} md={10} sm={12}>
+                                    <Typography variant="h4"
+                                        style={{marginBottom:'40px', color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '5em', textAlign:'center', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Operations
+                                    </Typography>
+                                    
+                                </Grid>
+                            </Grid>
+                            <div style={{ height: 10 }} />
+                            <div>
+                                <Typography variant="p" style={{marginTop:'80px', color: '#f0f0f0f', fontWeight: 'normal', fontSize: '1em', opacity: '0.9' }} >
+                                Our various art work/operations like FLORISTS The art of flowers, CRAFTERS The art of crafting clever ideas , DECORATION the art of assembling scattering things in an unbelievable way, SOUND SYSTEM The art of taking yourself in an accept able place, All these Beautiful things that made your event outlast, are done by our Passionate, Talented, Highly Motivated Youngster who are willing to explore new experience and make your event awesome/ a dream come true.
+                                </Typography>
+                            </div>
                         </div>
-                        <p 
-                         style={{
-                            textAlign:'center',
-                            
-                            marginLeft:'250px',
-                            width: "100%",
-                            
-                            marginTop:'50px',
-                            color:'white',
-                            fontSize:'20px'
-                        }}>
-                            Our various art works/operations like FLORISTS (the art of flowers), CRAFTERS (The art of crafting clever ideas), DECORATION (the art of assembling scattered things in an unbelievable way), SOUND SYSTEM (The art of taking yourself in an acceptable place), all these Beautiful things that make your event outlast, are done by our Passionate, Talented and Highly Motivated Youngsters who are willing to explore new experience and make your event awesome/ a dream come true.
-                        </p>
-                       
-                    </Container>
-                        
-                    </div>
-                    </Col>
-                    </Row>
-                    </Container>
-                </div>
+                    </Grid>
+                    </Grid>
                 
-            </div>
-        </div>
-
-    </div>
-            </React.Fragment>
+            </Container>
         )
     }
 }
 
-export default LandingPageComponent2;
+export default withRouter(LandingPageComponent4);
