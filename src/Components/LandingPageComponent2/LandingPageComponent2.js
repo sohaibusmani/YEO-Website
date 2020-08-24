@@ -4,9 +4,6 @@ import { Grid, Container, Typography } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 //Casecading Style Sheets
 import '../../App.css';
-import { GoPerson } from 'react-icons/go';
-import Fade from 'react-reveal/Fade';
-import Flip from 'react-reveal/Rotate';
 
 
 class LandingPageComponent4 extends React.Component {

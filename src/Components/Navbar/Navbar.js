@@ -1,4 +1,4 @@
-import React , {Component}   from 'react';
+import React   from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -89,6 +89,7 @@ return(
                 <Typography variant="h6" className={classes.title}>
                             <Link to="/" style={{ textDecoration: "none" }}>
                                 <img
+                                    alt='pic'
                                     src={Logo}
                                     style={{
                                         width: "150px",

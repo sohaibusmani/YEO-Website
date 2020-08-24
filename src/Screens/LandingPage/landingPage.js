@@ -4,8 +4,6 @@ import {
     Container,
     Grid,
     Typography,
-    Button,
-    Divider
 } from "@material-ui/core";
 import   ScrollUpButton  from "react-scroll-up-button";
 

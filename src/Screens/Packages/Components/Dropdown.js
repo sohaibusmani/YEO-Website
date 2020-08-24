@@ -74,7 +74,7 @@ function RenderDropDown(props) {
         if (props.selectedOption) {
             setSingle(props.selectedOption);
         }
-    })
+    } , [props.selectedOption])
 
 
     return (

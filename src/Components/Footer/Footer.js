@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faFacebookSquare, faInstagram, faGithub, faGooglePlus, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
@@ -27,14 +27,14 @@ class Footer extends React.Component {
                         <Row>
                             <Col md={4} lg={4} >
                                 <div className="footer-sec-1" style={{ marginTop: '20px' }}>
-                                    <img src={logo} width="200" height="auto" />
+                                    <img alt='pic' src={logo} width="200" height="auto" />
 
                                 </div>
                             </Col>
                             <Col md={4} lg={4} >
                                 <div style={{marginTop:'20px' , fontFamily:'TimesNewRoman'}}>
                                 <h2>Our Official Partner</h2>
-                                <img src={oric} style={{marginTop:'20px', }} width='300' height='auto' />
+                                <img alt='pic' src={oric} style={{marginTop:'20px', }} width='300' height='auto' />
                                 </div>
                             </Col>
                             <Col md={4} lg={4}>

@@ -203,7 +203,6 @@ import React , {Component} from 'react';
 
 // Component
 
-import PackageDetails from './Components/PackageDetails';
 import  AdPackages  from "./Components/AdPackages";
 
 class Packages extends Component {

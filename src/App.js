@@ -1,10 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { withStyles } from '@material-ui/core/styles';
 
 // Routing
-import { BrowserRouter as Router, Switch, Route, Redirect , withRouter} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 // Screens
 import LandingPage from './Screens/LandingPage/landingPage';
@@ -19,10 +17,6 @@ import PackageDetails from './Screens/Packages/Components/PackageDetails';
 import Chat from './Screens/Chat/Chat';
 import Events from './Screens/Events/Events';
 
-
-const styles = (theme => {
-  
-})
 
 
 class App extends React.Component{

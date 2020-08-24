@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import {Container,Row,Card,Col,Image} from 'react-bootstrap';
+import {Container,Row,Card,Col} from 'react-bootstrap';
 import {Typography, Grid} from '@material-ui/core';
 
 // Components

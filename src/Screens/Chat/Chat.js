@@ -3,7 +3,6 @@ import {Container, Row, Col, Spinner} from 'react-bootstrap'
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
-import Footer from '../../Components/Footer/Footer';
 
 class Chat extends Component {
     render(){

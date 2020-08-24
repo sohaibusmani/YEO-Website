@@ -1,8 +1,7 @@
 import React , {Component} from 'react';
-import {Container,Row,Col,Card,Button, Image} from 'react-bootstrap';
+import {Container,Row,Col,Card,Button} from 'react-bootstrap';
 import {Grid} from '@material-ui/core';
 import {Link} from 'react-router-dom';
-import styled from "@emotion/styled/macro";
 import { withStyles } from '@material-ui/core/styles';
 
 // Assets
@@ -29,28 +28,28 @@ const styles = {
   }
 }
 
-const DisplayOver = styled.div({
-  height: "100%",
-  left: "0",
-  position: "absolute",
-  top: "0",
-  width: "100%",
-  zIndex: 2,
-  transition: "background-color 350ms ease",
-  backgroundColor: "transparent",
-  padding: "20px 20px 0 20px",
-  boxSizing: "border-box",
+// const DisplayOver = styled.div({
+//   height: "100%",
+//   left: "0",
+//   position: "absolute",
+//   top: "0",
+//   width: "100%",
+//   zIndex: 2,
+//   transition: "background-color 350ms ease",
+//   backgroundColor: "transparent",
+//   padding: "20px 20px 0 20px",
+//   boxSizing: "border-box",
   
-});
+// });
 
-const Background = styled.div({
-  position: "relative",
-  width: "100%",
-  height: "100%",
-  maxWidth: '100%',
-  maxHeight: '100%',
-  color: 'white',
-});
+// const Background = styled.div({
+//   position: "relative",
+//   width: "100%",
+//   height: "100%",
+//   maxWidth: '100%',
+//   maxHeight: '100%',
+//   color: 'white',
+// });
 
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card, Col, Row, Container, Form, Button } from 'react-bootstrap';
-import { InputLabel, TextField , Typography} from '@material-ui/core';
+import { Card, Col, Row, Container, Button } from 'react-bootstrap';
+import {TextField , Typography} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";

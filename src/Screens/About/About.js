@@ -56,7 +56,9 @@ class About extends Component {
                             </Row>
                             <Row>
                                 <Col md={6} lg={6}>
-                                    <img style={{
+                                    <img
+                                    alt='pic'
+                                     style={{
                                         width: '100%',
                                         height: '300px',
                                     }} src={us8} />

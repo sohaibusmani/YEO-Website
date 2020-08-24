@@ -204,7 +204,7 @@ class LandingPageComponent1 extends React.Component {
                     <Row>
                         <Col md={3} lg={3}>
                         </Col>
-                        <Col md={6} lg={6} md={12} style={{ marginTop: '50px', textAlign: 'center' }}>
+                        <Col  lg={6} md={12} style={{ marginTop: '50px', textAlign: 'center' }}>
                             <h4>GIVE YOUR GUESTS A REASON TO STARE</h4>
                             <hr />
                             <p>From lavish weddings set on the bloom-bordered paths of Karachi’s historic venues to elaborate corporate events that nurture company connections,
@@ -215,7 +215,9 @@ class LandingPageComponent1 extends React.Component {
                         <Container style={{marginTop:'100px', marginBottom:'50px'}} fluid>
                             <Row>
                                 <Col md={6} lg={6}>
-                                 <img style={{width: '100%',
+                                 <img 
+                                  alt='pic'
+                                 style={{width: '100%',
                     height: '600px',}} src={us17} />
                                 </Col>
                                 <Col style={{fontFamily:'TimesNewRoman'}} md={6} lg={6}>

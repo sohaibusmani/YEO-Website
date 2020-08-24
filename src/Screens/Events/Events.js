@@ -53,7 +53,7 @@ class Events extends React.Component {
                     <Row>
                         <Col md={3} lg={3}>
                         </Col>
-                        <Col md={6} lg={6} md={12} style={{ fontFamily: 'TimesNewRoman', marginTop: '50px', textAlign: 'center' }}>
+                        <Col  lg={6} md={12} style={{ fontFamily: 'TimesNewRoman', marginTop: '50px', textAlign: 'center' }}>
                             <h1>Welcome to YEO Events</h1>
                             <hr />
 
@@ -63,7 +63,9 @@ class Events extends React.Component {
                         <Container style={{ marginTop: '100px', marginBottom: '50px' }} fluid>
                             <Row>
                                 <Col md={6} lg={6}>
-                                    <img style={{
+                                    <img 
+                                    alt='pic'
+                                    style={{
                                         width: '100%',
                                         height: '600px',
                                     }} src={us17} />

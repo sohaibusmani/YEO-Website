@@ -1,6 +1,5 @@
 import React , {Component} from 'react';
-import {Container, Row, Col, Image} from 'react-bootstrap';
-import styled from "@emotion/styled/macro";
+import {Container, Row, Col} from 'react-bootstrap';
 import { withStyles } from "@material-ui/core/styles";
 
 // Components
@@ -36,7 +35,6 @@ const styles = theme => ({
 
 class CourseDetail extends Component {
     render(){
-        const {classes}=this.props;
         return(
             <React.Fragment>
                 <Navbar/>

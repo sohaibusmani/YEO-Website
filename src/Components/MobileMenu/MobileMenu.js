@@ -1,14 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import { IconButton, Container, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -50,6 +43,7 @@ function TemporaryDrawer(props) {
                 <div style={{ height: 100 }} />
                 <Container maxWidth="lg">
                     <img
+                        alt='pic'
                         style={{
                             maxHeight: "100%",
                             maxWidth: "40%",
