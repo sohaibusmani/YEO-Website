@@ -5,6 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Container } from '@material-ui/core';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 
 // Logo
 import Logo from '../../Assets/Images/logo.jpg';
@@ -21,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     navs: {
         backgroundColor: 'white',
         color: '#AD365C',
-        
+        textDecoration:'none',
         '&:hover': {
             
             borderBottom:'1px solid #AD365C ',
@@ -67,7 +69,21 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.up("md")]: {
           display: "none"
       }
-  }
+  },
+  button: {
+    backgroundColor: 'white',
+    color: '#AD365C',
+    textDecoration:'none',
+    borderColor: '#AD365C !important',
+    '&:hover': {
+        backgroundColor: '#AD365C',
+        borderColor: 'white',
+        color:'white'
+      },
+      marginLeft:'30%',
+      
+      
+}
 }));
 
 
@@ -87,7 +103,7 @@ return(
               <Toolbar>
                 <Container maxWidth="lg">
                 <Typography variant="h6" className={classes.title}>
-                            <Link to="/" style={{ textDecoration: "none" }}>
+                            <Link to="/">
                                 <img
                                     alt='pic'
                                     src={Logo}
@@ -102,7 +118,7 @@ return(
                             </Link>
                         </Typography>
                         <div className={classes.navigationButtons}>
-                        <Link className={classes.navs} to='/' style={{ textDecoration: "none" }}>
+                        <Link className={classes.navs} to='/'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
@@ -111,7 +127,7 @@ return(
                                     Home
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/Events' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Events'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
@@ -120,7 +136,7 @@ return(
                                     Events
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/Courses' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Courses'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -129,7 +145,7 @@ return(
                                     Courses
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/Packages' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Packages'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -138,7 +154,7 @@ return(
                                     Packages
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/About' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/About'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -147,7 +163,7 @@ return(
                                     About
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/Contact' style={{ textDecoration: "none" }}>
+                            <Link className={classes.navs} to='/Contact'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -156,9 +172,10 @@ return(
                                     Contact Us
                                 </Button>
                             </Link>
-                            
-
-                            
+                            <Button className={classes.button} block>
+                                <AccountCircleIcon style={{marginRight:'7px'}}/>
+                                Login
+                            </Button>
                         </div>
                 </Container>
                 <div className={classes.mobileMenu}>
