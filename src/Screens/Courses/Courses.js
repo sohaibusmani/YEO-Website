@@ -58,7 +58,7 @@ class Courses extends Component {
       const {classes} = this.props;
         return(
             <React.Fragment>
-              <Navbar/>
+              
               <Container>
                  <div style={{backgroundImage:`url(${logo})`,
              width: '100%',

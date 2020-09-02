@@ -37,7 +37,7 @@ class CourseDetail extends Component {
     render(){
         return(
             <React.Fragment>
-                <Navbar/>
+               
                 <Container>
                 <div style={{backgroundImage:`url(${picture})`,
              width: '100%',

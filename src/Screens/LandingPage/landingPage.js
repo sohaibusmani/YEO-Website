@@ -182,7 +182,7 @@ class LandingPage extends Component {
         const { classes } = this.props;
         return(
             <React.Fragment>
-                <Navbar/>
+                
                 <div className={classes.scrollUpButton}>
                 <ScrollUpButton
                     ShowAtPosition={150}

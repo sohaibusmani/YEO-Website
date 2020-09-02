@@ -12,7 +12,7 @@ class Internship extends Component {
     render(){
         return(
             <React.Fragment>
-                <Navbar/>
+             
                 <Container>
               <div style={{backgroundImage:`url(${evebts})`,
              width: '100%',

@@ -23,7 +23,7 @@ class BrandSection extends Component {
     render(){
         return(
             <React.Fragment>
-              <Navbar/>
+             
               <Container>
                  <div style={{backgroundImage:`url(${logo})`,
              width: '100%',

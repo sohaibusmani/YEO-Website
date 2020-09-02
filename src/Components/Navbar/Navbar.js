@@ -103,7 +103,7 @@ return(
               <Toolbar>
                 <Container maxWidth="lg">
                 <Typography variant="h6" className={classes.title}>
-                            <Link to="/">
+                            {/* <Link to="/"> */}
                                 <img
                                     alt='pic'
                                     src={Logo}
@@ -114,8 +114,9 @@ return(
                                         bottom: " 0px",
                                         top: "3px"
                                     }}
+                                    onClick={()=>props.history.push('/')}
                                 />
-                            </Link>
+                            {/* </Link> */}
                         </Typography>
                         <div className={classes.navigationButtons}>
                         <Link className={classes.navs} to='/'>
@@ -172,10 +173,15 @@ return(
                                     Contact Us
                                 </Button>
                             </Link>
-                            <Button className={classes.button} block>
+                            
+                            <Button
+                             className={classes.button}
+                             onClick={()=>{props.history.push('/signin')}}
+                             block>
                                 <AccountCircleIcon style={{marginRight:'7px'}}/>
                                 Login
                             </Button>
+                            
                         </div>
                 </Container>
                 <div className={classes.mobileMenu}>

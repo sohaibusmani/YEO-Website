@@ -2,7 +2,10 @@ import React from 'react';
 import './App.css';
 
 // Routing
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// navbar
+import Navbar from './Components/Navbar/Navbar';
 
 // Screens
 import LandingPage from './Screens/LandingPage/landingPage';
@@ -16,39 +19,69 @@ import Packages from './Screens/Packages/Packages';
 import PackageDetails from './Screens/Packages/Components/PackageDetails';
 import Chat from './Screens/Chat/Chat';
 import Events from './Screens/Events/Events';
+import Signin from './Components/Login/Signin';
+
+// router
+import { withRouter } from 'react-router-dom';
 
 
 
-class App extends React.Component{
-  render(){
-    return(
+class App extends React.Component {
+  render() {
+    return (
       <React.Fragment>
-         <Router>
-    {/* <SearchAppBar/> */}
-    
-    <Switch>
-      <Route path='/' exact component={()=><LandingPage/>} />
-          {/* <Route path='/LandingPage' exact component={LandingPage}/> */}
-          <Route path='/about' exact component={About}/>
-          {/* <Route path='/Events'  component={Events}/> */}
-          <Route path='/Courses' exact  component={Courses}/>
-          <Route path='/Courses/CourseDetail' exact component={CourseDetail}/>
-          <Route path='/Courses/BrandSection' exact component={BrandSection}/>
-          <Route path='/Courses/Internship' exact component={Internship}/>
-          <Route path='/Contact' exact  component={Contact}/>
-          <Route path='/Packages' exact  component={Packages}/>
-          <Route path='/Packages/PackageDetails' exact component={PackageDetails}/>
-          <Route path='/Inbox' exact component={Chat}/>
-          <Route path='/Events' exact component={Events}/>
-          
-          
+        <Navbar {...this.props} />
+        
+          {/* <SearchAppBar/> */}
+
+          <Switch>
+            <Route path='/' exact render={
+              props => (<LandingPage {...props} />
+              )} />
+            {/* <Route path='/LandingPage' exact component={LandingPage}/> */}
+            <Route path='/About' exact render={
+              props => (<About {...props} />
+              )} />
+            {/* <Route path='/Events'  component={Events}/> */}
+            <Route path='/Courses' exact render={
+              props => (<Courses />
+              )} />
+            <Route path='/Courses/CourseDetail' exact render={
+              props => (<CourseDetail {...props} />
+              )} />
+            <Route path='/Courses/BrandSection' exact render={
+              props => (<BrandSection {...props}/>
+              )} />
+            <Route path='/Courses/Internship' exact render={
+              props => (<Internship {...props} />
+              )} />
+            <Route path='/Contact' exact render={
+              props => (<Contact {...props} />
+              )} />
+            <Route path='/Packages' exact render={
+              props => (<Packages {...props} />
+              )} />
+            <Route path='/Packages/PackageDetails' exact render={
+              props => (<PackageDetails />
+              )} />
+            <Route path='/Inbox' exact render={
+              props => (<Chat {...props} />
+              )} />
+            <Route path='/Events' exact render={
+              props => (<Events {...props}/>
+              )} />
+            <Route path='/signin' exact render={
+              props => (<Signin {...props} />
+              )} />
+
+
 
           </Switch>
-    </Router>
+       
       </React.Fragment>
     )
   }
 }
 
 // export default withRouter(withStyles(styles)(App));
-export default App;
+export default withRouter(App);

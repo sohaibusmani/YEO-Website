@@ -103,7 +103,7 @@ class PackageDetails extends Component {
 
         return (
             <React.Fragment >
-                <Navbar />
+                
                 <div style={{marginBottom:'3rem'}}>
                
                <Container>

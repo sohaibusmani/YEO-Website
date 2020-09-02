@@ -36,7 +36,7 @@ class Events extends React.Component {
         const {classes} = this.props;
         return (
             <React.Fragment>
-                <Navbar />
+                
                 <Container>
                     <div style={{
                         backgroundImage: `url(${us14})`,
