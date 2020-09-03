@@ -13,6 +13,16 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
+//firebase 
+import firebase from '../../config/firebase';
+import { baseUrl } from '../../config/api';
+
+//Axios
+import axios from 'axios';
+
+//Sweet Alerts
+import swal from 'sweetalert2';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -47,7 +57,62 @@ const styles = (theme) => ({
 });
 
 class Register extends React.Component {
+  state = {
+    firstName:'',
+    lastName:'',
+    email:'',
+    password:''
+  }
+
+  userRegistration = () => {
+    const {
+      firstName,
+      lastName,
+      email,
+      password
+    }
+    =this.state;
+
+    firebase.auth().createUserWithEmailAndPassword(email,password)
+    .then(()=>{
+      axios({
+        url:`${baseUrl}/user/user-register`,
+        method:'POST',
+        data:{
+          fullName : firstName + ' ' + lastName,
+          email,
+          password,
+          userId: firebase.auth().currentUser.uid,
+        }
+      })
+      .then(res => {
+        swal.fire({
+          icon:'success',
+          title:'Registered Successfully'
+        })
+        .then(()=>window.location.replace('/'))
+      })
+      .catch(err => {
+        swal.fire({
+          icon:'error',
+          title:'Internal Server Error'
+        });
+      });
+    })
+    .catch(function (error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+
+      swal.fire({
+        icon:'error',
+        title:errorCode || 'Something Went Wrong',
+        text:errorMessage
+      });
+    });
+  }
+
   render(){
+    const {firstName , lastName , email, password} = this.state;
     const {classes} = this.props;
     return(
       <Container component="main" maxWidth="xs">
@@ -59,7 +124,7 @@ class Register extends React.Component {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -71,6 +136,7 @@ class Register extends React.Component {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                onChange={e => { this.setState({ firstName: e.target.value })}}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -82,6 +148,7 @@ class Register extends React.Component {
                 label="Last Name"
                 name="lastName"
                 autoComplete="lname"
+                onChange={e => { this.setState({ lastName: e.target.value }); }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -93,6 +160,7 @@ class Register extends React.Component {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={e => { this.setState({ email: e.target.value }); }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -105,6 +173,7 @@ class Register extends React.Component {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={e => { this.setState({ password: e.target.value }); }}
               />
             </Grid>
             <Grid item xs={12}>
@@ -120,6 +189,7 @@ class Register extends React.Component {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={this.userRegistration}
           >
             Sign Up
           </Button>
@@ -130,7 +200,7 @@ class Register extends React.Component {
               </Link>
             </Grid>
           </Grid>
-        </form>
+        
       </div>
       <Box mt={5}>
         <Copyright />

@@ -13,6 +13,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
+// firebase
+import firebase from '../../config/firebase';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -58,7 +61,26 @@ const styles = (theme) => ({
 });
 
 class Login extends React.Component {
+  state = {
+    email:'',
+    password:''
+  }
+
+  login = () => {
+    const { email, password } = this.state;
+
+    firebase.auth().signInWithEmailAndPassword(email , password)
+        .then(() => {
+            window.location.replace('/')
+        })
+        .catch(function (error) {
+            var errorMessage = error.message;
+            console.log('User Auth Failed $Error: ' + errorMessage);
+        });
+}
+
 render(){
+  const {email , password} = this.state;
   const {classes} = this.props;
   return(
 <Grid container component="main" className={classes.root}>
@@ -72,7 +94,7 @@ render(){
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          
             <TextField
               variant="outlined"
               margin="normal"
@@ -83,6 +105,7 @@ render(){
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={e => { this.setState({ email: e.target.value }); }}
             />
             <TextField
               variant="outlined"
@@ -94,6 +117,7 @@ render(){
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={e => { this.setState({ password: e.target.value }); }}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -105,6 +129,7 @@ render(){
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={this.login}
             >
               Sign In
             </Button>
@@ -123,7 +148,7 @@ render(){
             <Box mt={5}>
               <Copyright />
             </Box>
-          </form>
+         
         </div>
       </Grid>
     </Grid>
