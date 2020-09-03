@@ -11,7 +11,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 function Copyright() {
   return (
@@ -26,7 +26,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const styles = (theme) => ({
   root: {
     height: '100vh',
   },
@@ -55,13 +55,13 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+});
 
-export default function SignInSide() {
-  const classes = useStyles();
-
-  return (
-    <Grid container component="main" className={classes.root}>
+class Login extends React.Component {
+render(){
+  const {classes} = this.props;
+  return(
+<Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -127,5 +127,8 @@ export default function SignInSide() {
         </div>
       </Grid>
     </Grid>
-  );
+  )
 }
+}
+
+export default withStyles(styles)(Login);
