@@ -10,15 +10,15 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://technest-pk.github.io/">
+        TechNest
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -26,7 +26,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const styles = (theme) => ({
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+});
 
-export default function SignUp() {
-  const classes = useStyles();
-
-  return (
-    <Container component="main" maxWidth="xs">
+class Register extends React.Component {
+  render(){
+    const {classes} = this.props;
+    return(
+      <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -136,5 +136,9 @@ export default function SignUp() {
         <Copyright />
       </Box>
     </Container>
-  );
+ 
+    )
+  }
 }
+
+export default withStyles(styles)(Register);
