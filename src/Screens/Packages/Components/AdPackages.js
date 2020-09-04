@@ -136,7 +136,7 @@ class AdPackages extends React.Component {
                                                 <Col lg={3} md={3}>
                                                 </Col>
                                                 <Col >
-                                                    <Link to='/Packages/PackageDetails' style={{ textDecoration: 'none' }}>
+                                                    <Link to={`/Packages/PackageDetails/${val._id}`} style={{ textDecoration: 'none' }}>
                                                         <Button className={classes.button} block>View Details</Button>
                                                     </Link>
                                                 </Col>
