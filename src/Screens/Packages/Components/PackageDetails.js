@@ -11,7 +11,8 @@ import {Link} from 'react-router-dom';
 
 import Navbar from '../../../Components/Navbar/Navbar';
 import { EventTypes, EventTimes } from './Dropdown';
-import Footer from '../../../Components/Footer/Footer'
+import Footer from '../../../Components/Footer/Footer';
+import Description from './ProductDescription';
 
 // Assets
 
@@ -70,7 +71,8 @@ class PackageDetails extends Component {
         eventType: '',
         eventTime: '',
         otherRequirements: '',
-        price:''
+        price:'',
+        overview:''
     }
 
     getEventTypes = eventType => {
@@ -98,7 +100,8 @@ class PackageDetails extends Component {
         })
         .then(response => {
             this.setState({
-                price: response.data.price
+                price: response.data.price,
+                overview: response.data.overview
             })
         })
         .catch((err)=>{
@@ -109,7 +112,7 @@ class PackageDetails extends Component {
 
     render() {
         const { classes } = this.props;
-        const {price} = this.state;
+        const {price, overview} = this.state;
 
         const images = [
             {
@@ -161,57 +164,7 @@ class PackageDetails extends Component {
                                 <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}></Col>
                             </Row>
                             <Row>
-                                
-                                   
-                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
-                                      <h4>Deal Includes:</h4>
-                                      <ul>
-                                          <li><Typography>Table décor </Typography></li>
-                                          <li><Typography>Chocolate fountain with Goodies</Typography></li>
-                                          <li><Typography>Juice corner</Typography></li>
-                                          <li><Typography>Balloon décor</Typography></li>
-                                         
-                                          <li><Typography>30 floral tiaras</Typography></li>
-                                          <li><Typography>3 bridal shower games</Typography></li>
-                                      </ul>
-                                    </Col>
-                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
-                                      <h4>Catering:</h4>
-                                      <ul>
-                                          <li><Typography>Biryani</Typography></li>
-                                          <li><Typography>Karahi</Typography></li>
-                                          <li><Typography>Handi</Typography></li>
-                                          <li><Typography>Fish</Typography></li>
-                                          <li><Typography>wong Tong</Typography></li>
-                                          <li><Typography>Stake</Typography></li>
-                                          <li><Typography>Labnani Kabab</Typography></li>
-                                      </ul>
-                                    </Col>
-                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
-                                      <h4>Photography:</h4>
-                                      <ul>
-                                          <li><Typography>Biryani</Typography></li>
-                                          <li><Typography>Karahi</Typography></li>
-                                          <li><Typography>Handi</Typography></li>
-                                          <li><Typography>Fish</Typography></li>
-                                          <li><Typography>wong Tong</Typography></li>
-                                          <li><Typography>Stake</Typography></li>
-                                          <li><Typography>Labnani Kabab</Typography></li>
-                                      </ul>
-                                    </Col>
-                                    <Col style={{marginTop:'3rem'}} lg={3} md={3} xs={12}>
-                                      <h4>Themes:</h4>
-                                      <ul>
-                                          <li><Typography>Cinderella</Typography></li>
-                                          <li><Typography>Fashionista</Typography></li>
-                                          <li><Typography>Bollywood</Typography></li>
-                                          <li><Typography>Chanel</Typography></li>
-                                          <li><Typography>Vogue</Typography></li>
-                                          <li><Typography>Black n gold</Typography></li>
-                                          <li><Typography>Tiffany & Co.</Typography></li>
-                                      </ul>
-                                    </Col>
-                               
+                                <Description overview={overview}/>   
                             </Row>
                         </Col>
                         <Col md={1}></Col>
