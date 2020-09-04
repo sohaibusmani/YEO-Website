@@ -63,7 +63,7 @@ class App extends React.Component {
               props => (<Packages {...props} />
               )} />
             <Route path='/Packages/PackageDetails/:id' exact render={
-              props => (<PackageDetails />
+              props => (<PackageDetails {...props} />
               )} />
             <Route path='/Inbox' exact render={
               props => (<Chat {...props} />

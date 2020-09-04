@@ -19,6 +19,11 @@ import logo from '../../../Assets/Images/us19.jpg';
 import image1 from '../../../Assets/Images/event.jpg';
 import image2 from '../../../Assets/Images/eventsCover.jpg';
 
+// axios
+import axios from 'axios';
+
+// connection
+import baseUrl from '../../../config/api';
 
 const styles = {
     textField: {
@@ -65,6 +70,7 @@ class PackageDetails extends Component {
         eventType: '',
         eventTime: '',
         otherRequirements: '',
+        price:''
     }
 
     getEventTypes = eventType => {
@@ -79,8 +85,31 @@ class PackageDetails extends Component {
         })
     }
 
+    componentDidMount(){
+        this.getPackageById();
+    }
+
+    getPackageById = () => {
+        const packageId = this.props.match.params.id ;
+
+        axios({
+            url: `${baseUrl}/package/get-package?id=${packageId}`,
+            method: 'GET'
+        })
+        .then(response => {
+            this.setState({
+                price: response.data.price
+            })
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+        
+    }
+
     render() {
         const { classes } = this.props;
+        const {price} = this.state;
 
         const images = [
             {
@@ -192,15 +221,15 @@ class PackageDetails extends Component {
                                     <Card.Body>
                                         <Card.Header style={{backgroundColor:'white', color:'#AD365C'}}>
                                             <Card.Title style={{ textAlign: 'center' }}>
-                                                <strong>RS 30,000</strong>
+                                                <strong>RS {price}</strong>
                                             </Card.Title>
                                         </Card.Header>
                                         <Card.Text>
-                                          => Need Any Sort OF Help
+                                          . Need Any Sort OF Help
                                           <br />
-                                          => Chat with Youth Event Oganizers For More info
+                                          . Chat with Youth Event Oganizers For More info
                                           <br />
-                                          => Click The Button Below
+                                          . Click The Button Below
                                       </Card.Text>
                                       <hr/>
                                       <Link to='/Inbox' style={{textDecoration:'none'}}>
