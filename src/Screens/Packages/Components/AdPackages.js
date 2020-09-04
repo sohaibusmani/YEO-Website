@@ -4,6 +4,15 @@ import {Typography} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom';
 
+// axios
+import axios from 'axios';
+
+// connection string
+import baseUrl from '../../../config/api';
+
+// swal
+import swal from 'sweetalert2';
+
 // Components
 import Navbar from '../../../Components/Navbar/Navbar'
 import Footer from '../../../Components/Footer/Footer'
@@ -40,8 +49,38 @@ const styles = {
 // };
 
 class AdPackages extends React.Component{
+    state = {
+        allPackages : [],
+    }
+
+    componentDidMount(){
+        this.getAllPackages();
+    }
+
+    getAllPackages = () => {
+        axios({
+            url: `${baseUrl}/package/get-packages`,
+            method: 'GET',
+        })
+            .then(response => {
+                console.log(response.data)
+                this.setState({
+                    allPackages: response.data
+                })
+            })
+            .catch(err => {
+                console.log(err);
+                swal.fire({
+                    icon: 'error',
+                    title: err,
+                    
+                })
+            })
+    }
+
     render(){
         const { classes } = this.props;
+        console.log(this.state.allPackages , 'all packages console');
         return(
             <React.Fragment>
                  
