@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Card, Col, Row, Container, Button } from 'react-bootstrap';
-import {TextField , Typography} from '@material-ui/core';
+import { TextField, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 // Components
@@ -46,16 +46,16 @@ const styles = {
             borderColor: '#AD365C !important',
         }
     },
-    button:{
+    button: {
         backgroundColor: 'white',
         color: '#AD365C',
         borderColor: '#AD365C !important',
-        
+
         '&:hover': {
             backgroundColor: '#AD365C',
             borderColor: '#AD365C',
-            
-          },
+
+        },
     }
 };
 
@@ -71,8 +71,9 @@ class PackageDetails extends Component {
         eventType: '',
         eventTime: '',
         otherRequirements: '',
-        price:'',
-        overview:''
+        price: '',
+        overview: '',
+        pics: []
     }
 
     getEventTypes = eventType => {
@@ -87,248 +88,245 @@ class PackageDetails extends Component {
         })
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getPackageById();
     }
 
     getPackageById = () => {
-        const packageId = this.props.match.params.id ;
+        const packageId = this.props.match.params.id;
 
         axios({
             url: `${baseUrl}/package/get-package?id=${packageId}`,
             method: 'GET'
         })
-        .then(response => {
-            this.setState({
-                price: response.data.price,
-                overview: response.data.overview
+            .then(response => {
+                this.setState({
+                    price: response.data.price,
+                    overview: response.data.overview,
+                    pics: response.data.pictures
+                })
             })
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
-        
+            .catch((err) => {
+                console.log(err);
+            })
+
     }
+
 
     render() {
         const { classes } = this.props;
-        const {price, overview} = this.state;
+        const { price, overview, pics } = this.state;
 
-        const images = [
-            {
-                original: logo,
-                thumbnail: logo,
-            },
-            {
-                original: image1,
-                thumbnail: image1,
-            },
-            {
-                original: image2,
-                thumbnail: image2,
-            },
-            // {
-            //     original: image3,
-            //     thumbnail: image3,
-            // },
-        ]
+
+        const images = [];
+        pics.length > 0 &&
+            pics.forEach(url => {
+                images.push({
+                    original: url,
+                    thumbnail: url,
+                })
+            });
 
         return (
             <React.Fragment >
-                
-                <div style={{marginBottom:'3rem'}}>
-               
-               <Container>
-                    <div style={{
-                        backgroundImage: `url(${logo})`,
-                        width: '100%',
-                        height: '300px',
-                        backgroundSize: '100% 100%'
-                    }}>
 
-                    </div>
+                <div style={{ marginBottom: '3rem' }}>
+
+                    <Container>
+                        <div style={{
+                            backgroundImage: `url(${logo})`,
+                            width: '100%',
+                            height: '300px',
+                            backgroundSize: '100% 100%'
+                        }}>
+
+                        </div>
                     </Container>
 
-                
-                <Container style={{ marginTop: '50px' }} fluid>
-                    <Row>
-                        <Col md={8}>
-                            <Row>
-                            <div>
-                                <ImageGallery style={{ height: 50 }} thumbnailPosition='bottom' autoPlay={true} items={images} />
-                            </div>
-                            </Row>
-                            <Row>
-                                <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}></Col>
-                                <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}><h2><strong>About the Deal</strong></h2></Col>
-                                <Col style={{marginTop:'3rem'}} lg={4} md={4} xs={12}></Col>
-                            </Row>
-                            <Row>
-                                <Description overview={overview}/>   
-                            </Row>
-                        </Col>
-                        <Col md={1}></Col>
-                        <Col style={{marginLeft:'-2rem'}} md={3}>
-                            <Row>
-                                <Card style={{ minWidth: 325 , borderColor:'#AD365C' }}>
-                                    <Card.Body>
-                                        <Card.Header style={{backgroundColor:'white', color:'#AD365C'}}>
-                                            <Card.Title style={{ textAlign: 'center' }}>
-                                                <strong>RS {price}</strong>
-                                            </Card.Title>
-                                        </Card.Header>
-                                        <Card.Text>
-                                          . Need Any Sort OF Help
+
+                    <Container style={{ marginTop: '50px' }} fluid>
+                        <Row>
+                            <Col md={8}>
+                                <Row>
+                                    <div>
+                                        <ImageGallery
+                                            style={{ height: 50 }}
+                                            thumbnailPosition='bottom'
+                                            autoPlay={true} items={images}
+                                        />
+                                    </div>
+                                </Row>
+                                <Row>
+                                    <Col style={{ marginTop: '3rem' }} lg={4} md={4} xs={12}></Col>
+                                    <Col style={{ marginTop: '3rem' }} lg={4} md={4} xs={12}><h2><strong>About the Deal</strong></h2></Col>
+                                    <Col style={{ marginTop: '3rem' }} lg={4} md={4} xs={12}></Col>
+                                </Row>
+                                <Row>
+                                    <Description overview={overview} />
+                                </Row>
+                            </Col>
+                            <Col md={1}></Col>
+                            <Col style={{ marginLeft: '-2rem' }} md={3}>
+                                <Row>
+                                    <Card style={{ minWidth: 325, borderColor: '#AD365C' }}>
+                                        <Card.Body>
+                                            <Card.Header style={{ backgroundColor: 'white', color: '#AD365C' }}>
+                                                <Card.Title style={{ textAlign: 'center' }}>
+                                                    <strong>RS {price}</strong>
+                                                </Card.Title>
+                                            </Card.Header>
+                                            <Card.Text>
+                                                . Need Any Sort OF Help
                                           <br />
                                           . Chat with Youth Event Oganizers For More info
                                           <br />
                                           . Click The Button Below
                                       </Card.Text>
-                                      <hr/>
-                                      <Link to='/Inbox' style={{textDecoration:'none'}}>
-                                      
-                                       <Button className={classes.button} block>
-                                            Chat with Admin
+                                            <hr />
+                                            <Link to='/Inbox' style={{ textDecoration: 'none' }}>
+
+                                                <Button className={classes.button} block>
+                                                    Chat with Admin
                                            </Button>
-                                           </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Row>
-                            <Row>
-                            <Container style={{border:'1px solid #AD365C' , marginTop : '3rem'}}>
-                                <Col md={12} style={{ marginTop: '5rem' }}>
-                                    <h3>
-                                        Your Requirements
+                                            </Link>
+                                        </Card.Body>
+                                    </Card>
+                                </Row>
+                                <Row>
+                                    <Container style={{ border: '1px solid #AD365C', marginTop: '3rem' }}>
+                                        <Col md={12} style={{ marginTop: '5rem' }}>
+                                            <h3>
+                                                Your Requirements
                                     </h3>
-                                    <br />
+                                            <br />
 
-                                    <TextField
-                                        id="standard-basic"
-                                        size='small'
-                                        required
-                                        placeholder="Name"
-                                        className={classes.textField}
-                                        InputProps={{
-                                            classes: {
-                                                notchedOutline: classes.notchedOutline,
-                                                focused: classes.focused,
-                                            }
-                                        }}
-                                        style={{ width: '100%' , marginTop:'3rem' }}
-                                        onChange={e => this.setState({ name: e.target.value })}
+                                            <TextField
+                                                id="standard-basic"
+                                                size='small'
+                                                required
+                                                placeholder="Name"
+                                                className={classes.textField}
+                                                InputProps={{
+                                                    classes: {
+                                                        notchedOutline: classes.notchedOutline,
+                                                        focused: classes.focused,
+                                                    }
+                                                }}
+                                                style={{ width: '100%', marginTop: '3rem' }}
+                                                onChange={e => this.setState({ name: e.target.value })}
 
-                                    />
+                                            />
 
-                                    <TextField
-                                        id="standard-basic"
-                                        size='small'
-                                        required
-                                        placeholder="Email"
-                                        className={classes.textField}
-                                        InputProps={{
-                                            classes: {
-                                                notchedOutline: classes.notchedOutline,
-                                                focused: classes.focused,
-                                            }
-                                        }}
-                                        style={{ width: '100%', marginTop:'3rem' }}
-                                        onChange={e => this.setState({ email: e.target.value })}
+                                            <TextField
+                                                id="standard-basic"
+                                                size='small'
+                                                required
+                                                placeholder="Email"
+                                                className={classes.textField}
+                                                InputProps={{
+                                                    classes: {
+                                                        notchedOutline: classes.notchedOutline,
+                                                        focused: classes.focused,
+                                                    }
+                                                }}
+                                                style={{ width: '100%', marginTop: '3rem' }}
+                                                onChange={e => this.setState({ email: e.target.value })}
 
-                                    />
+                                            />
 
-                                    <TextField
-                                        id="standard-basic"
-                                        size='small'
-                                        required
-                                        placeholder="Number"
-                                        className={classes.textField}
-                                        InputProps={{
-                                            classes: {
-                                                notchedOutline: classes.notchedOutline,
-                                                focused: classes.focused,
-                                            }
-                                        }}
-                                        type='number'
-                                        style={{ width: '100%', marginTop:'3rem' }}
-                                        onChange={e => this.setState({ contactNumber: e.target.value })}
+                                            <TextField
+                                                id="standard-basic"
+                                                size='small'
+                                                required
+                                                placeholder="Number"
+                                                className={classes.textField}
+                                                InputProps={{
+                                                    classes: {
+                                                        notchedOutline: classes.notchedOutline,
+                                                        focused: classes.focused,
+                                                    }
+                                                }}
+                                                type='number'
+                                                style={{ width: '100%', marginTop: '3rem' }}
+                                                onChange={e => this.setState({ contactNumber: e.target.value })}
 
-                                    />
+                                            />
 
-                                    <TextField
-                                        id="standard-basic"
-                                        size='small'
-                                        required
-                                        placeholder="Date"
-                                        className={classes.textField}
-                                        InputProps={{
-                                            classes: {
-                                                notchedOutline: classes.notchedOutline,
-                                                focused: classes.focused,
-                                            }
-                                        }}
-                                        type='text'
-                                        style={{ width: '100%', marginTop:'3rem' }}
-                                        onChange={e => this.setState({ eventDate: e.target.value })}
+                                            <TextField
+                                                id="standard-basic"
+                                                size='small'
+                                                required
+                                                placeholder="Date"
+                                                className={classes.textField}
+                                                InputProps={{
+                                                    classes: {
+                                                        notchedOutline: classes.notchedOutline,
+                                                        focused: classes.focused,
+                                                    }
+                                                }}
+                                                type='text'
+                                                style={{ width: '100%', marginTop: '3rem' }}
+                                                onChange={e => this.setState({ eventDate: e.target.value })}
 
-                                    />
+                                            />
 
-                                    <TextField
-                                        id="standard-basic"
-                                        size='small'
-                                        required
-                                        placeholder="Location"
-                                        className={classes.textField}
-                                        InputProps={{
-                                            classes: {
-                                                notchedOutline: classes.notchedOutline,
-                                                focused: classes.focused,
-                                            }
-                                        }}
-                                        type='text'
-                                        style={{ width: '100%' , marginTop:'3rem'}}
-                                        onChange={e => this.setState({ eventLocation: e.target.value })}
+                                            <TextField
+                                                id="standard-basic"
+                                                size='small'
+                                                required
+                                                placeholder="Location"
+                                                className={classes.textField}
+                                                InputProps={{
+                                                    classes: {
+                                                        notchedOutline: classes.notchedOutline,
+                                                        focused: classes.focused,
+                                                    }
+                                                }}
+                                                type='text'
+                                                style={{ width: '100%', marginTop: '3rem' }}
+                                                onChange={e => this.setState({ eventLocation: e.target.value })}
 
-                                    />
+                                            />
 
-                                    <TextField
-                                        id="standard-basic"
-                                        size='small'
-                                        required
-                                        placeholder="No. Of guests"
-                                        className={classes.textField}
-                                        InputProps={{
-                                            classes: {
-                                                notchedOutline: classes.notchedOutline,
-                                                focused: classes.focused,
-                                            }
-                                        }}
-                                        type='number'
-                                        style={{ width: '100%', marginTop:'3rem' }}
-                                        onChange={e => this.setState({ guests: e.target.value })}
+                                            <TextField
+                                                id="standard-basic"
+                                                size='small'
+                                                required
+                                                placeholder="No. Of guests"
+                                                className={classes.textField}
+                                                InputProps={{
+                                                    classes: {
+                                                        notchedOutline: classes.notchedOutline,
+                                                        focused: classes.focused,
+                                                    }
+                                                }}
+                                                type='number'
+                                                style={{ width: '100%', marginTop: '3rem' }}
+                                                onChange={e => this.setState({ guests: e.target.value })}
 
-                                    />
+                                            />
 
 
-                                     <br/>
-                                     <br/>
-                                    <EventTypes opt={this.getEventTypes} />
-                                    <br/>
-                                    <EventTimes opt={this.getEventTimes} />
-                                    <br/>
-                                    <Link to='/EventSummary' style={{textDecoration:'none'}}>
-                                    <Button className={classes.button} style={{marginBottom:'12px',}} block>
-                                        Submit
+                                            <br />
+                                            <br />
+                                            <EventTypes opt={this.getEventTypes} />
+                                            <br />
+                                            <EventTimes opt={this.getEventTimes} />
+                                            <br />
+                                            <Link to='/EventSummary' style={{ textDecoration: 'none' }}>
+                                                <Button className={classes.button} style={{ marginBottom: '12px', }} block>
+                                                    Submit
                                   </Button>
-                                  </Link>
-    
-                                </Col>
-                                </Container>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
+                                            </Link>
+
+                                        </Col>
+                                    </Container>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
-   <Footer/>
+                <Footer />
             </React.Fragment>
         )
     }

@@ -65,7 +65,8 @@ class AdPackages extends React.Component {
             .then(response => {
                 console.log(response.data)
                 this.setState({
-                    allPackages: response.data
+                    allPackages: response.data,
+                    pictures: response.data.pictures
                 })
             })
             .catch(err => {
