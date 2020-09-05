@@ -173,7 +173,7 @@ return(
                                     Contact Us
                                 </Button>
                             </Link>
-                            
+                            {!props.isUserLoggedIn &&
                             <Button
                              className={classes.button}
                              onClick={()=>{props.history.push('/signin')}}
@@ -181,7 +181,7 @@ return(
                                 <AccountCircleIcon style={{marginRight:'7px'}}/>
                                 Login
                             </Button>
-                            
+                            }
                         </div>
                 </Container>
                 <div className={classes.mobileMenu}>

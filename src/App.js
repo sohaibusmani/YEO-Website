@@ -4,6 +4,15 @@ import './App.css';
 // Routing
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// firebase
+import firebase from './config/firebase';
+
+// axios
+import axios from 'axios';
+
+// connection
+import baseUrl from './config/api';
+
 // navbar
 import Navbar from './Components/Navbar/Navbar';
 
@@ -28,60 +37,108 @@ import { withRouter } from 'react-router-dom';
 
 
 class App extends React.Component {
+
+  state = {
+    user: null,
+    userEmail: null,
+    isUserLoggedIn: false,
+    showLoginButton: false,
+    displayName: null,
+  }
+
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged((user) => {
+      let uId = '';
+      let usrEmail = '';
+      if (user) {
+        uId = firebase.auth().currentUser.uid;
+        usrEmail = firebase.auth().currentUser.email;
+        this.setState({
+          user: uId,
+          userEmail: usrEmail
+        });
+        console.log('User Logged in');
+        axios({
+          url: `${baseUrl}/user/get-current-user?firebaseId=${user}`,
+          method: 'GET',
+        })
+          .then(response => {
+            console.log(response.data);
+            this.setState({
+              isUserLoggedIn: true,
+              data: response.data.data,
+            })
+          })
+          .catch(err => {
+            console.log(err);
+          })
+      }
+      else {
+        this.setState({
+          userEmail: null,
+          user: null
+        });
+        console.log('User not logged in')
+      }
+
+    })
+  }
+
   render() {
+    const { isUserLoggedIn } = this.state;
     return (
       <React.Fragment>
-        <Navbar {...this.props} />
-        
-          {/* <SearchAppBar/> */}
+        <Navbar {...this.props} isUserLoggedIn={isUserLoggedIn} />
 
-          <Switch>
-            <Route path='/' exact render={
-              props => (<LandingPage {...props} />
-              )} />
-            {/* <Route path='/LandingPage' exact component={LandingPage}/> */}
-            <Route path='/About' exact render={
-              props => (<About {...props} />
-              )} />
-            {/* <Route path='/Events'  component={Events}/> */}
-            <Route path='/Courses' exact render={
-              props => (<Courses />
-              )} />
-            <Route path='/Courses/CourseDetail' exact render={
-              props => (<CourseDetail {...props} />
-              )} />
-            <Route path='/Courses/BrandSection' exact render={
-              props => (<BrandSection {...props}/>
-              )} />
-            <Route path='/Courses/Internship' exact render={
-              props => (<Internship {...props} />
-              )} />
-            <Route path='/Contact' exact render={
-              props => (<Contact {...props} />
-              )} />
-            <Route path='/Packages' exact render={
-              props => (<Packages {...props} />
-              )} />
-            <Route path='/Packages/PackageDetails/:id' exact render={
-              props => (<PackageDetails {...props} />
-              )} />
-            <Route path='/Inbox' exact render={
-              props => (<Chat {...props} />
-              )} />
-            <Route path='/Events' exact render={
-              props => (<Events {...props}/>
-              )} />
-            <Route path='/signin' exact render={
-              props => (<Signin {...props} />
-              )} />
-              <Route path='/signup' exact render={
-              props => (<Signup {...props} />
-              )} />
+        {/* <SearchAppBar/> */}
+
+        <Switch>
+          <Route path='/' exact render={
+            props => (<LandingPage {...props} />
+            )} />
+          {/* <Route path='/LandingPage' exact component={LandingPage}/> */}
+          <Route path='/About' exact render={
+            props => (<About {...props} />
+            )} />
+          {/* <Route path='/Events'  component={Events}/> */}
+          <Route path='/Courses' exact render={
+            props => (<Courses />
+            )} />
+          <Route path='/Courses/CourseDetail' exact render={
+            props => (<CourseDetail {...props} />
+            )} />
+          <Route path='/Courses/BrandSection' exact render={
+            props => (<BrandSection {...props} />
+            )} />
+          <Route path='/Courses/Internship' exact render={
+            props => (<Internship {...props} />
+            )} />
+          <Route path='/Contact' exact render={
+            props => (<Contact {...props} />
+            )} />
+          <Route path='/Packages' exact render={
+            props => (<Packages {...props} />
+            )} />
+          <Route path='/Packages/PackageDetails/:id' exact render={
+            props => (<PackageDetails {...props} />
+            )} />
+          <Route path='/Inbox' exact render={
+            props => (<Chat {...props} />
+            )} />
+          <Route path='/Events' exact render={
+            props => (<Events {...props} />
+            )} />
+          <Route path='/signin' exact render={
+            props => (<Signin {...props} />
+            )} />
+          <Route path='/signup' exact render={
+            props => (<Signup {...props} />
+            )} />
 
 
 
-          </Switch>
-       
+        </Switch>
+
       </React.Fragment>
     )
   }

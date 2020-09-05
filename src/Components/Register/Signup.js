@@ -15,7 +15,7 @@ import Container from '@material-ui/core/Container';
 
 //firebase 
 import firebase from '../../config/firebase';
-import { baseUrl } from '../../config/api';
+import  baseUrl  from '../../config/api';
 
 //Axios
 import axios from 'axios';
@@ -82,7 +82,7 @@ class Register extends React.Component {
           fullName : firstName + ' ' + lastName,
           email,
           password,
-          userId: firebase.auth().currentUser.uid,
+          firebaseId: firebase.auth().currentUser.uid,
         }
       })
       .then(res => {
