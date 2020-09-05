@@ -173,6 +173,15 @@ return(
                                     Contact Us
                                 </Button>
                             </Link>
+                            <Link className={classes.navs} to='/breakup-package'>
+                                <Button
+                                    variant="text"
+                                    style={{ margin: 5, color: "#A20737" }}
+                                    className={classes.categoriesButton}
+                                >
+                                    Make your own package
+                                </Button>
+                            </Link>
                             {!props.isUserLoggedIn &&
                             <Button
                              className={classes.button}

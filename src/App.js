@@ -29,7 +29,8 @@ import PackageDetails from './Screens/Packages/Components/PackageDetails';
 import Chat from './Screens/Chat/Chat';
 import Events from './Screens/Events/Events';
 import Signin from './Components/Login/Signin';
-import Signup from './Components/Register/Signup'
+import Signup from './Components/Register/Signup';
+import BreakupPackage from './Screens/BreakupPackages/BreakupPackages';
 
 // router
 import { withRouter } from 'react-router-dom';
@@ -134,7 +135,9 @@ class App extends React.Component {
           <Route path='/signup' exact render={
             props => (<Signup {...props} />
             )} />
-
+          <Route path='/breakup-package' exact render={
+            props => (<BreakupPackage {...props} />
+            )} />
 
 
         </Switch>
