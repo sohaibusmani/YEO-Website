@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import {Container } from '@material-ui/core';
+import {Container, Grid} from '@material-ui/core'; 
 
 import pcover from '../../Assets/Images/us14.jpg';
 
@@ -16,6 +16,12 @@ class BreakupPackages extends Component {
 
                     }}>
                              </div>
+                </Container>
+                <Container maxWidth='lg'>
+                   <Grid md={8}>
+                     <h3>Create Your Own Package</h3>
+                     <hr/>
+                   </Grid>
                 </Container>
             </React.Fragment>
         )

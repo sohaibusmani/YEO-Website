@@ -173,7 +173,7 @@ return(
                                     Contact Us
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/breakup-package'>
+                            {/* <Link className={classes.navs} to='/breakup-package'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -181,7 +181,7 @@ return(
                                 >
                                     Make your own package
                                 </Button>
-                            </Link>
+                            </Link> */}
                             {!props.isUserLoggedIn &&
                             <Button
                              className={classes.button}
