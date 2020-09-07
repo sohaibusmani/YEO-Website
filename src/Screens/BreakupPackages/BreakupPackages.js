@@ -44,13 +44,13 @@ class BreakupPackages extends Component {
                 <div style={{height:'50px'}} />
                 <Container maxWidth='lg'>
                     <div >
-                   
+                     <Grid container spacing={2}>
+                     <Grid item md={8}>
                      <h3>Create Your Own Package</h3>
-                     <Grid md={9}>
                      <hr style={{border:'1px solid #AD365C'}}/>
-                     <div className={classes.card}>
+                     <div className={classes.card} style={{marginBottom:'10px'}}>
                          <Grid container spacing={2}>
-                         <Grid  item xs={12} md={3}>
+                         <Grid  item xs={12} sm={8} md={3}>
                             <img
                              alt='pic'
                              style={{
@@ -60,7 +60,7 @@ class BreakupPackages extends Component {
                              src={pcover}
                              />
                          </Grid>
-                         <Grid item xs={12} md={6}>
+                         <Grid item xs={12} sm={4} md={6}>
                             <h5>Balloons</h5>
                             <h6>Actual price : Rs 50</h6>
                             <p>Balloons per packet price is rs 50 without our services</p>
@@ -70,6 +70,12 @@ class BreakupPackages extends Component {
                          </Grid>
                          </Grid>
                      </div>
+                   </Grid>
+                   
+                   <Grid item md={4} >
+                   <h3>Your Package</h3>
+                     <hr style={{border:'1px solid #AD365C'}}/>
+                   </Grid>
                    </Grid>
                    </div>
                 </Container>
