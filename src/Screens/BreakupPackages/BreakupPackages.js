@@ -34,6 +34,18 @@ class BreakupPackages extends Component {
                    <Grid md={8}>
                      <h3>Create Your Own Package</h3>
                      <hr/>
+                     <div>
+                         <Grid item xs={12} md={3}>
+                            <img
+                             alt='pic'
+                             style={{
+                                 width: '100%',
+                                 height: '150px'
+                             }}
+                             src={pcover}
+                             />
+                         </Grid>
+                     </div>
                    </Grid>
                    </div>
                 </Container>
