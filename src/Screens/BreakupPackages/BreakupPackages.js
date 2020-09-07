@@ -6,6 +6,7 @@ import pcover from '../../Assets/Images/us14.jpg';
 const styles = theme => ({
     card: {
         backgroundColor: '#f5f5f5',
+        borderColor: '#AD365C',
         padding: 10,
         [theme.breakpoints.up('sm')]: {
             padding: '20px 50px 20px',
@@ -29,13 +30,14 @@ class BreakupPackages extends Component {
                     }}>
                              </div>
                 </Container>
+                <div style={{height:'50px'}} />
                 <Container maxWidth='lg'>
-                    <div className={classes.card}>
-                   <Grid md={8}>
+                    <div >
+                   <Grid md={9}>
                      <h3>Create Your Own Package</h3>
-                     <hr/>
-                     <div>
-                         <Grid item xs={12} md={3}>
+                     <hr style={{border:'1px solid #AD365C'}}/>
+                     <div className={classes.card}>
+                         <Grid  item xs={12} md={3}>
                             <img
                              alt='pic'
                              style={{
