@@ -13,6 +13,16 @@ const styles = theme => ({
         },
         boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19)',
     },
+    ordersCard: {
+        backgroundColor: '#f5f5f5',
+        borderColor: '#AD365C',
+        padding: 10,
+        [theme.breakpoints.up('sm')]: {
+            padding: '20px 50px 20px',
+        },
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19)',
+        height:'600px'
+    },
     button: {
         backgroundColor: '#AD365C',
         color: 'white',
@@ -75,6 +85,9 @@ class BreakupPackages extends Component {
                    <Grid item md={4} >
                    <h3>Your WishList</h3>
                      <hr style={{border:'1px solid #AD365C'}}/>
+                     <div className={classes.ordersCard}>
+
+                     </div>
                    </Grid>
                    </Grid>
                    </div>
