@@ -46,7 +46,7 @@ class BreakupPackages extends Component {
                     <div >
                      <Grid container spacing={2}>
                      <Grid item md={8}>
-                     <h3>Create Your Own Package</h3>
+                     <h3>Make Your Package</h3>
                      <hr style={{border:'1px solid #AD365C'}}/>
                      <div className={classes.card} style={{marginBottom:'10px'}}>
                          <Grid container spacing={2}>
@@ -73,7 +73,7 @@ class BreakupPackages extends Component {
                    </Grid>
                    
                    <Grid item md={4} >
-                   <h3>Your Package</h3>
+                   <h3>Your WishList</h3>
                      <hr style={{border:'1px solid #AD365C'}}/>
                    </Grid>
                    </Grid>
