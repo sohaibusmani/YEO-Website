@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import { Card, Col, Row, Container, Button } from 'react-bootstrap';
-import { TextField, Typography } from '@material-ui/core';
+import { Card, Button } from 'react-bootstrap';
+import { Container, Grid, TextField, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from "react-image-gallery";
 import { Link } from 'react-router-dom';
 
-
 // Components
-
-import Navbar from '../../../Components/Navbar/Navbar';
 import { EventTypes, EventTimes } from './Dropdown';
 import Footer from '../../../Components/Footer/Footer';
 import Description from './ProductDescription';
@@ -17,8 +14,6 @@ import Description from './ProductDescription';
 // Assets
 
 import logo from '../../../Assets/Images/us19.jpg';
-import image1 from '../../../Assets/Images/event.jpg';
-import image2 from '../../../Assets/Images/eventsCover.jpg';
 
 // axios
 import axios from 'axios';
@@ -128,9 +123,9 @@ class PackageDetails extends Component {
             });
 
         return (
-            <React.Fragment >
+            <Container>
 
-                <div style={{ marginBottom: '3rem' }}>
+                {/* <div style={{ marginBottom: '3rem' }}> */}
 
                     <Container>
                         <div style={{
@@ -162,11 +157,14 @@ class PackageDetails extends Component {
                                     <Col style={{ marginTop: '3rem' }} lg={4} md={4} xs={12}></Col>
                                 </Row>
                                 <Row>
-                                    <Description overview={overview} />
+                                    <Col lg={12}>
+                                        <Description overview={overview} />
+                                    </Col>
                                 </Row>
                             </Col>
                             <Col md={1}></Col>
                             <Col style={{ marginLeft: '-2rem' }} md={3}>
+                               
                                 <Row>
                                     <Card style={{ minWidth: 325, borderColor: '#AD365C' }}>
                                         <Card.Body>
@@ -197,7 +195,7 @@ class PackageDetails extends Component {
                                         <Col md={12} style={{ marginTop: '5rem' }}>
                                             <h3>
                                                 Your Requirements
-                                    </h3>
+                                            </h3>
                                             <br />
 
                                             <TextField
@@ -313,11 +311,11 @@ class PackageDetails extends Component {
                                             <br />
                                             <EventTimes opt={this.getEventTimes} />
                                             <br />
-                                            <Link to='/EventSummary' style={{ textDecoration: 'none' }}>
-                                                <Button className={classes.button} style={{ marginBottom: '12px', }} block>
-                                                    Submit
-                                  </Button>
-                                            </Link>
+                                            {/* <Link to='/EventSummary' style={{ textDecoration: 'none' }}> */}
+                                            <Button className={classes.button} onClick={this.handleSubmitOrder} style={{ marginBottom: '12px', }} block>
+                                                Submit
+                                            </Button>
+                                            {/* </Link> */}
 
                                         </Col>
                                     </Container>
@@ -325,9 +323,9 @@ class PackageDetails extends Component {
                             </Col>
                         </Row>
                     </Container>
-                </div>
+                {/* </div> */}
                 <Footer />
-            </React.Fragment>
+            </Container>
         )
     }
 }
