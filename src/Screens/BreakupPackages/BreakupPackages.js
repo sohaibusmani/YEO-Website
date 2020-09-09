@@ -42,7 +42,7 @@ const styles = theme => ({
 
 class BreakupPackages extends Component {
     state = {
-        allProducts = []
+        allProducts : []
     }
 
     componentDidMount(){
