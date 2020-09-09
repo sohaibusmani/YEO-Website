@@ -66,6 +66,7 @@ class BreakupPackages extends Component {
     }
     render(){
         const {classes} = this.props;
+        const {allProducts} = this.state;
         return(
             <React.Fragment>
                 <Container>
@@ -85,7 +86,10 @@ class BreakupPackages extends Component {
                      <Grid item md={8}>
                      <h3>Make Your Package</h3>
                      <hr style={{border:'1px solid #AD365C'}}/>
-                     <div className={classes.card} style={{marginBottom:'10px'}}>
+                     {allProducts.length > 0 && 
+                        allProducts.map((val, index) => {
+                            return(
+                                <div key={index} className={classes.card} style={{marginBottom:'10px'}}>
                          <Grid container spacing={2}>
                          <Grid  item xs={12} sm={8} md={3}>
                             <img
@@ -98,15 +102,19 @@ class BreakupPackages extends Component {
                              />
                          </Grid>
                          <Grid item xs={12} sm={4} md={6}>
-                            <h5>Balloons</h5>
-                            <h6>Actual price : Rs 50</h6>
-                            <p>Balloons per packet price is rs 50 without our services</p>
+                            <h5>{val.title}</h5>
+                            <h6>Actual price : {val.price}</h6>
+                            <p>{val.description}</p>
                          </Grid>
                          <Grid item xs={12} md={3}>
                          <Button  className={classes.button} block>Add to cart</Button>
                          </Grid>
                          </Grid>
                      </div>
+                            )
+                        })
+                        }
+                     
                    </Grid>
                    
                    <Grid item md={4} >
