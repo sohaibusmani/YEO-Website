@@ -2,6 +2,10 @@ import React , {Component} from 'react';
 import {Container, Grid, Button, withStyles} from '@material-ui/core'; 
 
 import pcover from '../../Assets/Images/us14.jpg';
+import axios from 'axios';
+
+// connection
+import url from '../../config/api';
 
 const styles = theme => ({
     card: {
@@ -37,6 +41,29 @@ const styles = theme => ({
 })
 
 class BreakupPackages extends Component {
+    state = {
+        allProducts = []
+    }
+
+    componentDidMount(){
+        this.getAllProducts();
+    }
+
+    getAllProducts = () => {
+        axios({
+            url:`${url}/product/get-all-products`,
+            method:'GET',
+        })
+        .then(response => {
+            console.log(response.data);
+            this.setState({
+                allProducts : response.data ,
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
     render(){
         const {classes} = this.props;
         return(
