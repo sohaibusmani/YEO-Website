@@ -22,7 +22,7 @@ const styles = theme => ({
         borderColor: '#AD365C',
         padding: 10,
         [theme.breakpoints.up('sm')]: {
-            padding: '20px 50px 20px',
+            // padding: '20px 50px 20px',
         },
         boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19)',
         
@@ -131,7 +131,7 @@ class BreakupPackages extends Component {
                                   src={pcover}
                                   />
                               </ListItemIcon>
-                              <ListItemText primary='Balloons' secondary={<span style={{float:'right'}}>Quantity</span>}/>
+                              <ListItemText primary={<span>Balloons</span>} secondary='Quantity'/>
                            </ListItem>
                        </List>
                      </div>
