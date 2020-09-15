@@ -127,10 +127,11 @@ class BreakupPackages extends Component {
                                   <img
                                   alt='pic'
                                   style={{width:'50px',
-                                  height:'50px'}}
+                                  height:'40px'}}
                                   src={pcover}
                                   />
                               </ListItemIcon>
+                              <ListItemText primary='Balloons' secondary={<span style={{float:'right'}}>Quantity</span>}/>
                            </ListItem>
                        </List>
                      </div>
