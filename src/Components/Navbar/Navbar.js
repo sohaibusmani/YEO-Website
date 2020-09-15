@@ -155,7 +155,7 @@ return(
                                     Packages
                                 </Button>
                             </Link>
-                            <Link className={classes.navs} to='/About'>
+                            {/* <Link className={classes.navs} to='/About'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
@@ -163,7 +163,7 @@ return(
                                 >
                                     About
                                 </Button>
-                            </Link>
+                            </Link> */}
                             {/* <Link className={classes.navs} to='/Contact'>
                                 <Button
                                     variant="text"
@@ -179,10 +179,10 @@ return(
                                     style={{ margin: 5, color: "#A20737" }}
                                     className={classes.categoriesButton}
                                 >
-                                    Make your own package
+                                    Create package
                                 </Button>
                             </Link>
-                            {/* {!props.isUserLoggedIn &&
+                            {!props.isUserLoggedIn &&
                             <Button
                              className={classes.button}
                              onClick={()=>{props.history.push('/signin')}}
@@ -190,7 +190,7 @@ return(
                                 <AccountCircleIcon style={{marginRight:'7px'}}/>
                                 Login
                             </Button>
-                            } */}
+                            }
                         </div>
                 </Container>
                 <div className={classes.mobileMenu}>

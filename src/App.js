@@ -60,7 +60,7 @@ class App extends React.Component {
         });
         console.log('User Logged in');
         axios({
-          url: `${baseUrl}/user/get-current-user?firebaseId=${user}`,
+          url: `${baseUrl}/user/get-current-user?firebaseId=${uId}`,
           method: 'GET',
         })
           .then(response => {
