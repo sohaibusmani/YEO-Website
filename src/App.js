@@ -42,6 +42,7 @@ class App extends React.Component {
   state = {
     user: null,
     userEmail: null,
+    userId: '',
     isUserLoggedIn: false,
     showLoginButton: false,
     displayName: null,
@@ -68,6 +69,7 @@ class App extends React.Component {
             this.setState({
               isUserLoggedIn: true,
               data: response.data.data,
+              userId: response.data.data._id,
             })
           })
           .catch(err => {
@@ -86,7 +88,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isUserLoggedIn } = this.state;
+    const { isUserLoggedIn, userId } = this.state;
     return (
       <React.Fragment>
         <Navbar {...this.props} isUserLoggedIn={isUserLoggedIn} />
@@ -121,7 +123,7 @@ class App extends React.Component {
             props => (<Packages {...props} />
             )} />
           <Route path='/Packages/PackageDetails/:id' exact render={
-            props => (<PackageDetails {...props} />
+            props => (<PackageDetails {...props} userId={userId} />
             )} />
           <Route path='/Inbox' exact render={
             props => (<Chat {...props} />
