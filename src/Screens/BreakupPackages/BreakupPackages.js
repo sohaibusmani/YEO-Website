@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import {Container, Grid, Button, withStyles, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core'; 
-
+import DeleteIcon from '@material-ui/icons/Delete';
 import pcover from '../../Assets/Images/us14.jpg';
 import axios from 'axios';
 
@@ -37,6 +37,12 @@ const styles = theme => ({
              },
         marginTop:'60px',
         marginLeft:'50px'     
+    },
+    deleteIcon: {
+        float: 'right',
+        fontSize: 20,
+        cursor: 'pointer',
+        "&:hover": { color: 'red' }
     }
 })
 
@@ -132,6 +138,7 @@ class BreakupPackages extends Component {
                                   />
                               </ListItemIcon>
                               <ListItemText primary={<span>Balloons</span>} secondary='Quantity'/>
+                              <DeleteIcon className={classes.deleteIcon}/>
                            </ListItem>
                        </List>
                      </div>
