@@ -96,6 +96,29 @@ class BreakupPackages extends Component {
             })
     }
 
+    deleteFromCart = itemId => {
+        const { userId } = this.props;
+        // const { quantity } = this.state;
+
+        axios({
+            url: `${url}/product/remove-from-cart`,
+            method: 'POST',
+            data: {
+                userId,
+                prodId: itemId,
+            }
+        })
+            .then(res => {
+                // console.log(res.data.cart);
+                this.setState({
+                    cart: res.data.cart,
+                })
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
         const { classes } = this.props;
         const { allProducts, cart } = this.state;
@@ -176,7 +199,10 @@ class BreakupPackages extends Component {
                                                             primary={<span>{item.productDetails.title}</span>}
                                                             secondary={item.quantity}
                                                         />
-                                                        <DeleteIcon className={classes.deleteIcon} />
+                                                        <DeleteIcon
+                                                            className={classes.deleteIcon}
+                                                            onClick={() => { this.deleteFromCart(item.productDetails._id) }}
+                                                        />
                                                     </ListItem>
                                                 </List>
                                             )
