@@ -109,7 +109,8 @@ class PackageDetails extends Component {
     }
 
     submitOrder = () => {
-        const packageId = this.props.match.params.id;
+        const { match, userId } = this.props;
+        const packageId = match.params.id;
         const {
             name,
             email,
@@ -117,13 +118,18 @@ class PackageDetails extends Component {
             guests,
             eventDate,
             eventLocation,
+            price,
         } = this.state;
+
+        console.log(price);
 
         axios({
             url: `${baseUrl}/order/submit-order`,
             method: 'POST',
             data: {
+                userId,
                 packageId,
+                price,
                 name,
                 email,
                 contactNumber,
@@ -224,7 +230,6 @@ class PackageDetails extends Component {
                                         <br />
 
                                         <TextField
-                                            id="standard-basic"
                                             size='small'
                                             required
                                             placeholder="Name"
@@ -241,7 +246,6 @@ class PackageDetails extends Component {
                                         />
 
                                         <TextField
-                                            id="standard-basic"
                                             size='small'
                                             required
                                             placeholder="Email"
@@ -258,10 +262,9 @@ class PackageDetails extends Component {
                                         />
 
                                         <TextField
-                                            id="standard-basic"
                                             size='small'
                                             required
-                                            placeholder="Number"
+                                            placeholder="Phone Number"
                                             className={classes.textField}
                                             InputProps={{
                                                 classes: {
@@ -276,7 +279,6 @@ class PackageDetails extends Component {
                                         />
 
                                         <TextField
-                                            id="standard-basic"
                                             size='small'
                                             required
                                             placeholder="Date"
@@ -294,7 +296,6 @@ class PackageDetails extends Component {
                                         />
 
                                         <TextField
-                                            id="standard-basic"
                                             size='small'
                                             required
                                             placeholder="Location"
@@ -312,7 +313,6 @@ class PackageDetails extends Component {
                                         />
 
                                         <TextField
-                                            id="standard-basic"
                                             size='small'
                                             required
                                             placeholder="No. Of guests"
@@ -340,7 +340,7 @@ class PackageDetails extends Component {
                                             block
                                             className={classes.button}
                                             style={{ marginBottom: '12px', }}
-                                            onClick={this.handleSubmitOrder}
+                                            onClick={this.submitOrder}
                                         >
                                             Submit
                                 </Button>
