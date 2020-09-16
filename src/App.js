@@ -138,7 +138,7 @@ class App extends React.Component {
             props => (<Signup {...props} />
             )} />
           <Route path='/breakup-package' exact render={
-            props => (<BreakupPackage {...props} />
+            props => (<BreakupPackage {...props} userId={userId} />
             )} />
 
 
