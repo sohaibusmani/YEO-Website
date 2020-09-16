@@ -53,7 +53,30 @@ class BreakupPackages extends Component {
     }
 
     componentDidMount() {
+
         this.getAllProducts();
+        this.getCart();
+    }
+    
+    getCart = () => {
+        const { userId } = this.props;
+
+        axios({
+            url: `${url}/product/get-cart`,
+            method: 'POST',
+            data: {
+                userId
+            }
+        })
+            .then(res => {
+                console.log(res.data);
+                this.setState({
+                    cart: res.data.cart,
+                })
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     getAllProducts = () => {
