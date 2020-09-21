@@ -123,7 +123,7 @@ return(
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
-                                    className={classes.categoriesButton}
+                                    
                                 >
                                     Home
                                 </Button>
@@ -132,7 +132,7 @@ return(
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#AD365C" }}
-                                    className={classes.categoriesButton}
+                                    
                                 >
                                     Events
                                 </Button>
@@ -141,7 +141,7 @@ return(
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
-                                    className={classes.categoriesButton}
+                                    
                                 >
                                     Courses
                                 </Button>
@@ -150,20 +150,19 @@ return(
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
-                                    className={classes.categoriesButton}
+                                    
                                 >
                                     Packages
                                 </Button>
                             </Link>
-                            {/* <Link className={classes.navs} to='/About'>
+                            <Link className={classes.navs} to='/About'>
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
-                                    className={classes.categoriesButton}
-                                >
+                                     >                               
                                     About
                                 </Button>
-                            </Link> */}
+                            </Link>
                             {/* <Link className={classes.navs} to='/Contact'>
                                 <Button
                                     variant="text"
@@ -177,7 +176,7 @@ return(
                                 <Button
                                     variant="text"
                                     style={{ margin: 5, color: "#A20737" }}
-                                    className={classes.categoriesButton}
+                                    
                                 >
                                     Create package
                                 </Button>
@@ -187,7 +186,7 @@ return(
                              className={classes.button}
                              onClick={()=>{props.history.push('/signin')}}
                              block>
-                                <AccountCircleIcon style={{marginRight:'7px'}}/>
+                                <AccountCircleIcon/>
                                 Login
                             </Button>
                             }

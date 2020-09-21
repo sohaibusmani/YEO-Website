@@ -1,3 +1,3 @@
- const baseUrl = 'http://localhost:8000';
+ const baseUrl = 'https://event-management-web-server.herokuapp.com';
 
  module.exports = baseUrl;
