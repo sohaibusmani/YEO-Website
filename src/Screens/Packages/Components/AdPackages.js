@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
-import { Typography } from '@material-ui/core';
+import { Typography,Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
@@ -99,14 +99,14 @@ class AdPackages extends React.Component {
                 </Container>
 
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
-                <Container fluid>
-                <Row>
+                <Grid container>
+                <Grid container>
                   {allPackages.length > 0 && 
                    allPackages.map((val, index) => {
                      return(
                         
                         
-                            <Col md={6} lg={6} sm={12}>
+                            <Grid item md={6} lg={6} sm={12}>
                                 <Card style={{ width: '40rem', borderColor: '#AD365C' }}>
                                     <Card.Header style={{ backgroundColor: '#AD365C', color: 'white' }}>
                                         <Card.Title>
@@ -117,7 +117,7 @@ class AdPackages extends React.Component {
                                         <Container>
                                             <Row>
                                                 <Col lg={8} md={8} sm={12}>
-                                                    <Card.Img variant='top' src={Photography} />
+                                                    <Card.Img variant='top' src={val.pictures.length > 0 ? val.pictures[0] : Photography} />
                                                 </Col>
                                                 <Col lg={4} md={4} >
                                                     <h4>Deal includes:</h4>
@@ -146,13 +146,13 @@ class AdPackages extends React.Component {
                                         </Container>
                                     </Card.Body>
                                 </Card>
-                            </Col>
+                            </Grid>
                         
                     
                      )
                    }) }
-                   </Row>
-                   </Container>
+                   </Grid>
+                   </Grid>
                 </div>
                 <Footer />
             </React.Fragment>
