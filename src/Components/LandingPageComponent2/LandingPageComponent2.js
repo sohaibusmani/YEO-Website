@@ -21,7 +21,15 @@ class LandingPageComponent4 extends React.Component {
                                
                                 <Grid item lg={10} md={10} sm={12}>
                                     <Typography variant="h4"
-                                        style={{marginBottom:'40px', color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '5em', textAlign:'center', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        style={{marginBottom:'40px',
+                                        justifyContent:'center',
+                                        alignItems:'center',
+                                         color: 'white',
+                                          marginTop: 18,
+                                           fontWeight: 'bolder',
+                                            fontSize: '5em',
+                                             textAlign:'center',
+                                              fontFamily: '"Times New Roman", Times, serif', }} >
                                         Operations
                                     </Typography>
                                     
@@ -29,7 +37,13 @@ class LandingPageComponent4 extends React.Component {
                             </Grid>
                             <div style={{ height: 10 }} />
                             <div>
-                                <Typography variant="p" style={{marginTop:'80px', color: '#f0f0f0f', fontWeight: 'normal', fontSize: '1em', opacity: '0.9' }} >
+                                <Typography variant="p" style={{marginTop:'80px',
+                                 color: '#f0f0f0f',
+                                  fontWeight: 'normal',
+                                   fontSize: '1em', 
+                                   opacity: '0.9',
+                                   justifyContent:'center',
+                                   alignItems:'center' }} >
                                 Our various art work/operations like FLORISTS The art of flowers, CRAFTERS The art of crafting clever ideas , DECORATION the art of assembling scattering things in an unbelievable way, SOUND SYSTEM The art of taking yourself in an accept able place, All these Beautiful things that made your event outlast, are done by our Passionate, Talented, Highly Motivated Youngster who are willing to explore new experience and make your event awesome/ a dream come true.
                                 </Typography>
                             </div>

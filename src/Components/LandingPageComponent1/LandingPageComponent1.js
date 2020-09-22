@@ -182,7 +182,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 
 // Assets
-import mainCover from '../../Assets/Images/mainCover1.jpg';
+import mainCover from '../../Assets/Images/operations.jpg';
 import us17 from '../../Assets/Images/us12.jpg'
 
 
