@@ -93,8 +93,8 @@ class Events extends React.Component {
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
-    <Link  style={{textDecoration:'none'}}>
-    <Button  className={classes.button} block>Details</Button>
+    <Link to='/Packages' style={{textDecoration:'none'}}>
+    <Button  className={classes.button} block>Book Now</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -107,8 +107,8 @@ class Events extends React.Component {
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
-    <Link  style={{textDecoration:'none'}}>
-    <Button className={classes.button} block>Details</Button>
+    <Link to='/Packages' style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Book Now</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -122,8 +122,8 @@ class Events extends React.Component {
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Link  style={{textDecoration:'none'}}>
-    <Button className={classes.button} block>Details</Button>
+    <Link to='/Packages' style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Book Now</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -138,8 +138,8 @@ class Events extends React.Component {
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
     </Card.Text>
-    <Link  style={{textDecoration:'none'}}>
-    <Button  className={classes.button} block>Details</Button>
+    <Link to='/Packages' style={{textDecoration:'none'}}>
+    <Button  className={classes.button} block>Book Now</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -152,8 +152,8 @@ class Events extends React.Component {
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
     </Card.Text>
-    <Link  style={{textDecoration:'none'}}>
-    <Button className={classes.button} block>Details</Button>
+    <Link to='/Packages' style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Book Now</Button>
     </Link>
   </Card.Body>
 </Card>
@@ -167,8 +167,8 @@ class Events extends React.Component {
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Link  style={{textDecoration:'none'}}>
-    <Button className={classes.button} block>Details</Button>
+    <Link to='/Packages' style={{textDecoration:'none'}}>
+    <Button className={classes.button} block>Book Now</Button>
     </Link>
   </Card.Body>
 </Card>
