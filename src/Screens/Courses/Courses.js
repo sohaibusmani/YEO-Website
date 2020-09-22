@@ -6,14 +6,13 @@ import { withStyles } from '@material-ui/core/styles';
 
 // Assets
 import logo from '../../Assets/Images/us11.jpg';
-import card1 from '../../Assets/Images/us3.jpg';
-import card2 from '../../Assets/Images/us5.jpg';
+import card1 from '../../Assets/Images/course.jpg';
+import card2 from '../../Assets/Images/boost.jpg';
 import card3 from '../../Assets/Images/us7.jpg';
 
 
 // Component
 import Footer from '../../Components/Footer/Footer';
-import Navbar from '../../Components/Navbar/Navbar';
 
 const styles = {
   button: {

@@ -8,7 +8,7 @@ import Footer from '../../Components/Footer/Footer';
 
 
 // Assets
-import picture from '../../Assets/Images/us10.jpg'
+import picture from '../../Assets/Images/course.jpg'
 
 
 

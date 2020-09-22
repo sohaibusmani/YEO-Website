@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 
 // Assets
-import evebts from '../../Assets/Images/us7.jpg';
+import evebts from '../../Assets/Images/internship.jpg';
 import { Container , Col, Row} from 'react-bootstrap';
 
 // Components

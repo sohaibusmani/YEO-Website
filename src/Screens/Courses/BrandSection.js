@@ -4,10 +4,9 @@ import {Typography, Grid} from '@material-ui/core';
 
 // Components
 import Footer from '../../Components/Footer/Footer';
-import Navbar from '../../Components/Navbar/Navbar'
 
 // Assets 
-import logo from '../../Assets/Images/us6.jpg';
+import logo from '../../Assets/Images/boost.jpg';
 import bliss from '../../Assets/Images/Bliss.jpg';
 import axu from '../../Assets/Images/AXU.JPG';
 import miraculous from '../../Assets/Images/Miraculous.jpg';
