@@ -13,7 +13,7 @@
   }
 }
 .testimonial-banner {
-  background: url(./Assets/Images/mainCover1.jpg) no-repeat center center;
+  background: url(./Assets/Images/background.jpeg) no-repeat center center;
   padding: 0;
   -webkit-background-size: cover;
   background-size: cover;
@@ -22,7 +22,7 @@
 }
 
 .testimonial-banner .overlay {
-  background-color: rgba(3, 3, 3, 0.9);
+  background-color: rgba(3, 3, 3, 0.8);
   /* background-color: rgba(275, 275, 275, 0.98); */
   color: white;
   min-height: 500px;
