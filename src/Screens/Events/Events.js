@@ -8,7 +8,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 
 // Assets
-import us14 from '../../Assets/Images/us16.jpg';
+import us14 from '../../Assets/Images/eventsCover.jpg';
 import us17 from '../../Assets/Images/us17.jpg';
 import mehendi from '../../Assets/Images/mehendi.jpg';
 import qawwali from '../../Assets/Images/qawwalievent.jpg';
