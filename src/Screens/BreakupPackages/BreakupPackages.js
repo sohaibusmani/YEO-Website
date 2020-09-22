@@ -205,6 +205,7 @@ class BreakupPackages extends Component {
                                 <div className={classes.ordersCard}>
                                     {cart.length > 0 ?
                                         cart.map((item, index) => {
+                                            console.log(item);
                                             return (
                                                 <List key={index}>
                                                     <ListItem>
@@ -219,7 +220,7 @@ class BreakupPackages extends Component {
                                                             />
                                                         </ListItemIcon>
                                                         <ListItemText
-                                                            primary={<span>{item.productDetails.title}</span>}
+                                                            primary={<span>{item.title}</span>}
                                                             secondary={item.quantity}
                                                         />
                                                         <DeleteIcon

@@ -21,7 +21,7 @@ import Footer from '../../../Components/Footer/Footer'
 import logo from '../../../Assets/Images/mehendi.webp'
 import logo1 from '../../../Assets/Images/birthday.jpg'
 import Photography from '../../../Assets/Images/Photography.jpg'
-import pcover from '../../../Assets/Images/us15.jpg'
+import pcover from '../../../Assets/Images/packages.jpg'
 import qawwali from '../../../Assets/Images/qawwali.jpg'
 
 const styles = {
@@ -107,7 +107,7 @@ class AdPackages extends React.Component {
                         
                         
                             <Grid item md={6} lg={6} sm={12}>
-                                <Card style={{ width: '40rem', borderColor: '#AD365C' }}>
+                                <Card style={{ width: '40rem',marginBottom:'5rem', borderColor: '#AD365C' }}>
                                     <Card.Header style={{ backgroundColor: '#AD365C', color: 'white' }}>
                                         <Card.Title>
                                             {val.title}
