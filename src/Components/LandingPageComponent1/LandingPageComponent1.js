@@ -182,7 +182,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 
 // Assets
-import us18 from '../../Assets/Images/us18.jpg';
+import mainCover from '../../Assets/Images/mainCover1.jpg';
 import us17 from '../../Assets/Images/us12.jpg'
 
 
@@ -191,7 +191,7 @@ class LandingPageComponent1 extends React.Component {
         return (
             <React.Fragment>
                 <div style={{
-                    backgroundImage: `url(${us18})`,
+                    backgroundImage: `url(${mainCover})`,
                     width: '100%',
                     height: '600px',
                     backgroundSize: '100% 100%',
