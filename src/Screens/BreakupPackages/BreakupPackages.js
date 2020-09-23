@@ -176,7 +176,7 @@ class BreakupPackages extends Component {
                                                                 width: '100%',
                                                                 height: '150px'
                                                             }}
-                                                            src={pcover}
+                                                            src={val.pictures[0]}
                                                         />
                                                     </Grid>
                                                     <Grid item xs={12} sm={4} md={6}>
