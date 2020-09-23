@@ -80,8 +80,7 @@ const useStyles = makeStyles(theme => ({
         borderColor: 'white',
         color:'white'
       },
-      marginLeft:'30%',
-      
+    marginLeft:'auto'
       
 }
 }));
