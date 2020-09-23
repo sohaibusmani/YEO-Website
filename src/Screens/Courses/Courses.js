@@ -53,6 +53,11 @@ const styles = {
 
 
 class Courses extends Component {
+
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
+  
     render(){
       const {classes} = this.props;
         return(

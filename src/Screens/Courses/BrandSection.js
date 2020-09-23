@@ -19,6 +19,11 @@ import says from '../../Assets/Images/says.jpg';
 
 
 class BrandSection extends Component {
+
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
+  
     render(){
         return(
             <React.Fragment>

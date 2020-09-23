@@ -34,6 +34,11 @@ const styles = theme => ({
 });
 
 class CourseDetail extends Component {
+
+    componentDidMount(){
+        window.scrollTo(0, 0);
+      }
+      
     render(){
         return(
             <React.Fragment>

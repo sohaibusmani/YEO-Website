@@ -56,6 +56,7 @@ class BreakupPackages extends Component {
 
         this.getAllProducts();
         this.getCart();
+        window.scrollTo(0,0);
     }
     
     getCart = () => {

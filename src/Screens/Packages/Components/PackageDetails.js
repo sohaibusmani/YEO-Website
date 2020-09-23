@@ -86,6 +86,7 @@ class PackageDetails extends Component {
 
     componentDidMount() {
         this.getPackageById();
+        window.scrollTo(0, 0);
     }
 
     getPackageById = () => {

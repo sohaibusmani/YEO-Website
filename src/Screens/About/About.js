@@ -8,13 +8,18 @@ import founder from '../../Assets/Images/founder.jpg'
 import coFounder from '../../Assets/Images/coFounder.jpg'
 import us8 from '../../Assets/Images/us8.jpg'
 import supervisor from '../../Assets/Images/supervisor.jpg'
-import photographer from '../../Assets/Images/photographer.jpg'
+import photographer from '../../Assets/Images/photographer1.jpg'
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer'
 
 class About extends Component {
+
+    componentDidMount(){
+        window.scrollTo(0, 0);
+      }
+      
     render(){
         return(
             <React.Fragment>
@@ -129,8 +134,8 @@ class About extends Component {
                                     <hr />
                             </Col>
                             <Col md={3} lg={3}>
-                            <Card style={{width:'16rem', height:'10rem', borderColor:'#AD365C'}}>
-                                  <Card.Img src={us8}/>
+                            <Card style={{width:'16rem', borderColor:'#AD365C'}}>
+                                  <Card.Img src={photographer}/>
                                   </Card>
                                   <hr />
                                     <Typography variant="h4" className="text-align"

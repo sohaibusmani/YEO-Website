@@ -9,6 +9,11 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Footer from "../../Components/Footer/Footer";
 
 class Internship extends Component {
+    
+    componentDidMount(){
+        window.scrollTo(0, 0);
+      }
+
     render(){
         return(
             <React.Fragment>

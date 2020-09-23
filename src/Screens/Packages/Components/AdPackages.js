@@ -55,6 +55,7 @@ class AdPackages extends React.Component {
 
     componentDidMount() {
         this.getAllPackages();
+        window.scrollTo(0, 0);
     }
 
     getAllPackages = () => {
