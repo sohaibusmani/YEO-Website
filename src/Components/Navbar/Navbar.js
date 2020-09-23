@@ -107,7 +107,7 @@ return(
                                     alt='pic'
                                     src={Logo}
                                     style={{
-                                        width: "150px",
+                                        width: "120px",
                                         height: "80px",
                                         position: "absolute",
                                         bottom: " 0px",
