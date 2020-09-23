@@ -88,7 +88,7 @@ class About extends Component {
                             </Col>
                         </Row>
                                 <Row  style={{marginTop: '50px'}}>
-                            <Col md={3} lg={3}>
+                            <Col xs={12} md={3} lg={3}>
                                 <Card style={{width:'16rem', borderColor:'#AD365C'}}>
                                   <Card.Img src={founder}/>
                                   </Card>
@@ -103,7 +103,7 @@ class About extends Component {
                                 </Typography>
                                     <hr />
                             </Col>
-                            <Col md={3} lg={3}>
+                            <Col xs={12} md={3} lg={3}>
                             <Card style={{width:'16rem', borderColor:'#AD365C'}}>
                                   <Card.Img src={coFounder}/>
                                   </Card>
@@ -118,7 +118,7 @@ class About extends Component {
                                 </Typography>
                                     <hr />
                             </Col>
-                            <Col md={3} lg={3}>
+                            <Col xs={12} md={3} lg={3}>
                             <Card style={{width:'16rem', borderColor:'#AD365C'}}>
                                   <Card.Img src={supervisor}/>
                                   </Card>
@@ -133,7 +133,7 @@ class About extends Component {
                                 </Typography>
                                     <hr />
                             </Col>
-                            <Col md={3} lg={3}>
+                            <Col xs={12} md={3} lg={3}>
                             <Card style={{width:'16rem', borderColor:'#AD365C'}}>
                                   <Card.Img src={photographer}/>
                                   </Card>
