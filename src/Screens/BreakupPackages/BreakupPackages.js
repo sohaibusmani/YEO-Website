@@ -60,7 +60,7 @@ class BreakupPackages extends Component {
     
     getCart = () => {
         const { userId } = this.props;
-
+        console.log('getCart')
         axios({
             url: `${url}/product/get-cart`,
             method: 'POST',
@@ -220,7 +220,7 @@ class BreakupPackages extends Component {
                                                             />
                                                         </ListItemIcon>
                                                         <ListItemText
-                                                            primary={<span>{item.title}</span>}
+                                                            primary={<span>{item.productDetails.title}</span>}
                                                             secondary={item.quantity}
                                                         />
                                                         <DeleteIcon

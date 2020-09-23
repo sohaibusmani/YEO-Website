@@ -4,7 +4,8 @@ import {Typography} from '@material-ui/core'
 
 // Assets
 import us16 from "../../Assets/Images/us5.jpg";
-import us8 from '../../Assets/Images/us8.jpg'
+import us8 from '../../Assets/Images/founder.jpg'
+import coFounder from '../../Assets/Images/coFounder.jpg'
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
@@ -111,7 +112,7 @@ class About extends Component {
                             </Col>
                             <Col md={3} lg={3}>
                             <Card style={{width:'16rem', borderColor:'#AD365C'}}>
-                                  <Card.Img src={us8}/>
+                                  <Card.Img src={coFounder}/>
                                   </Card>
                                   <hr />
                                     <Typography variant="h4" className="text-align"
