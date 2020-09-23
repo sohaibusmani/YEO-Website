@@ -24,20 +24,20 @@ class LandingPageComponent4 extends React.Component {
                                 <Grid item lg={10} md={10} sm={12}>
                                     <Typography variant="h4"
                                         style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Syed Azib Ali
+                                        Mehwish Urooj
                                     </Typography>
-                                    <Typography variant="h4"
+                                    {/* <Typography variant="h4"
                                         style={{ color: '#6195FF', marginTop: 7, fontWeight: 'bolder', fontSize: '1.2em', fontFamily: '"Times New Roman", Times, serif', }} >
                                         Giverpays
-                                    </Typography>
+                                    </Typography> */}
                                 </Grid>
                             </Grid>
                             <div style={{ height: 10 }} />
                             <div>
                                 <Typography variant="p" style={{ color: '#f0f0f0f', fontWeight: 'normal', fontSize: '1.1em', opacity: '0.9' }} >
-                                    Was great to work with TechNest, good communication and very good
-                                    technical understanding of the features/bug fix. I highly recommend TechNest as
-                                    they would be a good asset for web development
+                                You guys have made our events so hassle free.
+                                 The best part is the way you guys put soo much efforts to make our day special.
+                                  Thankyou so much for amazing work 👍
                                 </Typography>
                             </div>
                         </div>
@@ -51,20 +51,18 @@ class LandingPageComponent4 extends React.Component {
                                 <Grid item lg={10} md={10} sm={12}>
                                     <Typography variant="h4"
                                         style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Montserrat", sans-serif', }} >
-                                        Syed Azib Ali
+                                        IR Fabrics
                                     </Typography>
-                                    <Typography variant="h4"
+                                    {/* <Typography variant="h4"
                                         style={{ color: '#6195FF', marginTop: 7, fontWeight: 'bolder', fontSize: '1.2em', fontFamily: '"Times New Roman", Times, serif', }} >
                                         Giverpays
-                                    </Typography>
+                                    </Typography> */}
                                 </Grid>
                             </Grid>
                             <div style={{ height: 10 }} />
                             <div>
                                 <Typography variant="p" style={{ color: '#f0f0f0f', fontWeight: 'normal', fontSize: '1.1em', opacity: '0.9' }} >
-                                    Was great to work with TechNest, good communication and very good
-                                    technical understanding of the features/bug fix. I highly recommend TechNest as
-                                    they would be a good asset for web development
+                                These are really good in their working & customer support.
                                 </Typography>
                             </div>
                         </div>
