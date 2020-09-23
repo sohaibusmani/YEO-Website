@@ -4,8 +4,11 @@ import {Typography} from '@material-ui/core'
 
 // Assets
 import us16 from "../../Assets/Images/us5.jpg";
-import us8 from '../../Assets/Images/founder.jpg'
+import founder from '../../Assets/Images/founder.jpg'
 import coFounder from '../../Assets/Images/coFounder.jpg'
+import us8 from '../../Assets/Images/us8.jpg'
+import supervisor from '../../Assets/Images/supervisor.jpg'
+import photographer from '../../Assets/Images/photographer.jpg'
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
@@ -82,31 +85,16 @@ class About extends Component {
                                 <Row  style={{marginTop: '50px'}}>
                             <Col md={3} lg={3}>
                                 <Card style={{width:'16rem', borderColor:'#AD365C'}}>
-                                  <Card.Img src={us8}/>
+                                  <Card.Img src={founder}/>
                                   </Card>
                                   <hr />
                                     <Typography variant="h4" className="text-align"
                                         style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Name
+                                        Aqsa Salam
                                 </Typography>
                                     <Typography variant="h4" className="text-align"
                                         style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Role
-                                </Typography>
-                                    <hr />
-                            </Col>
-                            <Col md={3} lg={3}>
-                            <Card style={{width:'16rem', borderColor:'#AD365C'}}>
-                                  <Card.Img src={us8}/>
-                                  </Card>
-                                  <hr />
-                                    <Typography variant="h4" className="text-align"
-                                        style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Name
-                                </Typography>
-                                    <Typography variant="h4" className="text-align"
-                                        style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Role
+                                        Founder
                                 </Typography>
                                     <hr />
                             </Col>
@@ -117,11 +105,26 @@ class About extends Component {
                                   <hr />
                                     <Typography variant="h4" className="text-align"
                                         style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Name
+                                        Uzair Nisar
                                 </Typography>
                                     <Typography variant="h4" className="text-align"
                                         style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Role
+                                        Co-Founder
+                                </Typography>
+                                    <hr />
+                            </Col>
+                            <Col md={3} lg={3}>
+                            <Card style={{width:'16rem', borderColor:'#AD365C'}}>
+                                  <Card.Img src={supervisor}/>
+                                  </Card>
+                                  <hr />
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Ahmed
+                                </Typography>
+                                    <Typography variant="h4" className="text-align"
+                                        style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                        Head Of Supervisors
                                 </Typography>
                                     <hr />
                             </Col>
@@ -132,11 +135,11 @@ class About extends Component {
                                   <hr />
                                     <Typography variant="h4" className="text-align"
                                         style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Name
+                                        Moiz
                                 </Typography>
                                     <Typography variant="h4" className="text-align"
                                         style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                        Role
+                                        Photographer
                                 </Typography>
                                     <hr />
                             </Col>
