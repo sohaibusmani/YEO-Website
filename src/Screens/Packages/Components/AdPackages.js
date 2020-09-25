@@ -123,7 +123,7 @@ class AdPackages extends React.Component {
                                                 <Col lg={4} md={4} >
                                                     <h4>Package Price</h4>
                                                      <Typography>
-                                                         {val.price}
+                                                        PKR {val.price}
                                                      </Typography>
                                                 </Col>
                                             </Row>
