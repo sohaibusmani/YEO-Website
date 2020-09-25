@@ -173,7 +173,7 @@ class PackageDetails extends Component {
                 </div>
                 <div style={{ height: 80 }} />
                 <Grid container spacing={1}>
-                    <Grid item xs={8}>
+                    <Grid item xs={8} >
                         <ImageGallery
                             style={{ height: 50 }}
                             thumbnailPosition='bottom'
