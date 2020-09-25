@@ -50,7 +50,7 @@ const styles = {
 
 class AdPackages extends React.Component {
     state = {
-        allPackages: [],
+        allPackages: []
     }
 
     componentDidMount() {
@@ -121,16 +121,10 @@ class AdPackages extends React.Component {
                                                     <Card.Img variant='top' src={val.pictures.length > 0 ? val.pictures[0] : Photography} />
                                                 </Col>
                                                 <Col lg={4} md={4} >
-                                                    <h4>Deal includes:</h4>
-                                                    <ul>
-                                                        <li><Typography>Food</Typography></li>
-                                                        <li><Typography>Decor</Typography></li>
-                                                        <li><Typography>Photography</Typography></li>
-                                                        <li><Typography>DJ</Typography></li>
-
-                                                        <li><Typography>Starter</Typography></li>
-                                                        <li><Typography>Games</Typography></li>
-                                                    </ul>
+                                                    <h4>Package Price</h4>
+                                                     <Typography>
+                                                         {val.price}
+                                                     </Typography>
                                                 </Col>
                                             </Row>
                                             <hr />
