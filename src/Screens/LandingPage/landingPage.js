@@ -26,48 +26,48 @@ import Footer from '../../Components/Footer/Footer'
 const styles = theme => ({
     firstHeading: {
         fontSize: 23,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             fontSize: 50,
         }
     },
     firstHeadingMain: {
         fontSize: 23,
         width: '80%',
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             fontSize: 50,
             width: '45%',
             marginLeft: 50,
         },
     },
     marginAdjust: {
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             marginLeft: 300
         }
     },
     heightAdjust: {
         backgroundColor: '#963596',
         height: 0,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             height: 30,
         }
     },
     letsGrowHeading: {
         fontSize: 23,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             fontSize: 52
         }
     },
     letsGrowSubHeading: {
         fontSize: "23px",
         width: "100%",
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             fontSize: "40px",
             width: "60%"
         }
     },
     aboutUsStats: {
         fontSize: "30px",
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             fontSize: "60px"
         }
     },
@@ -91,7 +91,7 @@ const styles = theme => ({
     helpTradeHeading: {
         fontSize: "32px",
         lineHeight: "35px",
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             fontSize: "64px",
             lineHeight: "73px"
         }
@@ -114,7 +114,7 @@ const styles = theme => ({
         marginLeft: 30,
         marginTop: 10,
         marginBottom: 10,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             marginLeft: -38,
             marginTop: 0,
             marginBottom: 0,
@@ -124,7 +124,7 @@ const styles = theme => ({
         marginLeft: 30,
         marginTop: 10,
         marginBottom: 10,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             marginLeft: -19,
             marginTop: 0,
             marginBottom: 0,
@@ -132,19 +132,19 @@ const styles = theme => ({
     },
     placeHolderLetsGrow: {
         height: 10,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             height: 0,
         }
     },
     leftMenu: {
         display: 'none',
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             display: 'flex',
         }
     },
     WhatPeopleSayCard: {
         marginTop: 10,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("lg")]: {
             position: "absolute",
             bottom: "-30px",
             right: "80px",
@@ -156,7 +156,7 @@ const styles = theme => ({
     scrollUpButton: {
         // zIndex: 9999,
         display: 'none',
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('lg')]: {
             display: 'block',
         },
     }
@@ -192,12 +192,12 @@ class LandingPage extends Component {
                 />
             </div>
                 <Grid container>
-                <Grid ref={this.block1Ref} item xs={12} md={12}>
+                <Grid ref={this.block1Ref} item xs={12} lg={12}>
                         <LandingPage1 getBlock1Height={this.getBlock1Height} />
                     </Grid>
                     </Grid>
                     <Grid container>
-                <Grid  item xs={12} md={12}>
+                <Grid  item xs={12} lg={12}>
                 <div className="testimonial-banner">
                         <div className="overlay">
                             <LandingPage2 />
@@ -226,7 +226,7 @@ class LandingPage extends Component {
                             </Typography>
                         </div>
                         <Grid container spacing={2}>
-                            <Grid item xs={12} md={3}>
+                            <Grid item xs={12} lg={3}>
                                 <div
                                     style={{
                                         justifyContent: "center",
@@ -253,7 +253,7 @@ class LandingPage extends Component {
                                     </Typography>
                                 </div>
                             </Grid>
-                            <Grid item xs={12} md={3}>
+                            <Grid item xs={12} lg={3}>
                                 <div
                                     style={{
                                         justifyContent: "center",
@@ -279,7 +279,7 @@ class LandingPage extends Component {
                                     </Typography>
                                 </div>
                             </Grid>
-                            <Grid item xs={12} md={3}>
+                            <Grid item xs={12} lg={3}>
                                 <div
                                     style={{
                                         justifyContent: "center",
@@ -305,7 +305,7 @@ class LandingPage extends Component {
                                     </Typography>
                                 </div>
                             </Grid>
-                            <Grid item xs={12} md={3}>
+                            <Grid item xs={12} lg={3}>
                                 <div
                                     style={{
                                         justifyContent: "center",
@@ -334,12 +334,12 @@ class LandingPage extends Component {
                         </Grid>
                     </Container>
                     <Grid container>
-                <Grid  item xs={12} md={12}>
+                <Grid  item xs={12} lg={12}>
                         <LandingPage3  />
                     </Grid>
                     </Grid>
                     <Grid container>
-                    <Grid  item xs={12} md={12}>
+                    <Grid  item xs={12} lg={12}>
                     <div style={{ height: 50 }} />
                     <h1 style={{textAlign:'center', marginBottom:'100px'}}>What our happy clients say</h1>
                     <div className="testimonial-banner">

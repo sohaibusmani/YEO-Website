@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col} from 'react-bootstrap';
+import {Grid , Container} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faFacebookSquare, faInstagram, faGithub, faGooglePlus, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
@@ -23,21 +23,21 @@ class Footer extends React.Component {
 
             <React.Fragment>
                 
-                    <Container>
-                        <Row>
-                            <Col md={4} lg={4} >
+                    <Container maxWidth='lg'>
+                        <Grid container>
+                            <Grid item xs={6} lg={4} >
                                 <div className="footer-sec-1" style={{ marginTop: '20px' }}>
                                     <img alt='pic' src={logo} width="200" height="auto" />
 
                                 </div>
-                            </Col>
-                            <Col md={4} lg={4} >
+                            </Grid>
+                            <Grid item xs={6} lg={4} >
                                 <div style={{marginTop:'20px' , fontFamily:'TimesNewRoman'}}>
                                 <h2>Our Official Partner</h2>
                                 <img alt='pic' src={oric} style={{marginTop:'20px', }} width='300' height='auto' />
                                 </div>
-                            </Col>
-                            <Col md={4} lg={4}>
+                            </Grid>
+                            <Grid item xs={6} lg={4}>
                             <div style={{marginTop:'20px', marginLeft:'20px' , fontFamily:'TimesNewRoman'}}>
                                                 <h2>Follow Us</h2>
                                                 {/* <hr />
@@ -65,15 +65,15 @@ class Footer extends React.Component {
                                                     </li>
                                                 </ul>
                                             </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                                <Col>
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                                <Grid item>
                                 <div className="footer-bottom" style={{marginTop:'40px', fontFamily:'TimesNewRoman'}}>
                     <p>Copyright © 2020 All rights reserved | Youth Event Organizers</p>
                 </div>
-                                </Col>
-                            </Row>
+                                </Grid>
+                            </Grid>
                     </Container>
                 
 

@@ -15,13 +15,13 @@ class LandingPageComponent4 extends React.Component {
             <Container maxWidth="lg">
                 <div style={{ height: 120 }} />
                 <Grid container spacing={2}>
-                    <Grid item lg={4} md={4}>
+                    <Grid item sm={12} lg={4} >
                         <div className="client-info" style={{ padding: 10 }}>
                             <Grid container spacing={1}>
-                                <Grid item lg={2} md={2} sm={12}>
+                                <Grid item lg={2}  sm={12}>
                                     <GoPerson style={{ fontSize: '5em' }} />
                                 </Grid>
-                                <Grid item lg={10} md={10} sm={12}>
+                                <Grid item lg={10} sm={12}>
                                     <Typography variant="h4"
                                         style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
                                         Mehwish Urooj
@@ -42,13 +42,13 @@ class LandingPageComponent4 extends React.Component {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item lg={4} md={4}>
+                    <Grid item sm={12} lg={4} >
                         <div className="client-info" style={{ padding: 10 }}>
                             <Grid container spacing={1}>
-                                <Grid item lg={2} md={2} sm={12}>
+                                <Grid item lg={2}  sm={12}>
                                     <GoPerson style={{ fontSize: '5em', borderColor:'black' }} />
                                 </Grid>
-                                <Grid item lg={10} md={10} sm={12}>
+                                <Grid item lg={10} sm={12}>
                                     <Typography variant="h4"
                                         style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Montserrat", sans-serif', }} >
                                         IR Fabrics
@@ -67,13 +67,13 @@ class LandingPageComponent4 extends React.Component {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item lg={4} md={4}>
+                    <Grid item sm={12} lg={4} >
                         <div className="client-info" style={{ padding: 10 }}>
                             <Grid container spacing={1}>
-                                <Grid item lg={2} md={2} sm={12}>
+                                <Grid item lg={2}  sm={12}>
                                     <GoPerson style={{ fontSize: '5em', borderColor:'black' }} />
                                 </Grid>
-                                <Grid item lg={10} md={10} sm={12}>
+                                <Grid item lg={10}  sm={12}>
                                     <Typography variant="h4"
                                         style={{ color: 'white', marginTop: 18, fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Montserrat", sans-serif', }} >
                                         IR Fabrics
