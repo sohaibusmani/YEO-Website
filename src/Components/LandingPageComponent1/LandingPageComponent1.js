@@ -214,13 +214,13 @@ class LandingPageComponent1 extends React.Component {
                     <Row>
                         <Container style={{marginTop:'100px', marginBottom:'50px'}} fluid>
                             <Row>
-                                <Col md={6} lg={6}>
+                                <Col sm={12} lg={6}>
                                  <img 
                                   alt='pic'
                                  style={{width: '100%',
                     height: '600px',}} src={us17} />
                                 </Col>
-                                <Col style={{fontFamily:'TimesNewRoman'}} md={6} lg={6}>
+                                <Col style={{fontFamily:'TimesNewRoman', marginTop:'10px'}} sm={12} lg={6}>
                                  <h2 style={{textAlign:'center'}}>We are here to deal you with</h2>
                                  <br/>
                                  <br/>
