@@ -4,9 +4,9 @@ import { Typography, Grid, Container } from '@material-ui/core';
 
 // Assets
 import us16 from "../../Assets/Images/us5.jpg";
-import founder from '../../Assets/Images/founder.jpg'
+import founder from '../../Assets/Images/founder2.jpg'
 import coFounder from '../../Assets/Images/coFounder.jpg'
-import us8 from '../../Assets/Images/us8.jpg'
+import us8 from '../../Assets/Images/oric.jpg'
 import supervisor from '../../Assets/Images/supervisor.jpg'
 import photographer from '../../Assets/Images/photographer1.jpg'
 import decorator from '../../Assets/Images/decorator.jpg'
@@ -63,7 +63,7 @@ class About extends Component {
                         </Grid>
                     </Grid>
                     <Grid container spacing={1}>
-                        <Grid item xs={12} sm={12} lg={6} >
+                        <Grid item xs={6} sm={12} lg={6} >
                             <img
                                 alt='pic'
                                 style={{
