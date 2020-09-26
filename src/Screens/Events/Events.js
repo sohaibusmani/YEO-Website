@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Grid } from '@material-ui/core';
+import {Card, Button} from 'react-bootstrap';
 import {Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -54,46 +55,50 @@ class Events extends React.Component {
 
                     </div>
                 </Container>
-                <Container >
-                    <Row>
-                        <Col md={3} lg={3}>
-                        </Col>
-                        <Col  lg={6} md={12} style={{ fontFamily: 'TimesNewRoman', marginTop: '50px', textAlign: 'center' }}>
+                <Container maxWidth='md'>
+                    <Grid container spacing={3}>
+                        <Grid item xs={12} lg={3}>
+                        </Grid>
+                        <Grid item xs={12} lg={6}  style={{ fontFamily: 'TimesNewRoman', marginTop: '50px', textAlign: 'center' }}>
                             <h1>Welcome to YEO Events</h1>
                             <hr />
 
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Container style={{ marginTop: '100px', marginBottom: '50px' }} fluid>
-                            <Row>
-                                <Col md={6} lg={6}>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={3}>
+                        {/* <Container style={{ marginTop: '100px', marginBottom: '50px' }} fluid> */}
+                            {/* <Row> */}
+                                <Grid item sm={12} lg={6}>
                                     <img 
                                     alt='pic'
                                     style={{
                                         width: '100%',
                                         height: '600px',
                                     }} src={us17} />
-                                </Col>
-                                <Col style={{ fontFamily: 'TimesNewRoman' }} md={6} lg={6}>
+                                </Grid>
+                                <Grid item style={{ fontFamily: 'TimesNewRoman' }} sm={12} lg={6}>
                                     <h2 style={{ textAlign: 'center' }}>Here at Youth Event Organizer</h2>
                                     <br />
                                     <br />
                                     <p style={{ fontSize: '20px' }}>We specialize in Planning Weddings, Parties, Corporate Events, Social gatherings etc. Our first priority is to understand our client’s needs and provide them the best possible arrangements, while staying within their budget. We coordinate your events according to your wishes and have a complete set up of event management, farm house booking, decorations and catering. We always follow latest trends and ensure that your event is as flawless as it is memorable. With every event, we come up with breakthrough ideas by adding creative touches to make it unique. Our services are tailored to specific needs. We do as much or as little as you desire.</p>
-                                </Col>
-                            </Row>
-                        </Container>
-                    </Row>
-                    <Row>
-                        <Col style={{fontFamily:'TimesNewRoman', textAlign:'center'}}>
+                                </Grid>
+                            {/* </Row> */}
+                        {/* </Container> */}
+                    </Grid>
+                    <Grid container>
+                    <Grid item xs={12} lg={4}>
+                        </Grid>
+                        <Grid item xs={12} lg={4} style={{ fontFamily: 'TimesNewRoman', marginTop: '50px', textAlign: 'center' }}>
+                          
                           <h1>Our Portfolio</h1>
-                        </Col>
-                    </Row>
-                    <Row style={{marginTop:"5rem"}}>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem' }}>
+                          
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={6} style={{marginTop:"5rem"}}>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={mehendi} />
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Mehendi </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
@@ -103,11 +108,11 @@ class Events extends React.Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem' }}>
+                     </Grid>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={qawwali} />
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Qawwali</Card.Title>
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
@@ -117,11 +122,11 @@ class Events extends React.Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem',  }}>
+                     </Grid>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={bossbaby}/>
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Boss baby Theme</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
@@ -132,13 +137,14 @@ class Events extends React.Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                 </Row>
-                 <Row style={{marginTop:"5rem"}}>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem' }}>
+                     </Grid>
+                 </Grid>
+
+                 <Grid container spacing={6} style={{marginTop:"5rem"}}>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={redblack} />
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Red and Black Theme </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
@@ -148,11 +154,11 @@ class Events extends React.Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem' }}>
+                     </Grid>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={marmaid} />
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Marmaid Theme</Card.Title>
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
@@ -162,11 +168,11 @@ class Events extends React.Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem',  }}>
+                     </Grid>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={multicolor}/>
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Multicolor Theme</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
@@ -177,8 +183,8 @@ class Events extends React.Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                 </Row>
+                     </Grid>
+                 </Grid>
                  
                 </Container>
                 <Footer/>
