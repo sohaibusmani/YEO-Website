@@ -9,6 +9,8 @@ import coFounder from '../../Assets/Images/coFounder.jpg'
 import us8 from '../../Assets/Images/us8.jpg'
 import supervisor from '../../Assets/Images/supervisor.jpg'
 import photographer from '../../Assets/Images/photographer1.jpg'
+import decorator from '../../Assets/Images/decorator.jpg'
+import flourist from '../../Assets/Images/flourist.jpg'
 
 // Components
 import Navbar from '../../Components/Navbar/Navbar';
@@ -84,96 +86,97 @@ class About extends Component {
                             </h2>
                             </div>
                     
-                    <Grid container>
-                        <Grid item xs={12} sm={12} lg={4} >
-                            <Card style={{ width: '16rem', borderColor: '#AD365C' }}>
-                                <Card.Img src={founder} />
-                            </Card>
-                            <hr />
-                            <Typography variant="h4" className="text-align"
-                                style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Aqsa Salam
-                                </Typography>
-                            <Typography variant="h4" className="text-align"
-                                style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Founder
-                                </Typography>
-                            <hr />
-                        </Grid>
+                    <Grid container spacing={8}>
                         <Grid item xs={12} sm={12} lg={4} >
                             <Card style={{ borderColor: '#AD365C' }}>
                                 <Card.Img src={founder} />
                             </Card>
                             <hr />
                             <Typography variant="h4" className="text-align"
-                                style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                style={{ color: 'black',textAlign:'center', fontWeight: 'bolder', fontFamily: '"Times New Roman", Times, serif', }} >
                                 Aqsa Salam
                                 </Typography>
                             <Typography variant="h4" className="text-align"
-                                style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                style={{ color: '#f9f9f9f',textAlign:'center', fontSize: '2em', fontFamily: '"Times New Roman", Times, serif', }} >
                                 Founder
                                 </Typography>
                             <hr />
                         </Grid>
                         <Grid item xs={12} sm={12} lg={4} >
-                            <Card style={{ width: '16rem', borderColor: '#AD365C' }}>
-                                <Card.Img src={founder} />
+                            <Card style={{ borderColor: '#AD365C' }}>
+                                <Card.Img src={coFounder} />
                             </Card>
                             <hr />
                             <Typography variant="h4" className="text-align"
-                                style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Aqsa Salam
+                                style={{ color: 'black',textAlign:'center', fontWeight: 'bolder', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Uzair Nisar
                                 </Typography>
                             <Typography variant="h4" className="text-align"
-                                style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Founder
+                                style={{ color: '#f9f9f9f',textAlign:'center', fontSize: '2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Co-Founder
+                                </Typography>
+                            <hr />
+                        </Grid>
+                        <Grid item xs={12} sm={12} lg={4} >
+                            <Card style={{borderColor: '#AD365C' }}>
+                                <Card.Img src={supervisor} />
+                            </Card>
+                            <hr />
+                            <Typography variant="h4" className="text-align"
+                                style={{ color: 'black',textAlign:'center', fontWeight: 'bolder', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Ahmed
+                                </Typography>
+                            <Typography variant="h4" className="text-align"
+                                style={{ color: '#f9f9f9f', textAlign:'center', fontSize: '2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Head Of Supervisors
                                 </Typography>
                             <hr />
                         </Grid>
                     </Grid>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12} sm={12} md={4} >
-                            <Card style={{ width: '16rem', borderColor: '#AD365C' }}>
-                                <Card.Img src={founder} />
+                    
+                    <Grid container spacing={8}>
+                        <Grid item xs={12} sm={12} lg={4} >
+                            <Card style={{ borderColor: '#AD365C' }}>
+                                <Card.Img src={photographer} />
                             </Card>
                             <hr />
                             <Typography variant="h4" className="text-align"
-                                style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Aqsa Salam
+                                style={{ color: 'black',textAlign:'center', fontWeight: 'bolder', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Moiz Islam
                                 </Typography>
                             <Typography variant="h4" className="text-align"
-                                style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Founder
+                                style={{ color: '#f9f9f9f',textAlign:'center', fontSize: '2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Photographer
                                 </Typography>
                             <hr />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={4} >
-                            <Card style={{ width: '16rem', borderColor: '#AD365C' }}>
-                                <Card.Img src={founder} />
+                        <Grid item xs={12} sm={12} lg={4} >
+                            <Card style={{ borderColor: '#AD365C' }}>
+                                <Card.Img src={flourist} />
                             </Card>
                             <hr />
                             <Typography variant="h4" className="text-align"
-                                style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Aqsa Salam
+                                style={{ color: 'black',textAlign:'center', fontWeight: 'bolder', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Abdul Rafey
                                 </Typography>
                             <Typography variant="h4" className="text-align"
-                                style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Founder
+                                style={{ color: '#f9f9f9f',textAlign:'center', fontSize: '2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Flourist
                                 </Typography>
                             <hr />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={4} >
-                            <Card style={{ width: '16rem', borderColor: '#AD365C' }}>
-                                <Card.Img src={founder} />
+                        <Grid item xs={12} sm={12} lg={4} >
+                            <Card style={{borderColor: '#AD365C' }}>
+                                <Card.Img src={decorator} />
                             </Card>
                             <hr />
                             <Typography variant="h4" className="text-align"
-                                style={{ color: 'black', fontWeight: 'bolder', fontSize: '1.5em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Aqsa Salam
+                                style={{ color: 'black',textAlign:'center', fontWeight: 'bolder', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Saqib
                                 </Typography>
                             <Typography variant="h4" className="text-align"
-                                style={{ color: '#f9f9f9f', fontWeight: 'bolder', fontSize: '1em', fontFamily: '"Times New Roman", Times, serif', }} >
-                                Founder
+                                style={{ color: '#f9f9f9f', textAlign:'center', fontSize: '2em', fontFamily: '"Times New Roman", Times, serif', }} >
+                                Decorator
                                 </Typography>
                             <hr />
                         </Grid>
