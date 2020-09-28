@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
-import {Container,Row,Col,Card,Button} from 'react-bootstrap';
-import {Grid} from '@material-ui/core';
+import {Button, Card} from 'react-bootstrap';
+import {Grid , Container} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -63,7 +63,7 @@ class Courses extends Component {
         return(
             <React.Fragment>
               
-              <Container>
+              <Container >
                  <div style={{backgroundImage:`url(${logo})`,
              width: '100%',
              height: '350px',
@@ -72,12 +72,12 @@ class Courses extends Component {
               </div>
                  
               </Container>
-                <Container>
-                 <Row style={{marginTop:"5rem"}}>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem' }}>
+                <Container maxWidth='md'>
+                 <Grid container spacing={3} style={{marginTop:"5rem"}}>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={card1} />
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Become an Event Planner </Card.Title>
     <Card.Text>
     This popular event course guides you through each step so you become a certified event planner!
@@ -87,9 +87,9 @@ class Courses extends Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem' }}>
+                     </Grid>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={card2} />
   <Card.Body>
     <Card.Title>Boost Your Business</Card.Title>
@@ -101,9 +101,9 @@ class Courses extends Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                     <Col xs={12} md={4}>
-                     <Card style={{ width: '20rem',  }}>
+                     </Grid>
+                     <Grid item xs={12} lg={4}>
+                     <Card>
   <Card.Img variant="top" src={card3}/>
   <Card.Body>
     <Card.Title>Internships</Card.Title>
@@ -116,8 +116,8 @@ class Courses extends Component {
     </Link>
   </Card.Body>
 </Card>
-                     </Col>
-                 </Row>
+                     </Grid>
+                 </Grid>
              </Container>
              
                <Grid container style={{marginTop:'20px'}}>
