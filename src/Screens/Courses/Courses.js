@@ -91,7 +91,7 @@ class Courses extends Component {
                      <Grid item xs={12} lg={4}>
                      <Card>
   <Card.Img variant="top" src={card2} />
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Boost Your Business</Card.Title>
     <Card.Text>
     Accelerate your learning in sales & marketing and business development too.
@@ -105,7 +105,7 @@ class Courses extends Component {
                      <Grid item xs={12} lg={4}>
                      <Card>
   <Card.Img variant="top" src={card3}/>
-  <Card.Body>
+  <Card.Body style={{textAlign:'center'}}>
     <Card.Title>Internships</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
