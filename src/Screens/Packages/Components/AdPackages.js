@@ -107,7 +107,7 @@ class AdPackages extends React.Component {
                      return(
                         
                         
-                            <Grid item md={6} lg={6} sm={12}>
+                            <Grid item xs={12} lg={6} >
                                 <Card style={{ width: '40rem',marginBottom:'5rem', borderColor: '#AD365C' }}>
                                     <Card.Header style={{ backgroundColor: '#AD365C', color: 'white' }}>
                                         <Card.Title>
