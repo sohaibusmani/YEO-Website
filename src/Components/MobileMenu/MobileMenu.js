@@ -172,6 +172,17 @@ function TemporaryDrawer(props) {
 
     return (
         <div>
+             <img
+                        alt='pic'
+                        style={{
+                            width: "120px",
+                            height: "80px",
+                            position: "absolute",
+                            bottom: " 0px",
+                            top: "3px"
+                        }}
+                        src={Logo}
+                    />
             <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 30, backgroundColor: '#AD365C', marginLeft: 850 }}>
                 <MenuIcon style={{ color: 'white' }} />
             </IconButton>
