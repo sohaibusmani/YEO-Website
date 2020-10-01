@@ -172,7 +172,7 @@ function TemporaryDrawer(props) {
 
     return (
         <div>
-            <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 30, backgroundColor: '#AD365C' }}>
+            <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 30, backgroundColor: '#AD365C', marginLeft: 850 }}>
                 <MenuIcon style={{ color: 'white' }} />
             </IconButton>
             <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
