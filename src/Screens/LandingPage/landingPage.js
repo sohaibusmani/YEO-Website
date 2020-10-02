@@ -5,7 +5,6 @@ import {
     Grid,
     Typography,
 } from "@material-ui/core";
-import   ScrollUpButton  from "react-scroll-up-button";
 
 // CSS
 import '../../App.css';
@@ -182,15 +181,6 @@ class LandingPage extends Component {
         const { classes } = this.props;
         return(
             <React.Fragment>
-                
-                <div className={classes.scrollUpButton}>
-                <ScrollUpButton
-                    ShowAtPosition={150}
-                    EasingType='easeOutCubic'
-                    AnimationDuration={500}
-                    style={{ zIndex: 9999 , color:'#AD365C', backgroundColor:'#AD365C'}}
-                />
-            </div>
                 <Grid container>
                 <Grid ref={this.block1Ref} item xs={12} lg={12}>
                         <LandingPage1 getBlock1Height={this.getBlock1Height} />
