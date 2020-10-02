@@ -119,7 +119,7 @@ class AdPackages extends React.Component {
                                         <Container>
                                             <Row>
                                                 <Col lg={8} md={8} sm={12}>
-                                                    <Card.Img variant='top' src={val.pictures.length > 0 ? val.pictures[0] : Photography} />
+                                                    <Card.Img variant='top' style={{maxHeight:'250px'}} src={val.pictures.length > 0 ? val.pictures[0] : Photography} />
                                                 </Col>
                                                 <Col lg={4} md={4} >
                                                     <h4>Package Price</h4>
