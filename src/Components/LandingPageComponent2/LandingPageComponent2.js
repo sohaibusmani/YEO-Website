@@ -1,15 +1,36 @@
 import React from 'react';
 import { Grid, Container, Typography } from '@material-ui/core';
+import { withStyles,createMuiTheme } from "@material-ui/core/styles";
 //React Router
 import { withRouter } from 'react-router-dom';
 //Casecading Style Sheets
 import '../../App.css';
 
+const customeTheme = createMuiTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1000,
+        xl: 1920,
+      },
+    },
+  })
+
+  const styles = {
+    mobScreenFont: {
+      [customeTheme.breakpoints.down("md")]: {
+          fontSize: "40px"
+      }
+    }
+}
+
 
 class LandingPageComponent4 extends React.Component {
 
     render() {
-
+        const {classes} = this.props;
         return (
             <Container maxWidth="md">
                 <div style={{ height: 120 }} />
@@ -35,9 +56,9 @@ class LandingPageComponent4 extends React.Component {
                                     
                                 </Grid>
                             </Grid>
-                            <div style={{ height: 10 }} />
+                            <div className={classes.mobScreenFont} style={{ height: 10 }} />
                             <div>
-                                <Typography variant="p" style={{marginTop:'80px',
+                                <Typography  variant="p" style={{marginTop:'80px',
                                  color: '#f0f0f0f',
                                   fontWeight: 'normal',
                                    fontSize: '1em', 
@@ -56,4 +77,4 @@ class LandingPageComponent4 extends React.Component {
     }
 }
 
-export default withRouter(LandingPageComponent4);
+export default withStyles(styles)(LandingPageComponent4);

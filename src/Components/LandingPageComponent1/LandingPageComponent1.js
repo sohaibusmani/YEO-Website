@@ -179,15 +179,37 @@
 // export default withStyles(styles)(LandingPage1);
 
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap';
+import { withStyles,createMuiTheme } from "@material-ui/core/styles";
 
 // Assets
 import mainCover from '../../Assets/Images/operations.jpg';
-import us17 from '../../Assets/Images/us12.jpg'
+import us17 from '../../Assets/Images/us12.jpg';
+
+const customeTheme = createMuiTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1000,
+        xl: 1920,
+      },
+    },
+  })
+
+  const styles = {
+      mobScreenFont: {
+        [customeTheme.breakpoints.down("md")]: {
+            fontSize: "40px"
+        }
+      }
+  }
 
 
 class LandingPageComponent1 extends React.Component {
     render() {
+        const {classes} = this.props;
         return (
             <React.Fragment>
                 <div style={{
@@ -204,8 +226,8 @@ class LandingPageComponent1 extends React.Component {
                     <Row>
                         <Col md={3} lg={3}>
                         </Col>
-                        <Col  lg={6} md={12} style={{ marginTop: '50px', textAlign: 'center' }}>
-                            <h4>GIVE YOUR GUESTS A REASON TO STARE</h4>
+                        <Col className={classes.mobScreenFont} lg={6} md={12} style={{ marginTop: '50px', textAlign: 'center' }}>
+                            <h3>GIVE YOUR GUESTS A REASON TO STARE</h3>
                             <hr />
                             <p>From lavish weddings set on the bloom-bordered paths of Karachi’s historic venues to elaborate corporate events that nurture company connections,
                                    Youth Event Organizer has a flair for transforming meaningful celebrations into unforgettable experiences.</p>
@@ -220,11 +242,11 @@ class LandingPageComponent1 extends React.Component {
                                  style={{width: '100%',
                     height: '600px',}} src={us17} />
                                 </Col>
-                                <Col style={{fontFamily:'TimesNewRoman', marginTop:'10px'}} sm={12} lg={6}>
-                                 <h2 style={{textAlign:'center'}}>We are here to deal you with</h2>
+                                <Col className={classes.mobScreenFont} style={{fontFamily:'TimesNewRoman', marginTop:'10px'}} sm={12} lg={6}>
+                                 <h1 style={{textAlign:'center'}}>We are here to deal you with</h1>
                                  <br/>
                                  <br/>
-                                 <ul style={{fontSize:'18px'}}>
+                                 <ul >
                                      <li>Full Service Planning or Wedding Design and Coordination.</li>
                                      <br/>
                                      <li>Access to our in-house floral team and décor rental warehouse.</li>
@@ -252,4 +274,4 @@ class LandingPageComponent1 extends React.Component {
     }
 }
 
-export default LandingPageComponent1;
+export default withStyles(styles)(LandingPageComponent1);
