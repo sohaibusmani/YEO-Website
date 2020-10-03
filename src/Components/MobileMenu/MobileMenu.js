@@ -37,8 +37,8 @@ function TemporaryDrawer(props) {
             role="presentation"
         >
             <List>
-                <IconButton onClick={toggleDrawer('right', false)} style={{ marginTop: 30, backgroundColor: '#AD365C', float: 'right', marginRight: 30 }}>
-                    <CloseIcon style={{ color: 'white' }} />
+                <IconButton onClick={toggleDrawer('right', false)} style={{ marginTop: 20, backgroundColor: '#AD365C', float: 'right', marginRight: 30 }}>
+                    <CloseIcon style={{ color: 'white', fontSize:'40px' }} />
                 </IconButton>
                 <div style={{ height: 100 }} />
                 <Container maxWidth="lg">
@@ -201,8 +201,8 @@ function TemporaryDrawer(props) {
                         }}
                         src={Logo}
                     />
-            <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 30, backgroundColor: '#AD365C', marginLeft: 850 }}>
-                <MenuIcon style={{ color: 'white' }} />
+            <IconButton onClick={toggleDrawer('right', true)} style={{ marginTop: 20, backgroundColor: '#AD365C', marginLeft: 850 }}>
+                <MenuIcon style={{ color: 'white', fontSize:'40px' }} />
             </IconButton>
             <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
                 {sideList('right')}
