@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
-import { Container, Grid, Button, withStyles, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Container, Grid, Button, withStyles,createMuiTheme, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import pcover from '../../Assets/Images/us14.jpg';
 import axios from 'axios';
 
 // connection
 import url from '../../config/api';
+
+const customeTheme = createMuiTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 960,
+        lg: 1000,
+        xl: 1920,
+      },
+    },
+  })
 
 const styles = theme => ({
     card: {
@@ -43,7 +55,12 @@ const styles = theme => ({
         fontSize: 20,
         cursor: 'pointer',
         "&:hover": { color: 'red' }
-    }
+    },
+    mobScreenFont: {
+        [customeTheme.breakpoints.down("md")]: {
+            fontSize: "25px"
+        }
+      }
 })
 
 class BreakupPackages extends Component {
@@ -162,7 +179,7 @@ class BreakupPackages extends Component {
                 <Container maxWidth='lg'>
                     <div >
                         <Grid container spacing={2}>
-                            <Grid item md={8}>
+                            <Grid item xs={8} lg={8}>
                                 <h3>Make Your Package</h3>
                                 <hr style={{ border: '1px solid #AD365C' }} />
                                 {allProducts.length > 0 &&
@@ -181,9 +198,9 @@ class BreakupPackages extends Component {
                                                         />
                                                     </Grid>
                                                     <Grid item xs={12} sm={4} md={6}>
-                                                        <h5>{val.title}</h5>
-                                                        <h6>Actual price : {val.price}</h6>
-                                                        <p>{val.description}</p>
+                                                        <h5 className={classes.mobScreenFont}>{val.title}</h5>
+                                                        <h6 className={classes.mobScreenFont}>Actual price : {val.price}</h6>
+                                                        <p className={classes.mobScreenFont}>{val.description}</p>
                                                     </Grid>
                                                     <Grid item xs={12} md={3}>
                                                         <Button
@@ -200,7 +217,7 @@ class BreakupPackages extends Component {
 
                             </Grid>
 
-                            <Grid item md={4} >
+                            <Grid item xs={4} lg={4}  >
                                 <div style={{width:'100%'}}>
                                 <h3>Your WishList</h3>
                                 <hr style={{ border: '1px solid #AD365C' }} />
@@ -218,7 +235,7 @@ class BreakupPackages extends Component {
                                                                     width: '50px',
                                                                     height: '40px'
                                                                 }}
-                                                                src={pcover}
+                                                                src={item.productDetails.pictures[0]}
                                                             />
                                                         </ListItemIcon>
                                                         <ListItemText
