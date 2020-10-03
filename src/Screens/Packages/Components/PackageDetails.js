@@ -285,8 +285,9 @@ class PackageDetails extends Component {
 
                                         <TextField
                                             size='small'
+                                            type='date'
                                             required
-                                            placeholder="Date"
+                                            // placeholder="Date"
                                             className={classes.textField}
                                             InputProps={{
                                                 classes: {
@@ -294,7 +295,6 @@ class PackageDetails extends Component {
                                                     focused: classes.focused,
                                                 }
                                             }}
-                                            type='text'
                                             style={{ width: '100%', marginTop: '3rem' }}
                                             onChange={e => this.setState({ eventDate: e.target.value })}
 
