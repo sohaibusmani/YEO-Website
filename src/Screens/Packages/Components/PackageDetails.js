@@ -66,6 +66,7 @@ class PackageDetails extends Component {
         eventType: '',
         eventTime: '',
         otherRequirements: '',
+        title: '',
         price: '',
         overview: '',
         pics: [],
@@ -98,6 +99,7 @@ class PackageDetails extends Component {
         })
             .then(response => {
                 this.setState({
+                    title: response.data.title,
                     price: response.data.price,
                     overview: response.data.overview,
                     pics: response.data.pictures
@@ -119,6 +121,7 @@ class PackageDetails extends Component {
             guests,
             eventDate,
             eventLocation,
+            title,
             price,
         } = this.state;
 
@@ -130,6 +133,7 @@ class PackageDetails extends Component {
             data: {
                 userId,
                 packageId,
+                title,
                 price,
                 name,
                 email,
