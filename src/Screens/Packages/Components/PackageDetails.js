@@ -18,6 +18,9 @@ import logo from '../../../Assets/Images/us19.jpg';
 // axios
 import axios from 'axios';
 
+// swal alert
+import swal from 'sweetalert2';
+
 // connection
 import baseUrl from '../../../config/api';
 
@@ -144,10 +147,20 @@ class PackageDetails extends Component {
             }
         })
             .then(response => {
-                console.log("order submitted", response.data)
+                console.log("order submitted", response.data);
+                swal.fire({
+                    icon: 'success',
+                    title: 'Youth Event Organizer',
+                    text: `Order has been placed`
+                })
             })
             .catch((err) => {
                 console.log(err);
+                swal.fire({
+                    icon: 'error',
+                    title: 'Youth Event Organizer',
+                    text: `Internal Server Error`
+                })
             })
     }
 
