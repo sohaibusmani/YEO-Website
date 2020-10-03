@@ -59,10 +59,10 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 700,
                                         marginBottom: "15px",
                                         cursor: "pointer"
                                     }}
@@ -77,10 +77,10 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 700,
                                         marginBottom: "15px",
                                         cursor: "pointer"
                                     }}
@@ -95,10 +95,10 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 700,
                                         marginBottom: "15px",
                                         cursor: "pointer"
                                     }}
@@ -113,10 +113,10 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 700,
                                         marginBottom: "15px",
                                         cursor: "pointer",
                                         width: 130
@@ -132,17 +132,17 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 600,
                                         marginBottom: "15px",
                                         cursor: "pointer",
                                         width: 130
                                     }}
                                     onClick={toggleDrawer('right', false)}
                                 >
-                                    About Us
+                                    About
                                 </Typography>
                             </Link>
                         </li>
@@ -151,10 +151,10 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 700,
                                         marginBottom: "8px",
                                         cursor: "pointer"
                                     }}
@@ -169,10 +169,10 @@ function TemporaryDrawer(props) {
                                 <Typography
                                     style={{
                                         color: "#AD365C",
-                                        fontSize: "23px",
+                                        fontSize: "35px",
                                         fontFamily:
                                             "myriad-pro, Arial",
-                                        fontWeight: 500,
+                                        fontWeight: 700,
                                         marginBottom: "8px",
                                         cursor: "pointer"
                                     }}
