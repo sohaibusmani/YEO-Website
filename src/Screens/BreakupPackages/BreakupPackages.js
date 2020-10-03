@@ -58,7 +58,7 @@ const styles = theme => ({
     },
     mobScreenFont: {
         [customeTheme.breakpoints.down("md")]: {
-            fontSize: "25px"
+            fontSize: "22px"
         }
       }
 })
