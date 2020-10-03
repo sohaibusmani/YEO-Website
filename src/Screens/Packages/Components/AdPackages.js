@@ -101,15 +101,16 @@ class AdPackages extends React.Component {
                 </Container>
 
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
+                     
                 <Grid container>
-                <Grid container>
+                <Grid container spacing={3}>
                   {allPackages.length > 0 && 
                    allPackages.map((val, index) => {
                      return(
                         
-                        
+                            
                             <Grid item xs={12} lg={6} >
-                                <Card style={{ width: '40rem',marginBottom:'5rem', borderColor: '#AD365C' }}>
+                                <Card style={{marginBottom:'5rem', borderColor: '#AD365C' }}>
                                     <Card.Header style={{ backgroundColor: '#AD365C', color: 'white' }}>
                                         <Card.Title>
                                             {val.title}
@@ -143,7 +144,7 @@ class AdPackages extends React.Component {
                                     </Card.Body>
                                 </Card>
                             </Grid>
-                        
+                            
                     
                      )
                    }) }
