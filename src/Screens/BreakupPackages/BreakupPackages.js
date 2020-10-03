@@ -201,7 +201,7 @@ class BreakupPackages extends Component {
                             </Grid>
 
                             <Grid item md={4} >
-                                <div style={{position:'fixed', width:'100%'}}>
+                                <div style={{width:'100%'}}>
                                 <h3>Your WishList</h3>
                                 <hr style={{ border: '1px solid #AD365C' }} />
                                 <div className={classes.ordersCard}>
