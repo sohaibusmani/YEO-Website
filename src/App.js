@@ -88,10 +88,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { user, userId } = this.state;
+    const { isUserLoggedIn, userId } = this.state;
     return (
       <React.Fragment>
-        <Navbar {...this.props} user={user} />
+        <Navbar {...this.props} user={isUserLoggedIn} />
 
         {/* <SearchAppBar/> */}
 
@@ -138,7 +138,7 @@ class App extends React.Component {
             props => (<Signup {...props} />
             )} />
           <Route path='/breakup-package' exact render={
-            props => (<BreakupPackage {...props} userId={userId} />
+            props => (<BreakupPackage {...props} userId={userId} user={isUserLoggedIn} />
             )} />
 
 
