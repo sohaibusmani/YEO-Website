@@ -88,10 +88,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { isUserLoggedIn, userId } = this.state;
+    const { user, userId } = this.state;
     return (
       <React.Fragment>
-        <Navbar {...this.props} isUserLoggedIn={isUserLoggedIn} />
+        <Navbar {...this.props} user={user} />
 
         {/* <SearchAppBar/> */}
 

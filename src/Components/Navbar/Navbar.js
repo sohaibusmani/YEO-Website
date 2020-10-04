@@ -191,7 +191,7 @@ export default function ButtonAppBar(props) {
                                         Create package
                                 </Button>
                                 </Link>
-                                {!props.isUserLoggedIn &&
+                                {!props.user &&
                                     <Button
                                         className={classes.button}
                                         onClick={() => { props.history.push('/signin') }}
