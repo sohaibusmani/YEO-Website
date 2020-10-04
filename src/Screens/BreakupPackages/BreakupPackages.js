@@ -76,12 +76,6 @@ class BreakupPackages extends Component {
         this.getCart();
         window.scrollTo(0,0);
     }
-
-    displaySignin = () => {
-        return(
-        <Signin/>
-        )
-    }
     
     getCart = () => {
         const { userId } = this.props;

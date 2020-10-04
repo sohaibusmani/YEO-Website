@@ -123,7 +123,7 @@ class App extends React.Component {
             props => (<Packages {...props} />
             )} />
           <Route path='/Packages/PackageDetails/:id' exact render={
-            props => (<PackageDetails {...props} userId={userId} />
+            props => (<PackageDetails {...props} userId={userId} user={isUserLoggedIn}/>
             )} />
           <Route path='/Inbox' exact render={
             props => (<Chat {...props} />

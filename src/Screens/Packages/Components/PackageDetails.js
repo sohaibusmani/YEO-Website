@@ -358,7 +358,7 @@ class PackageDetails extends Component {
                                             block
                                             className={classes.button}
                                             style={{ marginBottom: '12px', }}
-                                            onClick={this.submitOrder}
+                                            onClick={this.props.user ? this.submitOrder : () => {this.props.history.push('/signin')}}
                                         >
                                             Submit
                                 </Button>
