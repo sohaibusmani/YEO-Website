@@ -39,7 +39,7 @@ class About extends Component {
                     </div>
                 </Container>
 
-
+                <Container maxWidth='lg'>
                 <div style={{ fontFamily: 'TimesNewRoman', marginTop: '50px', color: '#AD365C', textAlign: 'center' }}>
                     <h1>Youth Event Organizer's Story</h1>
                 </div>
@@ -55,7 +55,7 @@ class About extends Component {
                                    It proves that if you keep on struggling you will achieve the goal until and unless you have the skills.
                                </p>
                 </div>
-
+                </Container>
                 <Container style={{ marginTop: '100px', marginBottom: '50px' }} maxWidth='lg'>
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
