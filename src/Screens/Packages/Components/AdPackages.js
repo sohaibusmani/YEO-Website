@@ -100,6 +100,8 @@ class AdPackages extends React.Component {
                     </div>
                 </Container>
 
+                <Container maxWidth='lg'>
+
                 <div style={{ marginTop: '50px', marginBottom: '50px' }}>
                      
                 <Grid container>
@@ -151,6 +153,7 @@ class AdPackages extends React.Component {
                    </Grid>
                    </Grid>
                 </div>
+                </Container>
                 <Footer />
             </React.Fragment>
         )
